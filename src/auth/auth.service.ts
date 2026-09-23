@@ -9,7 +9,11 @@ import { Model } from 'mongoose';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { ConfigService } from '@nestjs/config';
 import { User, UserDocument } from './schemas/user.schema';
-import { AuditEvent, AuditEventDocument, AuditAction } from './schemas/audit-event.schema';
+import {
+  AuditEvent,
+  AuditEventDocument,
+  AuditAction,
+} from './schemas/audit-event.schema';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { VerifyTotpDto } from './dto/verify-totp.dto';
@@ -33,12 +37,24 @@ export class AuthService {
   // ─── REGISTER ────────────────────────────────────────────────────────────────
   async register(dto: RegisterDto, ipAddress?: string) {
     // 1. Create Supabase user
+    console.log('Registering user with Supabase:', {
+      email: dto.email,
+      role: dto.role,
+    });
+
     const { data, error } = await this.supabase.auth.signUp({
       email: dto.email,
       password: dto.password,
     });
 
     if (error) {
+      console.error('Supabase signUp error:', {
+        message: error.message,
+        status: error.status,
+        name: error.name,
+        fullError: error,
+      });
+
       if (error.message.includes('already registered')) {
         throw new ConflictException('Email is already registered');
       }
@@ -46,7 +62,9 @@ export class AuthService {
     }
 
     if (!data.user) {
-      throw new InternalServerErrorException('Failed to create user in Supabase');
+      throw new InternalServerErrorException(
+        'Failed to create user in Supabase',
+      );
     }
 
     // 2. Check for duplicate in MongoDB
@@ -66,13 +84,21 @@ export class AuthService {
     });
 
     // 4. Audit event
-    await this.writeAudit(AuditAction.LOGIN, data.user.id, null, null, {
-      action: 'REGISTER',
-      email: dto.email,
-    }, ipAddress);
+    await this.writeAudit(
+      AuditAction.LOGIN,
+      data.user.id,
+      null,
+      null,
+      {
+        action: 'REGISTER',
+        email: dto.email,
+      },
+      ipAddress,
+    );
 
     return {
-      message: 'Registration successful. Please check your email to confirm your account.',
+      message:
+        'Registration successful. Please check your email to confirm your account.',
       userId: user._id,
     };
   }
@@ -86,10 +112,17 @@ export class AuthService {
 
     if (error) {
       // Audit failed login
-      await this.writeAudit(AuditAction.LOGIN_FAILED, 'anonymous', null, null, {
-        email: dto.email,
-        reason: error.message,
-      }, ipAddress);
+      await this.writeAudit(
+        AuditAction.LOGIN_FAILED,
+        'anonymous',
+        null,
+        null,
+        {
+          email: dto.email,
+          reason: error.message,
+        },
+        ipAddress,
+      );
       throw new UnauthorizedException('Invalid email or password');
     }
 
@@ -182,8 +215,8 @@ export class AuthService {
 
     return {
       factorId: data.id,
-      qrCode: data.totp.qr_code,   // Show this QR to the user to scan in their authenticator app
-      secret: data.totp.secret,    // Backup secret
+      qrCode: data.totp.qr_code, // Show this QR to the user to scan in their authenticator app
+      secret: data.totp.secret, // Backup secret
     };
   }
 
