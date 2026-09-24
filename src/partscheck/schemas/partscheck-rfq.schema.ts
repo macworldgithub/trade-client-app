@@ -97,7 +97,7 @@ export const RfqLineSchema = SchemaFactory.createForClass(RfqLine);
 @Schema({ timestamps: true })
 export class PartsCheckRfq {
   /** External PartsCheck RFQ identifier — e.g. "PC-RFQ-10293" */
-  @Prop({ required: true, unique: true, index: true })
+  @Prop({ required: true, unique: true })
   rfqId: string;
 
   /** PartsCheck buyer / smash repairer account ID */

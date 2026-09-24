@@ -157,7 +157,7 @@ export const OrderLineSchema = SchemaFactory.createForClass(OrderLine);
 @Schema({ timestamps: true })
 export class Order {
   /** Canonical human-readable order identifier — e.g. "ORD-20260924-A1B2" */
-  @Prop({ required: true, unique: true, index: true })
+  @Prop({ required: true, unique: true })
   orderNumber: string;
 
   /** Trade account ID the order was placed under (Pentana account slug) */

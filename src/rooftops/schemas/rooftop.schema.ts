@@ -67,6 +67,5 @@ export class Rooftop {
 
 export const RooftopSchema = SchemaFactory.createForClass(Rooftop);
 
-// Fast lookups by slug / active flag
-RooftopSchema.index({ rooftopId: 1 });
+// Fast lookups by active flag
 RooftopSchema.index({ isActive: 1 });

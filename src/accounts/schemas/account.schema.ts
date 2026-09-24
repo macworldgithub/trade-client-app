@@ -124,7 +124,6 @@ export class TradeAccount {
 export const TradeAccountSchema = SchemaFactory.createForClass(TradeAccount);
 
 // Fast lookups
-TradeAccountSchema.index({ accountId: 1 });
 TradeAccountSchema.index({ isActive: 1 });
 TradeAccountSchema.index({ rooftopId: 1 });
 TradeAccountSchema.index({ creditHold: 1 });
