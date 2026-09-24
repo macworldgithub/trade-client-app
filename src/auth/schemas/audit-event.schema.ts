@@ -42,5 +42,13 @@ export class AuditEvent {
 
 export const AuditEventSchema = SchemaFactory.createForClass(AuditEvent);
 
-// Retain audit events for 24 months as per scope
+// Retain audit events for 24 months as per scope (63,072,000 seconds)
 AuditEventSchema.index({ createdAt: 1 }, { expireAfterSeconds: 63072000 });
+
+// Compound query indexes for audit stream filtering
+AuditEventSchema.index({ userId: 1, createdAt: -1 });
+AuditEventSchema.index({ rooftopId: 1, createdAt: -1 });
+AuditEventSchema.index({ tradeAccountId: 1, createdAt: -1 });
+AuditEventSchema.index({ action: 1, createdAt: -1 });
+AuditEventSchema.index({ 'metadata.orderId': 1 });
+AuditEventSchema.index({ 'metadata.orderNumber': 1 });

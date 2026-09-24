@@ -5,6 +5,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { RooftopsModule } from './rooftops/rooftops.module';
+import { AccountsModule } from './accounts/accounts.module';
+import { PartsModule } from './parts/parts.module';
+import { OrdersModule } from './orders/orders.module';
+import { AuditModule } from './audit/audit.module';
+import { PartsCheckModule } from './partscheck/partscheck.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -18,6 +24,12 @@ import { RooftopsModule } from './rooftops/rooftops.module';
     }),
     AuthModule,
     RooftopsModule,
+    AccountsModule,
+    PartsModule,
+    OrdersModule,
+    AuditModule,
+    PartsCheckModule,
+    DashboardModule,
   ],
   controllers: [AppController],
   providers: [AppService],
