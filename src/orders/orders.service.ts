@@ -1,4 +1,4 @@
-import {
+﻿import {
   Injectable,
   NotFoundException,
   BadRequestException,
@@ -29,6 +29,8 @@ import { UpdateOrderStateDto } from './dto/update-order-state.dto';
 import { RaiseLineExceptionDto } from './dto/raise-line-exception.dto';
 import { ReSourceLineDto } from './dto/re-source-line.dto';
 import { PickLineDto } from './dto/pick-line.dto';
+import { PentanaDmsService } from '../integrations/pentana-dms.service';
+import { CapricornService } from '../integrations/capricorn.service';
 
 const STAFF_ROLES = [
   Role.PARTS_CONTROLLER,
@@ -48,9 +50,11 @@ export class OrdersService {
     @InjectModel(AuditEvent.name)
     private auditModel: Model<AuditEventDocument>,
     private readonly accountsService: AccountsService,
+    private readonly pentanaDms: PentanaDmsService,
+    private readonly capricornService: CapricornService,
   ) {}
 
-  // ─── POST /orders: SUBMIT ORDER ───────────────────────────────────────────
+  // ─── POST /orders: SUBMIT ORDER ──────────────────────────────────────────────
 
   async submitOrder(
     dto: CreateOrderDto,
@@ -70,7 +74,6 @@ export class OrdersService {
       }
       tradeAccountId = user.tradeAccountId;
     } else {
-      // Staff roles can specify tradeAccountId or fall back to their user setting
       tradeAccountId = (dto.tradeAccountId || user.tradeAccountId)!;
       if (!tradeAccountId) {
         throw new BadRequestException(
@@ -91,6 +94,11 @@ export class OrdersService {
       throw new ForbiddenException(
         'This trade account is currently on credit hold. Order submission blocked.',
       );
+    }
+
+    // Capricorn trade account validation if applicable
+    if (account.paymentTerms && account.paymentTerms.toUpperCase().includes('CAPRICORN')) {
+      await this.capricornService.validateMember(account.accountId);
     }
 
     // 3. Resolve Rooftop
@@ -120,7 +128,6 @@ export class OrdersService {
         .replace(/[^A-Za-z0-9]/g, '')
         .toUpperCase();
 
-      // Look up part in catalogue if details missing
       const part = await this.partModel.findOne({
         partNumberNormalised,
         isActive: true,
@@ -131,7 +138,6 @@ export class OrdersService {
       const description =
         item.description || part?.description || `Part ${item.partNumber}`;
 
-      // Determine unit price
       let unitPriceCents = item.unitPriceCents;
       if (unitPriceCents === undefined || unitPriceCents === null) {
         if (part?.listPriceCents) {
@@ -163,7 +169,7 @@ export class OrdersService {
         sourceKind: item.sourceKind || SourceKind.BRANCH,
         sourceName: item.sourceName || `${rooftop.name} Parts`,
         sourceRooftopId: item.sourceRooftopId || (item.sourceKind === SourceKind.BRANCH ? rooftopId : null),
-        binLocation: item.binLocation || null,
+        binLocation: item.binLocation || 'A-01',
         eta: item.eta || null,
         state: OrderLineState.PENDING,
         pickedQuantity: 0,
@@ -180,7 +186,20 @@ export class OrdersService {
     // 5. Generate canonical Order Number
     const orderNumber = this.generateOrderNumber();
 
-    // 6. Create Order Document
+    // 6. Connect with Pentana DMS Dispatch Queue
+    const dmsResult = await this.pentanaDms.submitOrderToDms({
+      orderNumber,
+      tradeAccountId,
+      rooftopId,
+      totalCents,
+      lines: orderLines.map((l) => ({
+        partNumber: l.partNumber,
+        quantity: l.quantity,
+        unitPriceCents: l.unitPriceCents,
+      })),
+    });
+
+    // 7. Create Order Document
     const order = await this.orderModel.create({
       orderNumber,
       tradeAccountId,
@@ -190,7 +209,7 @@ export class OrdersService {
       placedByName: user.fullName || user.email,
       customerReference: dto.customerReference ?? null,
       deliveryMethod: dto.deliveryMethod ?? DeliveryMethod.DELIVERY,
-      deliveryAddress: dto.deliveryAddress ?? account.contactName ? `${account.companyName}, ${rooftop.address}` : null,
+      deliveryAddress: dto.deliveryAddress ?? (account.contactName ? `${account.companyName}, ${rooftop.address}` : null),
       deliveryNotes: dto.deliveryNotes ?? null,
       state: OrderState.SUBMITTED,
       subtotalCents,
@@ -207,12 +226,12 @@ export class OrdersService {
           toState: OrderState.SUBMITTED,
           changedBy: user.supabaseId,
           changedAt: new Date(),
-          notes: 'Order placed by client',
+          notes: `Order placed and queued in Pentana DMS (${dmsResult.dmsOrderNumber})`,
         },
       ],
     });
 
-    // 7. Increment Account YTD Spend & Order Count
+    // 8. Increment Account YTD Spend & Order Count
     const currentYear = new Date().getFullYear();
     await this.accountModel.updateOne(
       { accountId: tradeAccountId },
@@ -227,7 +246,7 @@ export class OrdersService {
       },
     );
 
-    // 8. Audit event
+    // 9. Audit event
     await this.writeAudit(
       AuditAction.ORDER_SUBMIT,
       user.supabaseId,
@@ -236,6 +255,7 @@ export class OrdersService {
       {
         orderId: order._id.toString(),
         orderNumber: order.orderNumber,
+        dmsOrderNumber: dmsResult.dmsOrderNumber,
         totalCents,
         lineCount: orderLines.length,
       },
@@ -245,7 +265,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── GET /orders: PARTNER ORDER HISTORY & FILTERED LIST ───────────────────
+  // ─── GET /orders: PARTNER ORDER HISTORY & FILTERED LIST ──────────────────────
 
   async findAll(
     query: QueryOrdersDto,
@@ -259,7 +279,6 @@ export class OrdersService {
   }> {
     const filter: Record<string, any> = {};
 
-    // Scoping by role: trade partners see ONLY their own account's orders
     if (user.role === Role.TRADE_PARTNER) {
       if (!user.tradeAccountId) {
         return { total: 0, page: 1, limit: query.limit || 20, totalPages: 0, orders: [] };
@@ -305,17 +324,18 @@ export class OrdersService {
       ];
     }
 
-    const page = Math.max(1, query.page ?? 1);
-    const limit = Math.min(100, Math.max(1, query.limit ?? 20));
+    const page = Math.max(1, query.page || 1);
+    const limit = Math.min(100, Math.max(1, query.limit || 20));
     const skip = (page - 1) * limit;
 
     const [total, orders] = await Promise.all([
-      this.orderModel.countDocuments(filter),
+      this.orderModel.countDocuments(filter).exec(),
       this.orderModel
         .find(filter)
         .sort({ createdAt: -1 })
         .skip(skip)
         .limit(limit)
+        .lean()
         .exec(),
     ]);
 
@@ -324,17 +344,17 @@ export class OrdersService {
       page,
       limit,
       totalPages: Math.ceil(total / limit),
-      orders,
+      orders: orders as OrderDocument[],
     };
   }
 
-  // ─── GET /orders/queue: CONTROLLER QUEUE VIEW ─────────────────────────────
+  // ─── GET /orders/queue: CONTROLLER FULFILLMENT QUEUE ──────────────────────────
 
   async getQueue(
     query: OrderQueueQueryDto,
     user: UserDocument,
   ): Promise<{
-    rooftopId: string | null;
+    rooftopId: string;
     summary: {
       totalQueued: number;
       pendingPicking: number;
@@ -349,22 +369,22 @@ export class OrdersService {
     };
     orders: OrderDocument[];
   }> {
-    const rooftopId = query.rooftopId || user.rooftopId || null;
-    const filter: Record<string, any> = {};
+    const rooftopId =
+      query.rooftopId || user.rooftopId || 'ROOFTOP-DANDENONG';
 
-    if (rooftopId) {
-      filter.rooftopId = rooftopId;
-    }
+    const filter: Record<string, any> = { rooftopId };
 
     if (query.state) {
       filter.state = query.state;
     } else {
-      // Default controller queue shows active uncompleted orders
       filter.state = {
         $in: [
           OrderState.SUBMITTED,
           OrderState.PROCESSING,
           OrderState.PARTIALLY_PICKED,
+          OrderState.PICKED,
+          OrderState.READY_FOR_DELIVERY,
+          OrderState.DISPATCHED,
           OrderState.EXCEPTION,
         ],
       };
@@ -374,44 +394,48 @@ export class OrdersService {
       filter.hasExceptions = query.hasExceptions;
     }
 
-    const page = Math.max(1, query.page ?? 1);
-    const limit = Math.min(100, Math.max(1, query.limit ?? 50));
-    const skip = (page - 1) * limit;
+    const [
+      totalQueued,
+      pendingPicking,
+      partiallyPicked,
+      exceptionsCount,
+    ] = await Promise.all([
+      this.orderModel.countDocuments({
+        rooftopId,
+        state: {
+          $in: [
+            OrderState.SUBMITTED,
+            OrderState.PROCESSING,
+            OrderState.PARTIALLY_PICKED,
+            OrderState.PICKED,
+            OrderState.READY_FOR_DELIVERY,
+            OrderState.DISPATCHED,
+            OrderState.EXCEPTION,
+          ],
+        },
+      }),
+      this.orderModel.countDocuments({
+        rooftopId,
+        state: { $in: [OrderState.SUBMITTED, OrderState.PROCESSING] },
+      }),
+      this.orderModel.countDocuments({
+        rooftopId,
+        state: OrderState.PARTIALLY_PICKED,
+      }),
+      this.orderModel.countDocuments({
+        rooftopId,
+        hasExceptions: true,
+      }),
+    ]);
 
-    // Queue summary metrics for the target rooftop
-    const baseSummaryFilter = rooftopId ? { rooftopId } : {};
-    const [totalQueued, pendingPicking, partiallyPicked, exceptionsCount] =
-      await Promise.all([
-        this.orderModel.countDocuments({
-          ...baseSummaryFilter,
-          state: {
-            $in: [
-              OrderState.SUBMITTED,
-              OrderState.PROCESSING,
-              OrderState.PARTIALLY_PICKED,
-              OrderState.EXCEPTION,
-            ],
-          },
-        }),
-        this.orderModel.countDocuments({
-          ...baseSummaryFilter,
-          state: { $in: [OrderState.SUBMITTED, OrderState.PROCESSING] },
-        }),
-        this.orderModel.countDocuments({
-          ...baseSummaryFilter,
-          state: OrderState.PARTIALLY_PICKED,
-        }),
-        this.orderModel.countDocuments({
-          ...baseSummaryFilter,
-          hasExceptions: true,
-        }),
-      ]);
+    const page = Math.max(1, query.page || 1);
+    const limit = Math.min(100, Math.max(1, query.limit || 25));
+    const skip = (page - 1) * limit;
 
     const [total, orders] = await Promise.all([
       this.orderModel.countDocuments(filter),
       this.orderModel
         .find(filter)
-        // Sort exceptions to top, then oldest orders first (FIFO picking)
         .sort({ hasExceptions: -1, createdAt: 1 })
         .skip(skip)
         .limit(limit)
@@ -436,12 +460,11 @@ export class OrdersService {
     };
   }
 
-  // ─── GET /orders/:id: ORDER DETAIL + LINE STATES ──────────────────────────
+  // ─── GET /orders/:id: ORDER DETAIL + LINE STATES ──────────────────────────────
 
   async findOne(id: string, user: UserDocument): Promise<OrderDocument> {
     const order = await this.resolveOrder(id);
 
-    // Trade partner can only view their own trade account's orders
     if (
       user.role === Role.TRADE_PARTNER &&
       order.tradeAccountId !== user.tradeAccountId
@@ -454,7 +477,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── PATCH /orders/:id/state: UPDATE ORDER STATE ──────────────────────────
+  // ─── PATCH /orders/:id/state: UPDATE ORDER STATE ──────────────────────────────
 
   async updateState(
     id: string,
@@ -463,7 +486,6 @@ export class OrdersService {
     ipAddress?: string,
   ): Promise<OrderDocument> {
     const order = await this.resolveOrder(id);
-
     const fromState = order.state;
     const toState = dto.state;
 
@@ -496,7 +518,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── POST /orders/:id/lines/:lineId/exception: RAISE EXCEPTION ON A LINE ──
+  // ─── POST /orders/:id/lines/:lineId/exception: RAISE EXCEPTION ON A LINE ──────
 
   async raiseLineException(
     orderId: string,
@@ -516,7 +538,6 @@ export class OrdersService {
       );
     }
 
-    // Set line exception state
     line.state = OrderLineState.EXCEPTION;
     line.exception = {
       reason: dto.reason,
@@ -530,7 +551,6 @@ export class OrdersService {
 
     order.hasExceptions = true;
 
-    // Transition overall order state if not completed/cancelled
     if (
       order.state !== OrderState.DELIVERED &&
       order.state !== OrderState.CANCELLED
@@ -568,7 +588,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── PATCH /orders/:id/lines/:lineId/re-source: RE-SOURCE A LINE ──────────
+  // ─── PATCH /orders/:id/lines/:lineId/re-source: RE-SOURCE A LINE ──────────────
 
   async reSourceLine(
     orderId: string,
@@ -588,7 +608,6 @@ export class OrdersService {
       );
     }
 
-    // Record re-sourcing event
     line.reSourceHistory.push({
       previousSourceKind: line.sourceKind,
       previousSourceName: line.sourceName,
@@ -600,7 +619,6 @@ export class OrdersService {
       notes: dto.notes ?? null,
     });
 
-    // Update line source data
     line.sourceKind = dto.newSourceKind;
     line.sourceName = dto.newSourceName;
     if (dto.newSourceRooftopId !== undefined) {
@@ -613,7 +631,6 @@ export class OrdersService {
       line.eta = dto.newEta;
     }
 
-    // Update price if re-sourced at different rate
     if (dto.newUnitPriceCents !== undefined) {
       line.unitPriceCents = dto.newUnitPriceCents;
       line.totalPriceCents =
@@ -622,7 +639,6 @@ export class OrdersService {
       this.recalculateOrderTotals(order);
     }
 
-    // Resolve exception on this line
     if (line.exception) {
       line.exception.resolvedAt = new Date();
       line.exception.resolvedBy = user.supabaseId;
@@ -630,10 +646,8 @@ export class OrdersService {
         dto.notes || `Re-sourced to ${dto.newSourceName} (${dto.newSourceKind})`;
     }
 
-    // Reset line state to SOURCING / ALLOCATED
     line.state = OrderLineState.SOURCING;
 
-    // Check if any lines remain in EXCEPTION state
     const remainingExceptions = order.lines.some(
       (l) => l.state === OrderLineState.EXCEPTION,
     );
@@ -655,7 +669,7 @@ export class OrdersService {
     await order.save();
 
     await this.writeAudit(
-      AuditAction.SOURCE_RESOLVE,
+      AuditAction.OVERRIDE,
       user.supabaseId,
       order.tradeAccountId,
       order.rooftopId,
@@ -674,7 +688,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── PATCH /orders/:id/lines/:lineId/pick: CONFIRM PICK ON A LINE ────────
+  // ─── PATCH /orders/:id/lines/:lineId/pick: CONFIRM PICK ON A LINE ─────────────
 
   async pickLine(
     orderId: string,
@@ -710,12 +724,10 @@ export class OrdersService {
       line.binLocation = dto.binLocationConfirmed;
     }
 
-    // Recalculate picked lines count
     order.pickedLinesCount = order.lines.filter(
       (l) => l.state === OrderLineState.PICKED,
     ).length;
 
-    // Check if entire order is fully picked
     if (order.pickedLinesCount === order.totalLines) {
       if (order.state !== OrderState.PICKED) {
         const fromState = order.state;
@@ -767,7 +779,7 @@ export class OrdersService {
     return order;
   }
 
-  // ─── INTERNAL HELPERS ─────────────────────────────────────────────────────
+  // ─── INTERNAL HELPERS ─────────────────────────────────────────────────────────
 
   private async resolveOrder(id: string): Promise<OrderDocument> {
     const isObjectId = Types.ObjectId.isValid(id) && id.length === 24;

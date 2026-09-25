@@ -1,4 +1,4 @@
-import {
+﻿import {
   Injectable,
   CanActivate,
   ExecutionContext,
@@ -18,19 +18,40 @@ export class RolesGuard implements CanActivate {
       context.getClass(),
     ]);
 
-    // No roles required — allow through
     if (!requiredRoles || requiredRoles.length === 0) {
       return true;
     }
 
     const { user } = context.switchToHttp().getRequest();
-
-    if (!user || !requiredRoles.includes(user.role)) {
+    if (!user || !user.role) {
       throw new ForbiddenException(
         'You do not have permission to access this resource',
       );
     }
 
-    return true;
+    const userRole = user.role as Role;
+
+    // Admin has access to all protected endpoints
+    if (userRole === Role.ADMIN || userRole === Role.GROUP_ADMIN || userRole === Role.CSUITES) {
+      return true;
+    }
+
+    // Check exact match
+    if (requiredRoles.includes(userRole)) {
+      return true;
+    }
+
+    // If endpoint requires controller or legacy controller roles, match controller
+    const controllerRoles = [Role.CONTROLLER, Role.PARTS_CONTROLLER, Role.STORE_MANAGER];
+    const isControllerRequired = requiredRoles.some((r) => controllerRoles.includes(r));
+    const isUserRoleController = controllerRoles.includes(userRole);
+
+    if (isControllerRequired && isUserRoleController) {
+      return true;
+    }
+
+    throw new ForbiddenException(
+      'You do not have permission to access this resource',
+    );
   }
 }

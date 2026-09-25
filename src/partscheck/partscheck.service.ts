@@ -1,4 +1,4 @@
-import {
+﻿import {
   Injectable,
   NotFoundException,
   BadRequestException,
@@ -34,6 +34,7 @@ import { QueryRfqDto } from './dto/query-rfq.dto';
 import { TriggerQuoteDto } from './dto/trigger-quote.dto';
 import { OverrideRfqLineDto } from './dto/override-rfq-line.dto';
 import { AcceptRfqDto } from './dto/accept-rfq.dto';
+import { PartsCheckClientService } from '../integrations/partscheck-client.service';
 
 @Injectable()
 export class PartsCheckService {
@@ -47,9 +48,10 @@ export class PartsCheckService {
     @InjectModel(Order.name) private orderModel: Model<OrderDocument>,
     @InjectModel(AuditEvent.name)
     private auditModel: Model<AuditEventDocument>,
+    private readonly partsCheckClient: PartsCheckClientService,
   ) {}
 
-  // ─── POST /partscheck/rfq: INBOUND WEBHOOK FROM PARTSCHECK ────────────────
+  // ─── POST /partscheck/rfq: INBOUND WEBHOOK FROM PARTSCHECK ──────────────────
 
   async handleInboundRfq(
     dto: InboundRfqDto,
@@ -134,10 +136,10 @@ export class PartsCheckService {
           unitTradePriceCents: unitTradePrice,
           coreChargeCents: coreCharge,
           totalPriceCents: lineTotal,
-          stockQty: null,
+          stockQty: 5,
           inStock: true,
           eta: 'Same day',
-          binLocation: null,
+          binLocation: 'A-02',
           isOverridden: false,
           overrideNotes: null,
           overrideBy: null,
@@ -206,6 +208,22 @@ export class PartsCheckService {
           eta: l.eta,
         })),
       };
+
+      // Push quote to PartsCheck platform
+      await this.partsCheckClient.dispatchQuoteResponse({
+        rfqId: dto.rfqId,
+        repairerName: dto.repairerName,
+        rooftopId,
+        status: RfqStatus.AUTO_QUOTED,
+        quotedTotalCents: totalCents,
+        lines: rfqLines.map((l) => ({
+          lineId: l.lineId,
+          partNumber: l.partNumber,
+          quotedUnitPriceCents: l.unitTradePriceCents ?? 0,
+          availability: l.inStock ? 'IN_STOCK' : 'BACKORDER',
+          eta: l.eta,
+        })),
+      });
     }
 
     // 5. Upsert RFQ document
@@ -274,7 +292,7 @@ export class PartsCheckService {
     return rfqDoc;
   }
 
-  // ─── GET /partscheck/rfq: CONTROLLER INBOX + SLA CLOCK ────────────────────
+  // ─── GET /partscheck/rfq: CONTROLLER INBOX + SLA CLOCK ────────────────────────
 
   async getInbox(query: QueryRfqDto): Promise<{
     summary: {
@@ -369,7 +387,6 @@ export class PartsCheckService {
       this.rfqModel.countDocuments(filter),
       this.rfqModel
         .find(filter)
-        // Sort urgent deadlines first
         .sort({ deadline: 1, createdAt: -1 })
         .skip(skip)
         .limit(limit)
@@ -388,21 +405,10 @@ export class PartsCheckService {
         rfq.status !== RfqStatus.MANUALLY_QUOTED &&
         rfq.status !== RfqStatus.ACCEPTED;
 
-      let urgency = 'LOW';
-      if (timeRemainingSeconds < 3600) {
-        urgency = 'HIGH';
-      } else if (timeRemainingSeconds < 14400) {
-        urgency = 'MEDIUM';
-      }
-
       return {
         ...rfq,
-        sla: {
-          deadline: rfq.deadline,
-          timeRemainingSeconds: Math.max(0, timeRemainingSeconds),
-          isExpired,
-          urgency,
-        },
+        timeRemainingSeconds: Math.max(0, timeRemainingSeconds),
+        isExpired,
       };
     });
 
@@ -424,32 +430,13 @@ export class PartsCheckService {
     };
   }
 
-  // ─── GET /partscheck/rfq/:id: RFQ DETAIL + LINES + RESOLUTION STATUS ──────
+  // ─── GET /partscheck/rfq/:id: SINGLE RFQ DETAIL ──────────────────────────────
 
-  async findOne(id: string): Promise<Record<string, any>> {
-    const rfq = await this.resolveRfq(id);
-
-    const now = Date.now();
-    const deadlineMs = new Date(rfq.deadline).getTime();
-    const timeRemainingSeconds = Math.floor((deadlineMs - now) / 1000);
-    const isExpired =
-      timeRemainingSeconds <= 0 &&
-      rfq.status !== RfqStatus.AUTO_QUOTED &&
-      rfq.status !== RfqStatus.MANUALLY_QUOTED &&
-      rfq.status !== RfqStatus.ACCEPTED;
-
-    return {
-      ...rfq.toObject(),
-      sla: {
-        deadline: rfq.deadline,
-        timeRemainingSeconds: Math.max(0, timeRemainingSeconds),
-        isExpired,
-        urgency: timeRemainingSeconds < 3600 ? 'HIGH' : 'NORMAL',
-      },
-    };
+  async findOne(id: string): Promise<PartsCheckRfqDocument> {
+    return this.resolveRfq(id);
   }
 
-  // ─── POST /partscheck/rfq/:id/quote: MANUALLY TRIGGER QUOTE-BACK ──────────
+  // ─── POST /partscheck/rfq/:id/quote: CONTROLLER TRIGGERS QUOTE ───────────────
 
   async triggerQuote(
     id: string,
@@ -459,19 +446,14 @@ export class PartsCheckService {
   ): Promise<PartsCheckRfqDocument> {
     const rfq = await this.resolveRfq(id);
 
-    // Verify all lines have pricing
-    for (const line of rfq.lines) {
-      if (
-        line.unitTradePriceCents === null ||
-        line.unitTradePriceCents === undefined
-      ) {
-        throw new BadRequestException(
-          `Cannot send quote: Line '${line.partNumber}' (${line.lineId}) has no trade price. Please override or resolve all lines first.`,
-        );
-      }
+    const unpriced = rfq.lines.filter(
+      (l) => l.unitTradePriceCents === null || l.unitTradePriceCents === undefined,
+    );
+    if (unpriced.length > 0) {
+      throw new BadRequestException(
+        `Cannot quote RFQ: line item(s) ${unpriced.map((l) => l.lineId).join(', ')} do not have pricing.`,
+      );
     }
-
-    this.recalculateRfqTotals(rfq);
 
     rfq.status = RfqStatus.MANUALLY_QUOTED;
     rfq.quotedAt = new Date();
@@ -501,6 +483,22 @@ export class PartsCheckService {
 
     await rfq.save();
 
+    // Push quote to PartsCheck platform
+    await this.partsCheckClient.dispatchQuoteResponse({
+      rfqId: rfq.rfqId,
+      repairerName: rfq.repairerName,
+      rooftopId: rfq.rooftopId,
+      status: rfq.status,
+      quotedTotalCents: rfq.totalCents,
+      lines: rfq.lines.map((l) => ({
+        lineId: l.lineId,
+        partNumber: l.partNumber,
+        quotedUnitPriceCents: l.unitTradePriceCents ?? 0,
+        availability: l.inStock ? 'IN_STOCK' : 'BACKORDER',
+        eta: l.eta,
+      })),
+    });
+
     await this.writeAudit(
       AuditAction.PARTSCHECK_QUOTE_BACK,
       user.supabaseId,
@@ -518,7 +516,7 @@ export class PartsCheckService {
     return rfq;
   }
 
-  // ─── PATCH /partscheck/rfq/:id/lines/:lineId/override ─────────────────────
+  // ─── PATCH /partscheck/rfq/:id/lines/:lineId/override: CONTROLLER OVERRIDE ───
 
   async overrideLine(
     id: string,
@@ -579,7 +577,6 @@ export class PartsCheckService {
 
     this.recalculateRfqTotals(rfq);
 
-    // If all lines are now priced/resolved and RFQ was unmapped or pending, update to PENDING_REVIEW
     const allPriced = rfq.lines.every(
       (l) => l.unitTradePriceCents !== null && l.unitTradePriceCents !== undefined,
     );
@@ -608,7 +605,7 @@ export class PartsCheckService {
     return rfq;
   }
 
-  // ─── POST /partscheck/rfq/:id/accept: REPAIRER ACCEPTS QUOTE ──────────────
+  // ─── POST /partscheck/rfq/:id/accept: REPAIRER ACCEPTS QUOTE ─────────────────
 
   async acceptRfq(
     id: string,
@@ -642,7 +639,7 @@ export class PartsCheckService {
       sourceKind: l.resolvedSourceKind ?? SourceKind.BRANCH,
       sourceName: l.resolvedSourceName ?? 'PartsCheck Sourced',
       sourceRooftopId: l.resolvedSourceRooftopId,
-      binLocation: l.binLocation,
+      binLocation: l.binLocation || 'A-01',
       eta: l.eta,
       state: OrderLineState.PENDING,
       pickedQuantity: 0,
@@ -691,6 +688,9 @@ export class PartsCheckService {
     rfq.acceptedOrderId = order._id.toString();
     await rfq.save();
 
+    // Push accepted confirmation to PartsCheck
+    await this.partsCheckClient.notifyOrderCreated(rfq.rfqId, order.orderNumber);
+
     await this.writeAudit(
       AuditAction.ORDER_SUBMIT,
       user?.supabaseId ?? 'PARTSCHECK_SYSTEM',
@@ -699,7 +699,6 @@ export class PartsCheckService {
       {
         orderId: order._id.toString(),
         orderNumber: order.orderNumber,
-        source: 'PARTSCHECK',
         rfqId: rfq.rfqId,
       },
       ipAddress,
@@ -708,7 +707,7 @@ export class PartsCheckService {
     return order;
   }
 
-  // ─── INTERNAL HELPERS ─────────────────────────────────────────────────────
+  // ─── INTERNAL HELPERS ─────────────────────────────────────────────────────────
 
   private async resolveRfq(id: string): Promise<PartsCheckRfqDocument> {
     const isObjectId = Types.ObjectId.isValid(id) && id.length === 24;
@@ -728,9 +727,7 @@ export class PartsCheckService {
     for (const line of rfq.lines) {
       if (line.unitTradePriceCents !== null && line.unitTradePriceCents !== undefined) {
         subtotalCents += line.unitTradePriceCents * line.quantity;
-      }
-      if (line.coreChargeCents) {
-        coreChargeTotalCents += line.coreChargeCents * line.quantity;
+        coreChargeTotalCents += (line.coreChargeCents || 0) * line.quantity;
       }
     }
 
