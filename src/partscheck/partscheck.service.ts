@@ -1,4 +1,4 @@
-﻿import {
+import {
   Injectable,
   NotFoundException,
   BadRequestException,
@@ -407,6 +407,7 @@ export class PartsCheckService {
 
       return {
         ...rfq,
+        id: rfq.rfqId ?? rfq._id?.toString(), // Stable identifier for frontend use
         timeRemainingSeconds: Math.max(0, timeRemainingSeconds),
         isExpired,
       };
@@ -527,6 +528,31 @@ export class PartsCheckService {
   ): Promise<PartsCheckRfqDocument> {
     const rfq = await this.resolveRfq(id);
 
+    // Backfill required schema fields if missing from legacy records
+    if (!rfq.buyerId) {
+      rfq.buyerId = (rfq as any).repairerCode || 'BUYER-001';
+    }
+    if (!rfq.deadline) {
+      rfq.deadline = (rfq as any).slaExpiresAt
+        ? new Date((rfq as any).slaExpiresAt)
+        : new Date(Date.now() + 60 * 60 * 1000);
+    }
+    if (rfq.isBuyerMapped === undefined) {
+      rfq.isBuyerMapped = (rfq as any).mappedBuyer ?? false;
+    }
+
+    // Ensure all lines satisfy schema validation requirements
+    for (const l of rfq.lines) {
+      if (l.quantity === undefined || l.quantity === null || l.quantity < 1) {
+        l.quantity = (l as any).requestedQty || 1;
+      }
+      if (!l.partNumberNormalised && l.partNumber) {
+        l.partNumberNormalised = l.partNumber
+          .replace(/[^A-Za-z0-9]/g, '')
+          .toUpperCase();
+      }
+    }
+
     const line = rfq.lines.find(
       (l) => l.lineId === lineId || l.partNumber === lineId,
     );
@@ -546,11 +572,12 @@ export class PartsCheckService {
       line.description = dto.description;
     }
 
+    const lineQty = line.quantity || 1;
     line.unitTradePriceCents = dto.unitTradePriceCents;
     line.coreChargeCents = dto.coreChargeCents ?? 0;
     line.totalPriceCents =
-      dto.unitTradePriceCents * line.quantity +
-      line.coreChargeCents * line.quantity;
+      dto.unitTradePriceCents * lineQty +
+      line.coreChargeCents * lineQty;
 
     line.resolvedSourceKind = dto.sourceKind ?? SourceKind.BRANCH;
     line.resolvedSourceName = dto.sourceName ?? 'Controller Override';

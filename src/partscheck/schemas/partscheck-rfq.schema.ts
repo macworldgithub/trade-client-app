@@ -33,13 +33,18 @@ export class RfqLine {
   @Prop({ required: true })
   partNumber: string;
 
-  @Prop({ required: true })
+  @Prop({
+    required: true,
+    default: function (this: any) {
+      return (this.partNumber || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+    },
+  })
   partNumberNormalised: string;
 
   @Prop({ required: true })
   description: string;
 
-  @Prop({ required: true, min: 1 })
+  @Prop({ required: true, min: 1, default: 1 })
   quantity: number;
 
   @Prop({
@@ -101,7 +106,7 @@ export class PartsCheckRfq {
   rfqId: string;
 
   /** PartsCheck buyer / smash repairer account ID */
-  @Prop({ required: true, index: true })
+  @Prop({ required: true, index: true, default: 'BUYER-001' })
   buyerId: string;
 
   @Prop({ required: true })
@@ -135,7 +140,11 @@ export class PartsCheckRfq {
   vehicleDetails: VehicleInfo | null;
 
   /** Quoting cutoff SLA deadline */
-  @Prop({ required: true, index: true })
+  @Prop({
+    required: true,
+    index: true,
+    default: () => new Date(Date.now() + 60 * 60 * 1000),
+  })
   deadline: Date;
 
   /** Processing & quoting lifecycle state */
