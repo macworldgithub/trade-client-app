@@ -13,9 +13,11 @@ import * as path from 'path';
 // Load .env
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-const uri =
-  process.env.MONGODB_URI ||
-  'mongodb+srv://salman:4lanHyMRdCrtXDJ7@sign365.nglnioh.mongodb.net/trade-client';
+const uri = process.env.MONGODB_URI ;
+if (!uri) {
+  throw new Error('❌ MONGODB_URI is not defined in .env');
+}
+
 
 async function seed() {
   console.log('⚡ Connecting to MongoDB:', uri.replace(/:[^:@]+@/, ':****@'));
