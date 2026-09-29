@@ -13,19 +13,19 @@ import * as path from 'path';
 // Load .env
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
-const uri = process.env.MONGODB_URI ;
-if (!uri) {
-  throw new Error('❌ MONGODB_URI is not defined in .env');
-}
-
+const uri = process.env.MONGODB_URI;
 
 async function seed() {
+  if (!uri) {
+    throw new Error('❌ MONGODB_URI is not defined in .env');
+  }
+
   console.log('⚡ Connecting to MongoDB:', uri.replace(/:[^:@]+@/, ':****@'));
   await mongoose.connect(uri);
   console.log('✅ Connected successfully.');
 
   const db = mongoose.connection.db!;
-
+  
   console.log('\n--- 1. Seeding 9 Booran Dealership Precincts (Rooftops) ---');
   const rooftops = [
     {
