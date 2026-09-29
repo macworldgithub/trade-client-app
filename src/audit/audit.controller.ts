@@ -15,7 +15,9 @@ import { Role } from '../common/enums/roles.enum';
 import { AuditAction } from '../auth/schemas/audit-event.schema';
 
 const AUDIT_READ_ROLES = [
+  Role.ADMIN,
   Role.GROUP_ADMIN,
+  Role.CONTROLLER,
   Role.STORE_MANAGER,
   Role.CSUITES,
   Role.PARTS_CONTROLLER,

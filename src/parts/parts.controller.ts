@@ -33,7 +33,7 @@ export class PartsController {
    * Single search-box endpoint for the parts catalogue.
    * Accepts a free-text query (OEM part number or keyword), an optional
    * franchise/brand filter, and an optional vehicle fitment filter.
-   * Results are paginated; at least one of q, franchise, or vehicle is required.
+   * Results are paginated; if no filter is supplied the first active catalogue parts are returned.
    */
   @Get('search')
   @ApiOperation({
@@ -41,7 +41,7 @@ export class PartsController {
     description:
       'Full-text search across OEM part numbers, descriptions, and keyword synonyms. ' +
       'Filter by franchise (brand code) and/or vehicle fitment. ' +
-      'At least one of `q`, `franchise`, or `vehicle` must be supplied. ' +
+      'If no filter is supplied, active catalogue parts are returned. ' +
       'Results are paginated — use `limit` and `page` to navigate.',
   })
   @ApiQuery({ name: 'q', required: false, description: 'OEM part number or keyword phrase (min 2 chars)', example: '04465-0D060' })
@@ -54,7 +54,7 @@ export class PartsController {
     status: 200,
     description: 'Paginated parts catalogue results — { total, page, limit, results[] }',
   })
-  @ApiResponse({ status: 400, description: 'No search filter supplied or query too short' })
+  @ApiResponse({ status: 400, description: 'Invalid query parameter' })
   @ApiResponse({ status: 401, description: 'Unauthenticated' })
   search(
     @Query() dto: SearchPartsDto,
@@ -139,3 +139,4 @@ export class PartsController {
     return this.partsService.findOne(id);
   }
 }
+

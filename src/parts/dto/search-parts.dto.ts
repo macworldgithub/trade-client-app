@@ -13,9 +13,7 @@ import { ApiPropertyOptional } from '@nestjs/swagger';
 /**
  * Query parameters for GET /parts/search
  *
- * At least one of q, franchise, or vehicle must be supplied — this is
- * enforced in the service layer rather than the DTO so the error message
- * can be domain-specific.
+ * If no q, franchise, or vehicle filter is supplied, the endpoint returns active catalogue parts.
  *
  * Example:
  *   GET /api/v1/parts/search?q=04465-0D060&franchise=TOYOTA&rooftopId=ROOFTOP-DANDENONG
@@ -117,3 +115,4 @@ export class SearchPartsDto {
   @Min(1)
   page?: number = 1;
 }
+

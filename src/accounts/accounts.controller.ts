@@ -30,8 +30,18 @@ import { UserDocument } from '../auth/schemas/user.schema';
 
 /** Roles that can manage account flags (credit-hold / overdue) */
 const CONTROLLER_ROLES = [
+  Role.CONTROLLER,
   Role.PARTS_CONTROLLER,
   Role.STORE_MANAGER,
+  Role.ADMIN,
+  Role.GROUP_ADMIN,
+];
+
+const ACCOUNT_READ_ROLES = [
+  Role.CONTROLLER,
+  Role.PARTS_CONTROLLER,
+  Role.STORE_MANAGER,
+  Role.ADMIN,
   Role.GROUP_ADMIN,
 ];
 
@@ -65,7 +75,7 @@ export class AccountsController {
 
   @Get()
   @UseGuards(RolesGuard)
-  @Roles(Role.STORE_MANAGER, Role.GROUP_ADMIN, Role.PARTS_CONTROLLER)
+  @Roles(...ACCOUNT_READ_ROLES)
   @ApiOperation({
     summary: 'List all trade accounts',
     description:
@@ -83,7 +93,7 @@ export class AccountsController {
 
   @Get(':id')
   @UseGuards(RolesGuard)
-  @Roles(Role.STORE_MANAGER, Role.GROUP_ADMIN, Role.PARTS_CONTROLLER)
+  @Roles(...ACCOUNT_READ_ROLES)
   @ApiOperation({
     summary: 'Trade account detail',
     description:
@@ -163,7 +173,7 @@ export class AccountsController {
 
   @Get(':id/spend')
   @UseGuards(RolesGuard)
-  @Roles(Role.STORE_MANAGER, Role.GROUP_ADMIN, Role.PARTS_CONTROLLER)
+  @Roles(...ACCOUNT_READ_ROLES)
   @ApiOperation({
     summary: 'YTD spend summary for an account',
     description:

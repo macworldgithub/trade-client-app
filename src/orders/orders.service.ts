@@ -33,8 +33,10 @@ import { PentanaDmsService } from '../integrations/pentana-dms.service';
 import { CapricornService } from '../integrations/capricorn.service';
 
 const STAFF_ROLES = [
+  Role.CONTROLLER,
   Role.PARTS_CONTROLLER,
   Role.STORE_MANAGER,
+  Role.ADMIN,
   Role.GROUP_ADMIN,
   Role.CSUITES,
 ];

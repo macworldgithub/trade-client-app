@@ -1,5 +1,4 @@
 ﻿import {
-  BadRequestException,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -27,13 +26,14 @@ import { ResolvePartDto } from './dto/resolve-part.dto';
 import { PentanaDmsService } from '../integrations/pentana-dms.service';
 import { OemPortalService } from '../integrations/oem-portal.service';
 
-// ─── Response shape types ────────────────────────────────────────────────────────
+// --- Response shape types --------------------------------------------------------
 
 export interface PartSearchResult {
   total: number;
   page: number;
   limit: number;
   results: PartDocument[];
+  parts: PartDocument[];
 }
 
 export interface SourceRow {
@@ -61,7 +61,7 @@ export interface ResolveResult {
   cachedAt: Date | null;
 }
 
-// ─── Internal helpers ────────────────────────────────────────────────────────────
+// --- Internal helpers ------------------------------------------------------------
 
 function normalisePartNumber(raw: string): string {
   return raw.replace(/[\s\-\.]/g, '').toUpperCase();
@@ -98,7 +98,7 @@ export class PartsService {
     private readonly oemPortal: OemPortalService,
   ) {}
 
-  // ─── GET /parts/search ────────────────────────────────────────────────────────
+  // --- GET /parts/search --------------------------------------------------------
 
   async search(
     dto: SearchPartsDto,
@@ -106,27 +106,24 @@ export class PartsService {
   ): Promise<PartSearchResult> {
     const { q, franchise, vehicle, rooftopId, limit = 20, page = 1 } = dto;
 
-    if (!q && !franchise && !vehicle) {
-      throw new BadRequestException(
-        'At least one of q, franchise, or vehicle must be provided',
-      );
-    }
-
     const filter: Record<string, any> = { isActive: true };
 
     if (q) {
       const normQ = normalisePartNumber(q);
+      const escapedQ = q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       if (/\s/.test(q)) {
         filter.$text = { $search: q };
       } else {
         filter.$or = [
           { partNumberNormalised: { $regex: normQ, $options: 'i' } },
-          { $text: { $search: q } },
+          { partNumber: { $regex: escapedQ, $options: 'i' } },
+          { description: { $regex: escapedQ, $options: 'i' } },
+          { keywords: q.toLowerCase() },
         ];
       }
     }
 
-    if (franchise) {
+    if (franchise && franchise.toUpperCase() !== 'ALL') {
       filter.brandCode = franchise.toUpperCase();
     }
 
@@ -140,7 +137,7 @@ export class PartsService {
       this.partModel.countDocuments(filter).exec(),
       this.partModel
         .find(filter)
-        .sort(q ? { score: { $meta: 'textScore' } } : { partNumber: 1 })
+        .sort({ partNumber: 1 })
         .skip(skip)
         .limit(limit)
         .lean()
@@ -156,10 +153,11 @@ export class PartsService {
       ipAddress: null,
     });
 
-    return { total, page, limit, results: results as PartDocument[] };
+    const parts = results as PartDocument[];
+    return { total, page, limit, results: parts, parts };
   }
 
-  // ─── GET /parts/:id ───────────────────────────────────────────────────────────
+  // --- GET /parts/:id -----------------------------------------------------------
 
   async findOne(id: string): Promise<PartDocument> {
     const isObjectId = /^[a-f\d]{24}$/i.test(id);
@@ -181,7 +179,7 @@ export class PartsService {
     return part as PartDocument;
   }
 
-  // ─── GET /parts/:partNumber/resolve ──────────────────────────────────────────
+  // --- GET /parts/:partNumber/resolve ------------------------------------------
 
   async resolveSource(
     partNumber: string,
@@ -355,7 +353,7 @@ export class PartsService {
     };
   }
 
-  // ─── Private builder helpers ─────────────────────────────────────────────────
+  // --- Private builder helpers -------------------------------------------------
 
   private buildBranchRow(
     part: PartDocument,
@@ -484,3 +482,5 @@ export class PartsService {
       }));
   }
 }
+
+

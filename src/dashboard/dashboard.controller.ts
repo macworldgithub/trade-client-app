@@ -26,14 +26,17 @@ import { Role } from '../common/enums/roles.enum';
 import { UserDocument } from '../auth/schemas/user.schema';
 
 const EXECUTIVE_ROLES = [
+  Role.ADMIN,
   Role.CSUITES,
   Role.GROUP_ADMIN,
   Role.STORE_MANAGER,
 ];
 
 const STORE_ROLES = [
+  Role.CONTROLLER,
   Role.STORE_MANAGER,
   Role.PARTS_CONTROLLER,
+  Role.ADMIN,
   Role.GROUP_ADMIN,
   Role.CSUITES,
 ];

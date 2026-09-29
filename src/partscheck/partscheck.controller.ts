@@ -33,8 +33,10 @@ import { Role } from '../common/enums/roles.enum';
 import { UserDocument } from '../auth/schemas/user.schema';
 
 const CONTROLLER_ROLES = [
+  Role.CONTROLLER,
   Role.PARTS_CONTROLLER,
   Role.STORE_MANAGER,
+  Role.ADMIN,
   Role.GROUP_ADMIN,
   Role.CSUITES,
 ];
