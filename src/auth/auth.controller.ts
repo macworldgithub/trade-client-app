@@ -2,7 +2,11 @@ import {
   Controller,
   Post,
   Get,
+  Patch,
+  Delete,
   Body,
+  Param,
+  Query,
   Req,
   UseGuards,
   HttpCode,
@@ -13,15 +17,21 @@ import {
   ApiOperation,
   ApiBearerAuth,
   ApiResponse,
+  ApiParam,
 } from '@nestjs/swagger';
 import { Request } from 'express';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { VerifyTotpDto } from './dto/verify-totp.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
+import { ListUsersQueryDto } from './dto/list-users-query.dto';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
+import { RolesGuard } from '../common/guards/roles.guard';
+import { Roles } from '../common/decorators/roles.decorator';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
 import { UserDocument } from './schemas/user.schema';
+import { Role } from '../common/enums/roles.enum';
 
 @ApiTags('Auth')
 @Controller('auth')
@@ -86,5 +96,59 @@ export class AuthController {
   @ApiOperation({ summary: 'Get current authenticated user profile' })
   async getMe(@CurrentUser() user: UserDocument) {
     return this.authService.getMe(user);
+  }
+
+  // ─── ADMIN USER MANAGEMENT ──────────────────────────────────────────────────
+
+  @Get('users')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN, Role.GROUP_ADMIN, Role.CSUITES)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'List users with search, role, rooftop and status filtering (Admin only)' })
+  @ApiResponse({ status: 200, description: 'Paginated user list' })
+  async listUsers(@Query() query: ListUsersQueryDto) {
+    return this.authService.listUsers(query);
+  }
+
+  @Get('users/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN, Role.GROUP_ADMIN, Role.CSUITES)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Get user details by ID (Admin only)' })
+  @ApiParam({ name: 'id', description: 'User ID' })
+  @ApiResponse({ status: 200, description: 'User details' })
+  async getUserById(@Param('id') id: string) {
+    return this.authService.getUserById(id);
+  }
+
+  @Patch('users/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN, Role.GROUP_ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Update user role, status, precinct assignment or details (Admin only)' })
+  @ApiParam({ name: 'id', description: 'User ID' })
+  @ApiResponse({ status: 200, description: 'User updated successfully' })
+  async updateUser(
+    @Param('id') id: string,
+    @Body() dto: UpdateUserDto,
+    @CurrentUser() adminUser: UserDocument,
+    @Req() req: Request,
+  ) {
+    return this.authService.updateUser(id, dto, adminUser, req.ip);
+  }
+
+  @Delete('users/:id')
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles(Role.ADMIN, Role.GROUP_ADMIN)
+  @ApiBearerAuth()
+  @ApiOperation({ summary: 'Delete user account (Admin only)' })
+  @ApiParam({ name: 'id', description: 'User ID' })
+  @ApiResponse({ status: 200, description: 'User deleted successfully' })
+  async deleteUser(
+    @Param('id') id: string,
+    @CurrentUser() adminUser: UserDocument,
+    @Req() req: Request,
+  ) {
+    return this.authService.deleteUser(id, adminUser, req.ip);
   }
 }

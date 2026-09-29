@@ -17,6 +17,8 @@ export enum AuditAction {
   OVERRIDE = 'OVERRIDE',
   PARTSCHECK_RFQ_IN = 'PARTSCHECK_RFQ_IN',
   PARTSCHECK_QUOTE_BACK = 'PARTSCHECK_QUOTE_BACK',
+  USER_UPDATE = 'USER_UPDATE',
+  USER_DELETE = 'USER_DELETE',
 }
 
 @Schema({ timestamps: true })
