@@ -146,6 +146,19 @@ export class AuthService {
       ipAddress,
     );
 
+    // Check if the user has a verified TOTP factor enrolled (Supabase MFA)
+    const totpFactor = data.user.factors?.find(
+      (f) => f.factor_type === 'totp' && f.status === 'verified',
+    );
+
+    if (totpFactor) {
+      // Don't hand out tokens yet — require TOTP verification first
+      return {
+        requiresTotp: true,
+        factorId: totpFactor.id,
+      };
+    }
+
     return {
       accessToken: data.session?.access_token,
       refreshToken: data.session?.refresh_token,
