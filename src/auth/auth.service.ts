@@ -252,7 +252,7 @@ export class AuthService {
       factorId: dto.factorId,
       challengeId: challengeData.id,
       code: dto.code,
-    });
+    }); 
 
     if (error) {
       throw new UnauthorizedException('Invalid TOTP code');
