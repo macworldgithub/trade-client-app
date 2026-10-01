@@ -23,6 +23,25 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { ListUsersQueryDto } from './dto/list-users-query.dto';
 import { Role } from '../common/enums/roles.enum';
 
+class NoOpWebSocket {
+  static CONNECTING = 0;
+  static OPEN = 1;
+  static CLOSING = 2;
+  static CLOSED = 3;
+  readyState = 3;
+  addEventListener() {}
+  removeEventListener() {}
+  dispatchEvent() {
+    return false;
+  }
+  send() {}
+  close() {}
+}
+
+if (typeof (globalThis as any).WebSocket === 'undefined') {
+  (globalThis as any).WebSocket = NoOpWebSocket;
+}
+
 @Injectable()
 export class AuthService {
   private supabase: SupabaseClient;
@@ -41,7 +60,15 @@ export class AuthService {
       process.env.SUPABASE_SECRET_KEY ||
       'placeholder-secret';
 
-    this.supabase = createClient(supabaseUrl, supabaseKey);
+    this.supabase = createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+      realtime: {
+        transport: (globalThis as any).WebSocket || NoOpWebSocket,
+      },
+    });
   }
 
   // ─── REGISTER ────────────────────────────────────────────────────────────────
