@@ -41,7 +41,12 @@ async function bootstrapServer(): Promise<Express> {
 export default async function handler(req: Request, res: Response) {
   try {
     const server = await bootstrapServer();
-    return server(req, res);
+    return new Promise<void>((resolve, reject) => {
+      res.on('finish', () => resolve());
+      res.on('close', () => resolve());
+      res.on('error', (err) => reject(err));
+      server(req, res);
+    });
   } catch (error: any) {
     console.error('Vercel Serverless Function Error:', error);
     return res.status(500).json({
