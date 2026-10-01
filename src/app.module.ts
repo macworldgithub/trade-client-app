@@ -1,5 +1,5 @@
-﻿import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { Module } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -19,9 +19,18 @@ import { IntegrationsModule } from './integrations/integrations.module';
       isGlobal: true,
     }),
     MongooseModule.forRootAsync({
-      useFactory: () => ({
-        uri: process.env.MONGODB_URI as string,
-      }),
+      imports: [ConfigModule],
+      useFactory: (configService: ConfigService) => {
+        const uri = configService.get<string>('MONGODB_URI') || process.env.MONGODB_URI;
+        if (!uri) {
+          console.error('CRITICAL: MONGODB_URI environment variable is missing!');
+        }
+        return {
+          uri: uri || '',
+          serverSelectionTimeoutMS: 5000,
+        };
+      },
+      inject: [ConfigService],
     }),
     IntegrationsModule,
     AuthModule,
