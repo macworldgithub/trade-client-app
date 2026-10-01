@@ -32,10 +32,16 @@ export class AuthService {
     @InjectModel(AuditEvent.name) private auditModel: Model<AuditEventDocument>,
     private configService: ConfigService,
   ) {
-    this.supabase = createClient(
-      this.configService.get<string>('SUPABASE_URL')!,
-      this.configService.get<string>('SUPABASE_SECRET_KEY')!,
-    );
+    const supabaseUrl =
+      this.configService.get<string>('SUPABASE_URL') ||
+      process.env.SUPABASE_URL ||
+      'https://placeholder.supabase.co';
+    const supabaseKey =
+      this.configService.get<string>('SUPABASE_SECRET_KEY') ||
+      process.env.SUPABASE_SECRET_KEY ||
+      'placeholder-secret';
+
+    this.supabase = createClient(supabaseUrl, supabaseKey);
   }
 
   // ─── REGISTER ────────────────────────────────────────────────────────────────

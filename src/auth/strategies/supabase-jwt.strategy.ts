@@ -52,7 +52,10 @@ export class SupabaseJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       audience: 'authenticated',
     });
 
-    this.supabaseUrl = this.configService.get<string>('SUPABASE_URL')!;
+    this.supabaseUrl =
+      this.configService.get<string>('SUPABASE_URL') ||
+      process.env.SUPABASE_URL ||
+      'https://placeholder.supabase.co';
     this.jwksClient = new JwksClient({
       cache: true,
       rateLimit: true,
