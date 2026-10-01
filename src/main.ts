@@ -1,13 +1,19 @@
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { ValidationPipe, Logger } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
+  const logger = new Logger('Bootstrap');
   const app = await NestFactory.create(AppModule);
 
-  // Global prefix for all routes
-  app.setGlobalPrefix('api/v1');
+  // Graceful shutdown handling for PM2 and container signals (SIGINT, SIGTERM)
+  app.enableShutdownHooks();
+
+  // Global prefix for all API routes, excluding root and health checks
+  app.setGlobalPrefix('api/v1', {
+    exclude: ['/', 'health'],
+  });
 
   // Global validation pipe — strips unknown fields, validates DTOs
   app.useGlobalPipes(
@@ -18,22 +24,44 @@ async function bootstrap() {
     }),
   );
 
-  // CORS
-  app.enableCors();
+  // Robust CORS configuration
+  const rawCorsOrigins = process.env.CORS_ORIGIN;
+  let origin: boolean | string | string[] = true;
+  if (rawCorsOrigins && rawCorsOrigins !== '*') {
+    origin = rawCorsOrigins.split(',').map((o) => o.trim());
+  }
 
-  // Swagger docs at /docs
-  const config = new DocumentBuilder()
-    .setTitle('Trade Client App')
-    .setDescription('Booran Motor Group — Trade Client Easy Order API')
-    .setVersion('1.0')
-    .addBearerAuth()
-    .build();
+  app.enableCors({
+    origin,
+    credentials: true,
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Accept', 'Authorization', 'X-Requested-With'],
+  });
 
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs', app, document);
+  // Swagger API Documentation setup
+  const enableSwagger = process.env.SWAGGER_ENABLED !== 'false';
+  if (enableSwagger) {
+    const config = new DocumentBuilder()
+      .setTitle('Trade Client App API')
+      .setDescription('Booran Motor Group — Trade Client Easy Order API')
+      .setVersion('1.0')
+      .addBearerAuth()
+      .build();
 
-  await app.listen(process.env.PORT ?? 3000);
-  console.log(`Application running on: http://localhost:${process.env.PORT ?? 3000}`);
-  console.log(`Swagger docs at: http://localhost:${process.env.PORT ?? 3000}/docs`);
+    const document = SwaggerModule.createDocument(app, config);
+    SwaggerModule.setup('docs', app, document);
+  }
+
+  const port = parseInt(process.env.PORT || '3000', 10);
+  const host = process.env.HOST || '0.0.0.0';
+
+  await app.listen(port, host);
+  logger.log(`Application successfully started on: http://${host}:${port}`);
+  logger.log(`API Base URL: http://${host}:${port}/api/v1`);
+  logger.log(`Health Check: http://${host}:${port}/health`);
+  if (enableSwagger) {
+    logger.log(`Swagger Documentation: http://${host}:${port}/docs`);
+  }
 }
 bootstrap();
+
