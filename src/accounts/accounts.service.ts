@@ -61,11 +61,57 @@ export class AccountsService {
 
   // ─── GET /accounts  (manager / admin) ─────────────────────────────────────
 
-  async findAll(): Promise<ReturnType<typeof this.formatAccount>[]> {
-    const docs = await this.accountModel
-      .find({ isActive: true })
-      .sort({ companyName: 1 });
-    return docs.map((d) => this.formatAccount(d));
+  async findAll(query?: import('./dto/query-accounts.dto').QueryAccountsDto) {
+    const filter: Record<string, any> = { isActive: true };
+
+    if (query?.search) {
+      const escaped = query.search.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(escaped, 'i');
+      filter.$or = [
+        { accountId: regex },
+        { companyName: regex },
+        { contactName: regex },
+        { contactEmail: regex },
+        { contactPhone: regex },
+      ];
+    }
+
+    if (query?.rooftopId && query.rooftopId !== 'ALL') {
+      filter.rooftopId = query.rooftopId;
+    }
+
+    if (typeof query?.creditHold === 'boolean') {
+      filter.creditHold = query.creditHold;
+    }
+
+    if (typeof query?.isOverdue === 'boolean') {
+      filter.isOverdue = query.isOverdue;
+    }
+
+    const page = Math.max(1, Number(query?.page) || 1);
+    const limit = query?.limit ? Math.min(100, Math.max(1, Number(query.limit))) : 20;
+    const skip = (page - 1) * limit;
+
+    const [docs, total] = await Promise.all([
+      this.accountModel
+        .find(filter)
+        .sort({ companyName: 1 })
+        .skip(skip)
+        .limit(limit)
+        .exec(),
+      this.accountModel.countDocuments(filter).exec(),
+    ]);
+
+    const formatted = docs.map((d) => this.formatAccount(d));
+
+    return {
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit) || 1,
+      accounts: formatted,
+      results: formatted,
+    };
   }
 
   // ─── GET /accounts/my  (trade_partner's own account) ──────────────────────

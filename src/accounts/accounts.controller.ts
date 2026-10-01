@@ -79,14 +79,14 @@ export class AccountsController {
   @ApiOperation({
     summary: 'List all trade accounts',
     description:
-      'Returns all active trade accounts sorted alphabetically by company name. ' +
+      'Returns paginated active trade accounts with optional search, precinct and status filters. ' +
       'Restricted to store_manager, parts_controller, and group_admin.',
   })
-  @ApiResponse({ status: 200, description: 'Array of trade account documents' })
+  @ApiResponse({ status: 200, description: 'Paginated trade accounts — { total, page, limit, totalPages, accounts[] }' })
   @ApiResponse({ status: 401, description: 'Unauthenticated' })
   @ApiResponse({ status: 403, description: 'Insufficient role' })
-  findAll() {
-    return this.accountsService.findAll();
+  findAll(@Query() query: import('./dto/query-accounts.dto').QueryAccountsDto) {
+    return this.accountsService.findAll(query);
   }
 
   // ─── GET /accounts/:id ─────────────────────────────────────────────────────
