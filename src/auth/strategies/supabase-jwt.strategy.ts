@@ -4,7 +4,7 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import * as jwksRsa from 'jwks-rsa';
+import { JwksClient, SigningKey } from 'jwks-rsa';
 import * as jwt from 'jsonwebtoken';
 import { User, UserDocument } from '../schemas/user.schema';
 
@@ -20,7 +20,7 @@ export interface SupabaseJwtPayload {
 
 @Injectable()
 export class SupabaseJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
-  private jwksClient: jwksRsa.JwksClient;
+  private jwksClient: JwksClient;
   private supabaseUrl: string;
 
   constructor(
@@ -36,7 +36,7 @@ export class SupabaseJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
           if (!decoded?.header?.kid) {
             return done(new UnauthorizedException('Missing kid in token header'));
           }
-          const key = await new Promise<jwksRsa.SigningKey>((resolve, reject) => {
+          const key = await new Promise<SigningKey>((resolve, reject) => {
             this.jwksClient.getSigningKey(decoded.header.kid, (err, signingKey) => {
               if (err) reject(err);
               else resolve(signingKey!);
@@ -53,7 +53,7 @@ export class SupabaseJwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     });
 
     this.supabaseUrl = this.configService.get<string>('SUPABASE_URL')!;
-    this.jwksClient = jwksRsa({
+    this.jwksClient = new JwksClient({
       cache: true,
       rateLimit: true,
       jwksRequestsPerMinute: 5,
