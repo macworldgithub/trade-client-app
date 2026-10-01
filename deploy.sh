@@ -30,10 +30,10 @@ npm run build
 # 3. Reload or start PM2 process
 echo "🚀 Updating PM2 process..."
 if pm2 describe trade-client-backend > /dev/null 2>&1; then
-    echo "Reloading existing PM2 cluster without downtime..."
-    pm2 reload ecosystem.config.js --env production
+    echo "Restarting existing PM2 process..."
+    pm2 restart ecosystem.config.js --env production
 else
-    echo "Starting PM2 cluster for the first time..."
+    echo "Starting PM2 process for the first time..."
     pm2 start ecosystem.config.js --env production
 fi
 

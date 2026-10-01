@@ -3,8 +3,8 @@ module.exports = {
     {
       name: 'trade-client-backend',
       script: './dist/main.js',
-      instances: 'max', // Utilizes all available CPU cores, or set to 1 or 2
-      exec_mode: 'cluster',
+      instances: 1,
+      exec_mode: 'fork',
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
