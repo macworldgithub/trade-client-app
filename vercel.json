@@ -1,6 +1,7 @@
 {
   "version": 2,
   "env": {
+    "NODE_OPTIONS": "--experimental-require-module",
     "AUTH_FRONTEND_URL": "https://trade-client-frontend.vercel.app",
     "CORS_ORIGIN": "https://trade-client-frontend.vercel.app"
   },

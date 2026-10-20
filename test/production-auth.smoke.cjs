@@ -3,12 +3,22 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const ts = require('typescript');
 const { EventEmitter } = require('node:events');
+const { spawnSync } = require('node:child_process');
 const { ConfigService } = require('@nestjs/config');
 const { authAllowedOrigins, authFrontendOrigin } = require('../dist/auth/auth-origins');
 const { configureHttp } = require('../dist/configure-http');
 const { AuthCookiesService } = require('../dist/auth/auth-cookies.service');
 
 (async () => {
+  const deployment = JSON.parse(fs.readFileSync(require.resolve('../vercel.json'), 'utf8'));
+  assert.equal(deployment.env.NODE_OPTIONS, '--experimental-require-module');
+  const cwd = require('node:path').resolve(__dirname, '..');
+  const disabled = spawnSync(process.execPath, ['--no-experimental-require-module', '-e',
+    "try { require('@nestjs/core'); process.exitCode = 1; } catch (e) { if (e.code !== 'ERR_REQUIRE_ESM') throw e; }"], { cwd, encoding: 'utf8' });
+  assert.equal(disabled.status, 0, disabled.stderr);
+  const enabled = spawnSync(process.execPath, [deployment.env.NODE_OPTIONS, '-e',
+    "for (const name of ['@nestjs/core', '@nestjs/common', '@nestjs/platform-express', '@nestjs/mongoose', '@nestjs/jwt']) require(name);"], { cwd, encoding: 'utf8' });
+  assert.equal(enabled.status, 0, enabled.stderr);
   const frontend = 'https://trade-client-frontend.vercel.app';
   const env = { NODE_ENV: 'production', AUTH_FRONTEND_URL: frontend, CORS_ORIGIN: frontend };
   assert.equal(authFrontendOrigin(env), frontend);
