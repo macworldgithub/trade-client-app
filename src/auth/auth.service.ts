@@ -1,301 +1,241 @@
-import {
-  Injectable,
-  UnauthorizedException,
-  ConflictException,
-  InternalServerErrorException,
-  NotFoundException,
-  BadRequestException,
-} from '@nestjs/common';
+import { Injectable, UnauthorizedException, ConflictException, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { createClient, SupabaseClient } from '@supabase/supabase-js';
-import { ConfigService } from '@nestjs/config';
+import { JwtService } from '@nestjs/jwt';
+import { randomBytes, randomUUID, createHash } from 'crypto';
+import * as bcrypt from 'bcrypt';
 import { User, UserDocument } from './schemas/user.schema';
-import {
-  AuditEvent,
-  AuditEventDocument,
-  AuditAction,
-} from './schemas/audit-event.schema';
+import { AuthSession, AuthSessionDocument } from './schemas/auth-session.schema';
+import { AuditEvent, AuditEventDocument, AuditAction } from './schemas/audit-event.schema';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { VerifyTotpDto } from './dto/verify-totp.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { ListUsersQueryDto } from './dto/list-users-query.dto';
 import { Role } from '../common/enums/roles.enum';
-
-class NoOpWebSocket {
-  static CONNECTING = 0;
-  static OPEN = 1;
-  static CLOSING = 2;
-  static CLOSED = 3;
-  readyState = 3;
-  addEventListener() {}
-  removeEventListener() {}
-  dispatchEvent() {
-    return false;
-  }
-  send() {}
-  close() {}
-}
-
-if (typeof (globalThis as any).WebSocket === 'undefined') {
-  (globalThis as any).WebSocket = NoOpWebSocket;
-}
+import { AuthMailService } from './auth-mail.service';
+import { AuthMfaService } from './auth-mfa.service';
 
 @Injectable()
 export class AuthService {
-  private supabase: SupabaseClient;
-
   constructor(
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     @InjectModel(AuditEvent.name) private auditModel: Model<AuditEventDocument>,
-    private configService: ConfigService,
-  ) {
-    const supabaseUrl =
-      this.configService.get<string>('SUPABASE_URL') ||
-      process.env.SUPABASE_URL ||
-      'https://placeholder.supabase.co';
-    const supabaseKey =
-      this.configService.get<string>('SUPABASE_SECRET_KEY') ||
-      process.env.SUPABASE_SECRET_KEY ||
-      'placeholder-secret';
+    @InjectModel(AuthSession.name) private sessionModel: Model<AuthSessionDocument>,
+    private jwtService: JwtService,
+    private mail: AuthMailService,
+    private mfa: AuthMfaService,
+  ) {}
 
-    this.supabase = createClient(supabaseUrl, supabaseKey, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false,
-      },
-      realtime: {
-        transport: (globalThis as any).WebSocket || NoOpWebSocket,
-      },
-    });
-  }
-
-  // ─── REGISTER ────────────────────────────────────────────────────────────────
-  async register(dto: RegisterDto, ipAddress?: string) {
-    // 1. Create Supabase user
-    console.log('Registering user with Supabase:', {
-      email: dto.email,
-      role: dto.role,
-    });
-
-    const { data, error } = await this.supabase.auth.signUp({
-      email: dto.email,
-      password: dto.password,
-    });
-
-    if (error) {
-      console.error('Supabase signUp error:', {
-        message: error.message,
-        status: error.status,
-        name: error.name,
-        fullError: error,
+  async register(dto: RegisterDto, ipAddress?: string, provisionedBy?: UserDocument) {
+    if (!provisionedBy && ((dto.role && dto.role !== Role.TRADE_PARTNER) || dto.tradeAccountId || dto.rooftopId)) {
+      throw new BadRequestException('Public registration creates trade partners only; administrators assign roles and accounts');
+    }
+    if (dto.password.length < 12 || Buffer.byteLength(dto.password, 'utf8') > 72) {
+      throw new BadRequestException('Password must have at least 12 characters and at most 72 UTF-8 bytes');
+    }
+    const email = dto.email.trim().toLowerCase();
+    if (await this.userModel.exists({ email })) throw new ConflictException('Email is already registered');
+    this.mail.assertConfigured();
+    const verificationToken = randomBytes(48).toString('base64url');
+    const passwordHash = await bcrypt.hash(dto.password, 12);
+    let user: UserDocument;
+    try {
+      user = await this.userModel.create({
+        // Compatibility identity for existing order and audit code; no Supabase call.
+        supabaseId: randomUUID(), email, fullName: dto.fullName.trim(), passwordHash,
+        emailVerificationTokenHash: this.tokenHash(verificationToken),
+        emailVerificationExpiresAt: new Date(Date.now() + 86400000),
+        role: provisionedBy ? (dto.role ?? Role.TRADE_PARTNER) : Role.TRADE_PARTNER,
+        tradeAccountId: provisionedBy ? (dto.tradeAccountId ?? null) : null,
+        rooftopId: provisionedBy ? (dto.rooftopId ?? null) : null,
       });
-
-      if (error.message.includes('already registered')) {
-        throw new ConflictException('Email is already registered');
-      }
-      throw new InternalServerErrorException(error.message);
+    } catch (error) {
+      if (error?.code === 11000) throw new ConflictException('Email is already registered');
+      throw error;
     }
-
-    if (!data.user) {
-      throw new InternalServerErrorException(
-        'Failed to create user in Supabase',
-      );
-    }
-
-    // 2. Check for duplicate in MongoDB
-    const existing = await this.userModel.findOne({ email: dto.email });
-    if (existing) {
-      throw new ConflictException('Email is already registered');
-    }
-
-    // 3. Save user in MongoDB with Supabase ID mapping
-    const user = await this.userModel.create({
-      supabaseId: data.user.id,
-      email: dto.email,
-      fullName: dto.fullName,
-      role: dto.role ?? Role.TRADE_PARTNER,
-      tradeAccountId: dto.tradeAccountId ?? null,
-      rooftopId: dto.rooftopId ?? null,
-    });
-
-    // 4. Audit event
-    await this.writeAudit(
-      AuditAction.LOGIN,
-      data.user.id,
-      null,
-      null,
-      {
-        action: 'REGISTER',
-        email: dto.email,
-      },
-      ipAddress,
-    );
-
-    return {
-      message:
-        'Registration successful. Please check your email to confirm your account.',
-      userId: user._id,
-    };
+    await this.writeAudit(AuditAction.LOGIN, user.supabaseId, null, null, { action: 'REGISTER', email }, ipAddress);
+    await this.mail.send(email, verificationToken, 'verify-email');
+    return { message: 'Registration successful. Check your email to verify your account.', userId: user._id };
   }
 
-  // ─── LOGIN ───────────────────────────────────────────────────────────────────
   async login(dto: LoginDto, ipAddress?: string) {
-    const { data, error } = await this.supabase.auth.signInWithPassword({
-      email: dto.email,
-      password: dto.password,
-    });
-
-    if (error) {
-      // Audit failed login
-      await this.writeAudit(
-        AuditAction.LOGIN_FAILED,
-        'anonymous',
-        null,
-        null,
-        {
-          email: dto.email,
-          reason: error.message,
-        },
-        ipAddress,
-      );
+    const email = dto.email.trim().toLowerCase();
+    const user = await this.userModel.findOne({ email }).select('+passwordHash');
+    const hash = user?.passwordHash || '$2b$12$R9h/cIPz0gi.URNNX3kh2OPST9/PgBkqquzi.Ss7KIUgO2t0jWMUW';
+    const valid = Buffer.byteLength(dto.password, 'utf8') <= 72 && await bcrypt.compare(dto.password, hash);
+    if (!user?.passwordHash || !user.isActive || !valid) {
+      await this.writeAudit(AuditAction.LOGIN_FAILED, 'anonymous', null, null, { email }, ipAddress);
       throw new UnauthorizedException('Invalid email or password');
     }
-
-    // Look up MongoDB user
-    const user = await this.userModel.findOne({ supabaseId: data.user.id });
-    if (!user || !user.isActive) {
-      throw new UnauthorizedException('Account not found or inactive');
-    }
-
-    // Audit successful login
-    await this.writeAudit(
-      AuditAction.LOGIN,
-      data.user.id,
-      user.tradeAccountId,
-      user.rooftopId,
-      { email: dto.email },
-      ipAddress,
-    );
-
-    // Check if the user has a verified TOTP factor enrolled (Supabase MFA)
-    const totpFactor = data.user.factors?.find(
-      (f) => f.factor_type === 'totp' && f.status === 'verified',
-    );
-
-    if (totpFactor) {
-      // Don't hand out tokens yet — require TOTP verification first
-      return {
-        requiresTotp: true,
-        factorId: totpFactor.id,
-      };
-    }
-
-    return {
-      accessToken: data.session?.access_token,
-      refreshToken: data.session?.refresh_token,
-      expiresAt: data.session?.expires_at,
-      user: {
-        id: user._id,
-        email: user.email,
-        fullName: user.fullName,
-        role: user.role,
-        tradeAccountId: user.tradeAccountId,
-        rooftopId: user.rooftopId,
-        creditHold: user.creditHold,
-        isOverdue: user.isOverdue,
-      },
-    };
+    if (!user.emailVerifiedAt) throw new UnauthorizedException('Please verify your email before signing in');
+    if (user.totpEnabled) return this.mfa.startChallenge(user);
+    const result = await this.createSession(user, ipAddress);
+    await this.writeAudit(AuditAction.LOGIN, user.supabaseId, user.tradeAccountId, user.rooftopId, { email }, ipAddress);
+    return { ...result, user: await this.getMe(user) };
   }
 
-  // ─── LOGOUT ──────────────────────────────────────────────────────────────────
-  async logout(user: UserDocument, ipAddress?: string) {
-    await this.supabase.auth.signOut();
+  private tokenHash(token: string) {
+    return createHash('sha256').update(token).digest('hex');
+  }
 
-    await this.writeAudit(
-      AuditAction.LOGOUT,
-      user.supabaseId,
-      user.tradeAccountId,
-      user.rooftopId,
-      {},
-      ipAddress,
+  async requestAccountEmail(email: string, purpose: 'verify-email' | 'reset-password') {
+    this.mail.assertConfigured();
+    const token = randomBytes(48).toString('base64url');
+    const verification = purpose === 'verify-email';
+    const prefix = verification ? 'emailVerification' : 'passwordReset';
+    const user = await this.userModel.findOneAndUpdate(
+      { email: email.trim().toLowerCase(), isActive: true,
+        ...(verification ? { emailVerifiedAt: null } : {}),
+        $or: [{ [`${prefix}ExpiresAt`]: null },
+          { [`${prefix}ExpiresAt`]: { $lte: new Date(Date.now() + (verification ? 86400000 : 1800000) - 60000) } }],
+      },
+      { $set: { [`${prefix}TokenHash`]: this.tokenHash(token),
+        [`${prefix}ExpiresAt`]: new Date(Date.now() + (verification ? 86400000 : 1800000)) } },
+      { new: true },
     );
+    if (user) {
+      try { await this.mail.send(user.email, token, purpose); }
+      catch {
+        // Do not disclose account existence when delivery fails. Permit a retry.
+        await this.userModel.updateOne({ _id: user._id, [`${prefix}TokenHash`]: this.tokenHash(token) },
+          { $unset: { [`${prefix}TokenHash`]: 1, [`${prefix}ExpiresAt`]: 1 } });
+      }
+    }
+    return { message: 'If an eligible account exists, an email will arrive shortly.' };
+  }
 
+  async verifyEmail(token: string) {
+    this.validateAccountToken(token);
+    const user = await this.userModel.findOneAndUpdate(
+      { emailVerificationTokenHash: this.tokenHash(token), emailVerificationExpiresAt: { $gt: new Date() }, isActive: true },
+      { $set: { emailVerifiedAt: new Date() }, $unset: { emailVerificationTokenHash: 1, emailVerificationExpiresAt: 1 } },
+      { new: true },
+    );
+    if (!user) throw new BadRequestException('Invalid or expired verification link');
+    return { message: 'Email verified. You can now sign in.' };
+  }
+
+  private validateAccountToken(token: string) {
+    if (typeof token !== 'string' || !/^[A-Za-z0-9_-]{64}$/.test(token)) {
+      throw new BadRequestException('Invalid or expired account link');
+    }
+  }
+
+  async resetPassword(token: string, password: string) {
+    this.validateAccountToken(token);
+    if (typeof password !== 'string' || password.length < 12 || Buffer.byteLength(password, 'utf8') > 72) {
+      throw new BadRequestException('Password must have at least 12 characters and at most 72 UTF-8 bytes');
+    }
+    const passwordHash = await bcrypt.hash(password, 12);
+    const user = await this.userModel.findOneAndUpdate(
+      { passwordResetTokenHash: this.tokenHash(token), passwordResetExpiresAt: { $gt: new Date() }, isActive: true },
+      // Possession of the single-use emailed token proves control of the inbox.
+      { $set: { passwordHash, passwordChangedAt: new Date(), emailVerifiedAt: new Date() },
+        $unset: { passwordResetTokenHash: 1, passwordResetExpiresAt: 1,
+          emailVerificationTokenHash: 1, emailVerificationExpiresAt: 1,
+          totpPendingSecretEncrypted: 1, totpPendingFactorId: 1, totpPendingExpiresAt: 1,
+          totpPendingPasswordVersion: 1, totpPendingAttempts: 1 } },
+      { new: true },
+    );
+    if (!user) throw new BadRequestException('Invalid or expired password reset link');
+    await this.sessionModel.updateMany({ userId: user._id, revokedAt: null }, { $set: { revokedAt: new Date() } });
+    return { message: 'Password saved and email verified. You can now sign in. Two-factor authentication is still required if enabled.' };
+  }
+
+  private async tokens(user: UserDocument, session: AuthSessionDocument, refreshToken: string) {
+    const accessToken = await this.jwtService.signAsync({ sub: String(user._id), sid: String(session._id) });
+    return { accessToken, refreshToken, expiresAt: Math.floor(Date.now() / 1000) + 900 };
+  }
+
+  private async createSession(user: UserDocument, ipAddress?: string) {
+    const refreshToken = randomBytes(48).toString('base64url');
+    const session = await this.sessionModel.create({
+      userId: user._id, familyId: randomUUID(), refreshTokenHash: this.tokenHash(refreshToken),
+      passwordVersion: user.passwordChangedAt?.getTime() ?? 0,
+      mfaVersion: user.mfaVersion ?? 0,
+      expiresAt: new Date(Date.now() + 30 * 86400000), ipAddress: ipAddress ?? null,
+    });
+    return this.tokens(user, session, refreshToken);
+  }
+
+  async logout(user: UserDocument, ipAddress?: string) {
+    await this.sessionModel.updateMany({ userId: user._id, revokedAt: null }, { $set: { revokedAt: new Date() } });
+    await this.writeAudit(AuditAction.LOGOUT, user.supabaseId, user.tradeAccountId, user.rooftopId, {}, ipAddress);
+    return { message: 'Logged out successfully on all devices' };
+  }
+
+  async logoutSession(refreshToken: string | null, ipAddress?: string) {
+    if (refreshToken && /^[A-Za-z0-9_-]{64}$/.test(refreshToken)) {
+      const session = await this.sessionModel.findOne({ refreshTokenHash: this.tokenHash(refreshToken), revokedAt: null });
+      const user = session && await this.userModel.findById(session.userId);
+      if (user) return this.logout(user, ipAddress);
+    }
     return { message: 'Logged out successfully' };
   }
 
-  // ─── REFRESH TOKEN ───────────────────────────────────────────────────────────
   async refreshToken(refreshToken: string, ipAddress?: string) {
-    const { data, error } = await this.supabase.auth.refreshSession({
-      refresh_token: refreshToken,
-    });
-
-    if (error || !data.session) {
+    if (typeof refreshToken !== 'string' || !/^[A-Za-z0-9_-]{64}$/.test(refreshToken)) {
       throw new UnauthorizedException('Invalid or expired refresh token');
     }
-
-    const user = await this.userModel.findOne({ supabaseId: data.user?.id });
-
-    await this.writeAudit(
-      AuditAction.TOKEN_REFRESH,
-      data.user?.id ?? 'unknown',
-      user?.tradeAccountId ?? null,
-      user?.rooftopId ?? null,
-      {},
-      ipAddress,
+    const hash = this.tokenHash(refreshToken);
+    const next = randomBytes(48).toString('base64url');
+    // Atomic in-place rotation keeps the session ID stable and retains used hashes
+    // for replay detection. Revocation and rotation operate on the same document.
+    const session = await this.sessionModel.findOneAndUpdate(
+      { refreshTokenHash: hash, revokedAt: null, expiresAt: { $gt: new Date() } },
+      { $set: { refreshTokenHash: this.tokenHash(next) }, $push: { usedRefreshTokenHashes: hash } },
+      { new: true },
     );
-
-    return {
-      accessToken: data.session.access_token,
-      refreshToken: data.session.refresh_token,
-      expiresAt: data.session.expires_at,
-    };
+    if (!session) {
+      await this.sessionModel.updateMany({ usedRefreshTokenHashes: hash, revokedAt: null },
+        { $set: { revokedAt: new Date() } });
+      throw new UnauthorizedException('Invalid or expired refresh token');
+    }
+    const user = await this.userModel.findById(session.userId);
+    if (!user?.isActive || !user.emailVerifiedAt || (session.passwordVersion ?? 0) !== (user.passwordChangedAt?.getTime() ?? 0)
+      || (session.mfaVersion ?? 0) !== (user.mfaVersion ?? 0)) {
+      await this.sessionModel.updateOne({ _id: session._id }, { $set: { revokedAt: new Date() } });
+      throw new UnauthorizedException('Account not found or inactive');
+    }
+    await this.writeAudit(AuditAction.TOKEN_REFRESH, user.supabaseId, user.tradeAccountId, user.rooftopId, {}, ipAddress);
+    return this.tokens(user, session, next);
   }
 
-  // ─── ENROLL TOTP ─────────────────────────────────────────────────────────────
-  async enrollTotp() {
-    const { data, error } = await this.supabase.auth.mfa.enroll({
-      factorType: 'totp',
-    });
-
-    if (error) {
-      throw new InternalServerErrorException(error.message);
-    }
-
-    return {
-      factorId: data.id,
-      qrCode: data.totp.qr_code, // Show this QR to the user to scan in their authenticator app
-      secret: data.totp.secret, // Backup secret
-    };
+  async enrollTotp(user: UserDocument, password: string) {
+    return this.mfa.enroll(String(user._id), password);
   }
 
-  // ─── VERIFY TOTP ─────────────────────────────────────────────────────────────
-  async verifyTotp(dto: VerifyTotpDto) {
-    // Step 1: create a challenge
-    const { data: challengeData, error: challengeError } =
-      await this.supabase.auth.mfa.challenge({ factorId: dto.factorId });
+  async totpStatus(user: UserDocument) { return this.mfa.status(String(user._id)); }
 
-    if (challengeError) {
-      throw new UnauthorizedException(challengeError.message);
+  async confirmTotp(user: UserDocument, factorId: string, code: string, ipAddress?: string) {
+    const confirmed = await this.mfa.confirm(String(user._id), factorId, code);
+    const result = await this.replaceMfaSession(confirmed.user, 'MFA_ENABLED', ipAddress);
+    return { ...result, recoveryCodes: confirmed.recoveryCodes };
+  }
+
+  async disableTotp(user: UserDocument, password: string, code: string, ipAddress?: string) {
+    const updated = await this.mfa.disable(String(user._id), password, code);
+    return this.replaceMfaSession(updated, 'MFA_DISABLED', ipAddress);
+  }
+
+  private async replaceMfaSession(user: UserDocument, action: string, ipAddress?: string) {
+    await this.sessionModel.updateMany({ userId: user._id, revokedAt: null }, { $set: { revokedAt: new Date() } });
+    const result = await this.createSession(user, ipAddress);
+    await this.writeAudit(AuditAction.USER_UPDATE, user.supabaseId, user.tradeAccountId, user.rooftopId, { action }, ipAddress);
+    return { ...result, user: await this.getMe(user) };
+  }
+
+  async verifyTotp(dto: VerifyTotpDto, ipAddress?: string) {
+    let user: UserDocument;
+    try { user = await this.mfa.verifyLogin(dto.factorId, dto.code); }
+    catch (error) {
+      await this.writeAudit(AuditAction.LOGIN_FAILED, 'anonymous', null, null, { secondFactor: true }, ipAddress);
+      throw error;
     }
-
-    // Step 2: verify the challenge with the TOTP code
-    const { data, error } = await this.supabase.auth.mfa.verify({
-      factorId: dto.factorId,
-      challengeId: challengeData.id,
-      code: dto.code,
-    }); 
-
-    if (error) {
-      throw new UnauthorizedException('Invalid TOTP code');
-    }
-
-    return {
-      accessToken: data.access_token,
-      refreshToken: data.refresh_token,
-      message: 'TOTP verified successfully',
-    };
+    const result = await this.createSession(user, ipAddress);
+    await this.writeAudit(AuditAction.LOGIN, user.supabaseId, user.tradeAccountId, user.rooftopId, { secondFactor: true }, ipAddress);
+    return { ...result, user: await this.getMe(user) };
   }
 
   // ─── GET ME ──────────────────────────────────────────────────────────────────
@@ -310,6 +250,7 @@ export class AuthService {
       creditHold: user.creditHold,
       isOverdue: user.isOverdue,
       isActive: user.isActive,
+      totpEnabled: !!user.totpEnabled,
     };
   }
 
@@ -461,13 +402,7 @@ export class AuthService {
       throw new BadRequestException('You cannot delete your own admin account');
     }
 
-    if (user.supabaseId) {
-      try {
-        await this.supabase.auth.admin.deleteUser(user.supabaseId);
-      } catch (err) {
-        console.warn('Supabase auth user delete warning:', err);
-      }
-    }
+    await this.sessionModel.updateMany({ userId: user._id }, { $set: { revokedAt: new Date() } });
 
     await this.userModel.findByIdAndDelete(id).exec();
 

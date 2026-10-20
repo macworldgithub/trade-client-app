@@ -1,7 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { ValidationPipe, Logger } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import { configureHttp } from './configure-http';
 
 // Global WebSocket fallback for Node.js < 22 environments
 if (typeof (globalThis as any).WebSocket === 'undefined') {
@@ -25,36 +26,8 @@ async function bootstrap() {
   const logger = new Logger('Bootstrap');
   const app = await NestFactory.create(AppModule);
 
-  // Graceful shutdown handling for PM2 and container signals (SIGINT, SIGTERM)
   app.enableShutdownHooks();
-
-  // Global prefix for all API routes, excluding root and health checks
-  app.setGlobalPrefix('api/v1', {
-    exclude: ['/', 'health'],
-  });
-
-  // Global validation pipe — strips unknown fields, validates DTOs
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transform: true,
-    }),
-  );
-
-  // Robust CORS configuration
-  const rawCorsOrigins = process.env.CORS_ORIGIN;
-  let origin: boolean | string | string[] = true;
-  if (rawCorsOrigins && rawCorsOrigins !== '*') {
-    origin = rawCorsOrigins.split(',').map((o) => o.trim());
-  }
-
-  app.enableCors({
-    origin,
-    credentials: true,
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Accept', 'Authorization', 'X-Requested-With'],
-  });
+  configureHttp(app);
 
   // Swagger API Documentation setup
   const enableSwagger = process.env.SWAGGER_ENABLED !== 'false';

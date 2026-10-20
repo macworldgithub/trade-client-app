@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "env": {
+    "AUTH_FRONTEND_URL": "https://trade-client-frontend.vercel.app",
+    "CORS_ORIGIN": "https://trade-client-frontend.vercel.app"
+  },
   "rewrites": [
     {
       "source": "/(.*)",

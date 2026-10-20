@@ -12,6 +12,58 @@ export class User {
   @Prop({ required: true, unique: true })
   email: string;
 
+  // Optional until native registration replaces Supabase registration.
+  @Prop({ type: String, select: false })
+  passwordHash?: string;
+
+  @Prop({ default: false })
+  totpEnabled: boolean;
+
+  @Prop({ type: Number, default: 0 })
+  mfaVersion: number;
+
+  @Prop({ type: String, select: false })
+  totpSecretEncrypted?: string;
+
+  @Prop({ type: String, select: false })
+  totpPendingSecretEncrypted?: string;
+
+  @Prop({ type: String, select: false })
+  totpPendingFactorId?: string;
+
+  @Prop({ type: Date, select: false })
+  totpPendingExpiresAt?: Date;
+
+  @Prop({ type: Number, default: 0, select: false })
+  totpPendingAttempts: number;
+
+  @Prop({ type: Number, select: false })
+  totpPendingPasswordVersion?: number;
+
+  @Prop({ type: Number, default: -1, select: false })
+  totpLastUsedStep: number;
+
+  @Prop({ type: [String], default: [], select: false })
+  totpRecoveryCodeHashes: string[];
+
+  @Prop({ type: Date, default: null })
+  emailVerifiedAt: Date | null;
+
+  @Prop({ type: String, select: false })
+  emailVerificationTokenHash?: string;
+
+  @Prop({ type: Date, default: null, select: false })
+  emailVerificationExpiresAt: Date | null;
+
+  @Prop({ type: String, select: false })
+  passwordResetTokenHash?: string;
+
+  @Prop({ type: Date, default: null, select: false })
+  passwordResetExpiresAt: Date | null;
+
+  @Prop({ type: Date, default: null })
+  passwordChangedAt: Date | null;
+
   @Prop({ required: true })
   fullName: string;
 
