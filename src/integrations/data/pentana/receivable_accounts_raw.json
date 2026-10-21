@@ -1,0 +1,266 @@
+[
+  {
+    "screen": "EntityReceivable.htm",
+    "captured_at": "2026-10-20T08:37:09.274Z",
+    "source_entity_code": "50",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "19400"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "XPRXXXU"
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "A&M Smash Repairs"
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_SalutationDesc",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Accounts"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 8759 4110"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": "(0434) 231 043"
+      },
+      {
+        "field": "entityname_entityid_CusCreditLimit",
+        "value": "1000.00"
+      },
+      {
+        "field": "txtAccountBalance",
+        "value": "1016.46"
+      },
+      {
+        "field": "txtCreditAvailable",
+        "value": "-16.46"
+      },
+      {
+        "field": "entityname_entityid_CusCreditType",
+        "value": "R",
+        "label": "Regular"
+      },
+      {
+        "field": "entityname_entityid_CusCreditCode",
+        "value": "1",
+        "label": "Good"
+      },
+      {
+        "field": "entityname_entityid_CusCreditTerms",
+        "value": "30",
+        "label": "30 DAYS"
+      },
+      {
+        "field": "entityname_entityid_CusDateCredit",
+        "value": "17/07/2018"
+      },
+      {
+        "field": "entityname_entityid_CusPayMethod",
+        "value": "1",
+        "label": "CHARGE"
+      },
+      {
+        "field": "entityname_entityid_CusTerritory",
+        "value": "",
+        "label": "No Selection"
+      },
+      {
+        "field": "entityname_entityid_CusRcvContactName",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusGlAcct",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusStatementFmt",
+        "value": "D",
+        "label": "Detail Forward"
+      },
+      {
+        "field": "entityname_entityid_CusPrintStatement",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "field": "entityname_entityid_CusSvcChg",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "field": "chkPrint",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "field": "entityname_entityid_CusCrAge",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "field": "chkEmail",
+        "value": "on",
+        "checked": true
+      },
+      {
+        "field": "chkFax",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "field": "entityname_entityid_CusStatementEmail",
+        "value": "info@amsmashrepairs.au"
+      },
+      {
+        "field": "entityname_entityid_CusStatementFax",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_BpayNo",
+        "value": "194001"
+      },
+      {
+        "field": "entityname_entityid_CusCrComments",
+        "value": ""
+      },
+      {
+        "field": "lblCurrent",
+        "value": "Current"
+      },
+      {
+        "field": "entityname_entityid_CusCurrentBal",
+        "value": "558.61"
+      },
+      {
+        "field": "lbl30Days",
+        "value": "30 Days"
+      },
+      {
+        "field": "entityname_entityid_CusBalA",
+        "value": "245.75"
+      },
+      {
+        "field": "lbl60Days",
+        "value": "60 Days"
+      },
+      {
+        "field": "entityname_entityid_CusBalB",
+        "value": "0.00"
+      },
+      {
+        "field": "lbl90Days",
+        "value": "90 Days"
+      },
+      {
+        "field": "entityname_entityid_CusBalC",
+        "value": ""
+      },
+      {
+        "field": "lbl120Days",
+        "value": "120 Days"
+      },
+      {
+        "field": "entityname_entityid_CusBalD",
+        "value": "0.00"
+      },
+      {
+        "field": "lblDummyType",
+        "value": ""
+      },
+      {
+        "field": "dspDummyAmt",
+        "value": ""
+      },
+      {
+        "field": "lblTotal",
+        "value": "Total"
+      },
+      {
+        "field": "entityname_entityid_CusBalTotal",
+        "value": "245.75"
+      },
+      {
+        "field": "lblPurchaseYtd",
+        "value": "Purchase Ytd"
+      },
+      {
+        "field": "txtPurchaseYtd",
+        "value": "868.37"
+      },
+      {
+        "field": "lblPurchasePyr",
+        "value": "Purchase Pyr"
+      },
+      {
+        "field": "txtPurchasePyr",
+        "value": "2135.96"
+      },
+      {
+        "field": "lblAvgDaysPay",
+        "value": "Avg Days - Pay"
+      },
+      {
+        "field": "txtAvgDaysPay",
+        "value": "45"
+      },
+      {
+        "field": "lblFirstPurchase",
+        "value": "First Purchase"
+      },
+      {
+        "field": "txtFirstPurchase",
+        "value": "18/07/2018"
+      },
+      {
+        "field": "lblLastPurchase",
+        "value": "Last Purchase"
+      },
+      {
+        "field": "txtLastPurchase",
+        "value": "20/10/2026"
+      },
+      {
+        "field": "lblLastChange",
+        "value": "Last Change"
+      },
+      {
+        "field": "txtLastChange",
+        "value": "20/10/2026"
+      },
+      {
+        "field": "lblLastPayment",
+        "value": "Last Payment"
+      },
+      {
+        "field": "txtLastPayment",
+        "value": "09/09/2026"
+      }
+    ],
+    "tabs": []
+  }
+]

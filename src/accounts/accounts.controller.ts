@@ -2,6 +2,7 @@ import {
   Controller,
   Get,
   Patch,
+  Post,
   Param,
   Body,
   Query,
@@ -71,6 +72,68 @@ export class AccountsController {
     return this.accountsService.findMine(user);
   }
 
+  // ─── POST /accounts/pentana/sync ───────────────────────────────────────────
+
+  @Post('pentana/sync')
+  @UseGuards(RolesGuard)
+  @Roles(...CONTROLLER_ROLES)
+  @ApiOperation({
+    summary: 'Trigger synchronization from Pentana extraction bundle',
+    description: 'Ingests verified trade accounts and discovered entities from the microservice Pentana CSV/JSON bundle.',
+  })
+  syncPentana() {
+    return this.accountsService.syncPentanaData();
+  }
+
+  // ─── GET /accounts/pentana/entities ────────────────────────────────────────
+
+  @Get('pentana/entities')
+  @UseGuards(RolesGuard)
+  @Roles(...ACCOUNT_READ_ROLES)
+  @ApiOperation({
+    summary: 'List discovered Pentana business entities (185 contacts)',
+    description: 'Returns paginated smash repair contacts discovered from Pentana Entity 50 query.',
+  })
+  getPentanaEntities(
+    @Query('search') search?: string,
+    @Query('suburb') suburb?: string,
+    @Query('isTradeAccount') isTradeAccount?: string,
+    @Query('page') page?: number,
+    @Query('limit') limit?: number,
+  ) {
+    return this.accountsService.getDiscoveredEntities({
+      search,
+      suburb,
+      isTradeAccount: isTradeAccount !== undefined ? isTradeAccount === 'true' : undefined,
+      page: page ? Number(page) : undefined,
+      limit: limit ? Number(limit) : undefined,
+    });
+  }
+
+  // ─── GET /accounts/pentana/price-levels ────────────────────────────────────
+
+  @Get('pentana/price-levels')
+  @UseGuards(RolesGuard)
+  @Roles(...ACCOUNT_READ_ROLES)
+  @ApiOperation({
+    summary: 'Pentana price level reference codes (52 rules)',
+  })
+  getPentanaPriceLevels() {
+    return this.accountsService.getPentanaPriceLevels();
+  }
+
+  // ─── GET /accounts/pentana/status ─────────────────────────────────────────
+
+  @Get('pentana/status')
+  @UseGuards(RolesGuard)
+  @Roles(...ACCOUNT_READ_ROLES)
+  @ApiOperation({
+    summary: 'Pentana extraction manifest and health status',
+  })
+  getPentanaStatus() {
+    return this.accountsService.getPentanaStatus();
+  }
+
   // ─── GET /accounts ─────────────────────────────────────────────────────────
 
   @Get()
@@ -92,6 +155,7 @@ export class AccountsController {
   // ─── GET /accounts/:id ─────────────────────────────────────────────────────
 
   @Get(':id')
+
   @UseGuards(RolesGuard)
   @Roles(...ACCOUNT_READ_ROLES)
   @ApiOperation({

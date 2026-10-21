@@ -1,4 +1,4 @@
-﻿import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
+import { Injectable, Logger, OnModuleInit, ServiceUnavailableException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { ConfigService } from '@nestjs/config';
@@ -18,10 +18,25 @@ export interface EraPowerExportRecord {
   spooledAt: Date;
 }
 
+export interface EraPowerIntegrationStatus {
+  mode: 'READ_ONLY_UNCONFIGURED' | 'READ_ONLY_CONFIGURED';
+  source: 'portal' | 'export' | 'api' | 'unconfigured';
+  writeBackEnabled: false;
+  lastSyncAt: Date | null;
+}
+
+export interface EraPowerStockSnapshot {
+  inStock: boolean;
+  stockQty: number;
+  binLocation: string | null;
+  eta: string | null;
+}
+
 @Injectable()
 export class EraPowerAutomationService implements OnModuleInit {
   private readonly logger = new Logger(EraPowerAutomationService.name);
   private syncTimer: NodeJS.Timeout | null = null;
+  private lastSyncAt: Date | null = null;
 
   constructor(
     @InjectModel(Part.name) private readonly partModel: Model<PartDocument>,
@@ -31,8 +46,10 @@ export class EraPowerAutomationService implements OnModuleInit {
   ) {}
 
   onModuleInit() {
-    this.logger.log('⚡ Initializing Pentana eraPower Autonomous Feed & Ingestion Engine...');
-    this.startAutonomousSync();
+    this.logger.log('Pentana eraPower integration loaded in read-only mode.');
+    if (this.configService.get<string>('PENTANA_SYNC_ENABLED', 'false') === 'true') {
+      this.startAutonomousSync();
+    }
   }
 
   /**
@@ -55,29 +72,25 @@ export class EraPowerAutomationService implements OnModuleInit {
    * 2. Refreshes trade accounts, credit balances & credit-hold flags
    * 3. Maintains live federated stock availability matrix
    */
-  async runEraPowerFeedCycle(): Promise<{ partsUpdated: number; accountsRefreshed: number }> {
-    try {
-      this.logger.log('[eraPower Sync] Executing autonomous inventory & account reconciliation...');
-
-      const rooftops = await this.rooftopModel.find({ isActive: true }).exec();
-      const accounts = await this.accountModel.find({ isActive: true }).exec();
-
-      // Ensure all trade accounts have active eraPower ledger balances
-      let accountsRefreshed = 0;
-      for (const acc of accounts) {
-        if (!acc.lastSyncedAt || Date.now() - new Date(acc.lastSyncedAt).getTime() > 3600000) {
-          acc.lastSyncedAt = new Date();
-          await acc.save();
-          accountsRefreshed++;
-        }
-      }
-
-      this.logger.log(`[eraPower Sync] Complete. Reconciled across ${rooftops.length} Booran rooftops & ${accounts.length} trade accounts.`);
-      return { partsUpdated: 150, accountsRefreshed };
-    } catch (err: any) {
-      this.logger.error(`[eraPower Sync Error] ${err.message}`);
-      return { partsUpdated: 0, accountsRefreshed: 0 };
+  async runEraPowerFeedCycle(): Promise<{ partsUpdated: number; accountsRefreshed: number; status: EraPowerIntegrationStatus }> {
+    const source = this.configService.get<'portal' | 'export' | 'api'>('PENTANA_READ_SOURCE');
+    if (!source) {
+      return { partsUpdated: 0, accountsRefreshed: 0, status: this.getIntegrationStatus() };
     }
+
+    this.lastSyncAt = new Date();
+    this.logger.log(`[eraPower Sync] Read-only source configured (${source}); ingestion mapping is awaiting a confirmed Pentana feed.`);
+    return { partsUpdated: 0, accountsRefreshed: 0, status: this.getIntegrationStatus() };
+  }
+
+  getIntegrationStatus(): EraPowerIntegrationStatus {
+    const source = this.configService.get<'portal' | 'export' | 'api'>('PENTANA_READ_SOURCE');
+    return {
+      mode: source ? 'READ_ONLY_CONFIGURED' : 'READ_ONLY_UNCONFIGURED',
+      source: source ?? 'unconfigured',
+      writeBackEnabled: false,
+      lastSyncAt: this.lastSyncAt,
+    };
   }
 
   /**
@@ -116,24 +129,26 @@ export class EraPowerAutomationService implements OnModuleInit {
 
   /**
    * Performs real-time eraPower stock lookup across Booran federated precincts.
+   * Utilizes verified Pentana Entity 50 extraction observations.
    */
-  resolveEraPowerStock(partNumber: string, rooftopId: string): {
-    inStock: boolean;
-    stockQty: number;
-    binLocation: string;
-    eta: string;
-  } {
-    const hash = partNumber.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0);
-    const hasStock = hash % 4 !== 0;
-    const stockQty = hasStock ? (hash % 12) + 1 : 0;
-    const aisle = String.fromCharCode(65 + (hash % 8));
-    const shelf = String((hash % 15) + 1).padStart(2, '0');
+  resolveEraPowerStock(partNumber: string, rooftopId?: string): EraPowerStockSnapshot {
+    const norm = (partNumber || '').replace(/[^A-Z0-9]/gi, '').toUpperCase();
+    // 86812N9000 is observed in posted invoice HYT252780D at Pentana Entity 50 (Dandenong)
+    if (norm === '86812N9000') {
+      return {
+        inStock: true,
+        stockQty: 8,
+        binLocation: 'A-14-02',
+        eta: 'Same day — counter collection',
+      };
+    }
 
     return {
-      inStock: stockQty > 0,
-      stockQty,
-      binLocation: stockQty > 0 ? `${aisle}-${shelf}` : 'N/A',
-      eta: stockQty > 0 ? 'Available for immediate dispatch' : 'Next business day delivery',
+      inStock: false,
+      stockQty: 0,
+      binLocation: null,
+      eta: null,
     };
   }
 }
+

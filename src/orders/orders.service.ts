@@ -169,9 +169,9 @@ export class OrdersService {
         coreChargeCents,
         totalPriceCents: lineTotal,
         sourceKind: item.sourceKind || SourceKind.BRANCH,
-        sourceName: item.sourceName || `${rooftop.name} Parts`,
+        sourceName: item.sourceName || 'Pentana (unresolved)',
         sourceRooftopId: item.sourceRooftopId || (item.sourceKind === SourceKind.BRANCH ? rooftopId : null),
-        binLocation: item.binLocation || 'A-01',
+        binLocation: item.binLocation || null,
         eta: item.eta || null,
         state: OrderLineState.PENDING,
         pickedQuantity: 0,
@@ -228,7 +228,9 @@ export class OrdersService {
           toState: OrderState.SUBMITTED,
           changedBy: user.supabaseId,
           changedAt: new Date(),
-          notes: `Order placed and queued in Pentana DMS (${dmsResult.dmsOrderNumber})`,
+          notes: dmsResult.requiresStaffEntry
+            ? 'Order created in the app; staff entry into Pentana is required for Phase 1.'
+            : `Order queued in Pentana DMS (${dmsResult.dmsOrderNumber})`,
         },
       ],
     });

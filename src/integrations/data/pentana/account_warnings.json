@@ -1,0 +1,122 @@
+[
+  {
+    "source_entity_code": "50",
+    "entity_id": "19214",
+    "warning_entity_id": "19214",
+    "warning_text": "07/09/2023     2120           philm          \nDANDENONG NISSAN\nREQUIRES TILL PAYMENT BEFORE ORDERING OR SENDING ANY PARTS\n",
+    "captured_at": "2026-10-20T08:31:05.906Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "4014",
+    "warning_entity_id": "4014",
+    "warning_text": "05/03/2025     2120           matthewt       \nDON'T USE THIS ACCOUNT\nUSE ACCOUNT 038549\n",
+    "captured_at": "2026-10-20T08:45:06.737Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038477",
+    "warning_entity_id": "038477",
+    "warning_text": "25/10/2016     2120           philm          \nUSE ACC 7674 \n\n",
+    "captured_at": "2026-10-20T08:45:30.250Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546765",
+    "warning_entity_id": "546765",
+    "warning_text": "21/05/2015     2120           philm          \nISSUES?\nCALL PAUL 0499 600 165\n\n",
+    "captured_at": "2026-10-20T08:46:15.965Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "58616",
+    "warning_entity_id": "58616",
+    "warning_text": "03/09/2026     2120           andrewa        \nPLEASE CHECK PRICE MATCHING FOR HYU & MITS\n\n\n",
+    "captured_at": "2026-10-20T08:48:42.636Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "597836",
+    "warning_entity_id": "597836",
+    "warning_text": "19/08/2016     2120           matthewt       \nDONT USE THIS ACCOUNT\nUSE ACCOUNT 034402\n",
+    "captured_at": "2026-10-20T08:49:46.750Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033555",
+    "warning_entity_id": "033555",
+    "warning_text": "25/10/2021     0556           catherinem     \nPlease use account 23213. Thank you\n\n",
+    "captured_at": "2026-10-20T08:52:06.760Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "501644",
+    "warning_entity_id": "501644",
+    "warning_text": "05/05/2023     2120           markb          \nDO NOT SELL TO.  EVER!!!!! DOES NOT PAY!!!!!\n**************NOT EVEN C.O.D*************\n\n\n04/11/2011     2120           philm          \nJOHN 0438 008 111\n",
+    "captured_at": "2026-10-20T08:54:08.534Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "522937",
+    "warning_entity_id": "522937",
+    "warning_text": "10/12/2021     0556           catherinem     \nPLease use account 8612. Thank you\n\n",
+    "captured_at": "2026-10-20T08:55:52.014Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "80931",
+    "warning_entity_id": "80931",
+    "warning_text": "05/02/2024     2120           markb          \nUSE ACC 331068 R&D BODY GROUP\n\n",
+    "captured_at": "2026-10-20T08:56:15.938Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "43583",
+    "warning_entity_id": "43583",
+    "warning_text": "19/08/2021     2120           markb          \nUSE ACC 23346\n\n\n",
+    "captured_at": "2026-10-20T08:58:42.336Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "532342",
+    "warning_entity_id": "532342",
+    "warning_text": "05/02/2024     2120           markb          \nUSE ACC 331068 R&D BODY GROUP\n\n",
+    "captured_at": "2026-10-20T09:03:00.763Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "331068",
+    "warning_entity_id": "331068",
+    "warning_text": "05/02/2024     2120           markb          \nUSE PRICE LEVEL 27 PLEASE\nNEW SMASH N SHINE ACC\n\n",
+    "captured_at": "2026-10-20T09:03:19.981Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "1646",
+    "warning_entity_id": "1646",
+    "warning_text": "07/09/2023     2120           philm          \nDANDENONG NISSAN\nREQUIRES TILL PAYMENT BEFORE ORDERING OR SENDING ANY PARTS\n",
+    "captured_at": "2026-10-21T04:52:26.522Z",
+    "source_screen": "NotePadWarnings.htm"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037216",
+    "warning_entity_id": "037216",
+    "warning_text": "16/11/2022     2120           markb          \nDO NOT USE THIS ACC\n\n",
+    "captured_at": "2026-10-21T04:53:29.469Z",
+    "source_screen": "NotePadWarnings.htm"
+  }
+]

@@ -5,6 +5,7 @@ export interface AutomatedQuoteResponse {
   rfqId: string;
   autoQuoted: boolean;
   quotedTotalCents: number;
+  requiresStaffReview: boolean;
   slaTargetSeconds: number;
   timestamp: Date;
   lines: Array<{
@@ -32,29 +33,23 @@ export class PartsCheckAutomationService {
     rooftopId: string;
     lines: Array<{ lineId: string; partNumber: string; quantity: number; unitTradePriceCents?: number | null }>;
   }): AutomatedQuoteResponse {
-    let totalCents = 0;
-
     const evaluatedLines = rfqPayload.lines.map((l) => {
-      const stock = this.eraPowerService.resolveEraPowerStock(l.partNumber, rfqPayload.rooftopId);
-      const unitPriceCents = l.unitTradePriceCents ?? 12500;
-      const lineTotal = unitPriceCents * l.quantity;
-      totalCents += lineTotal;
-
       return {
         lineId: l.lineId,
         partNumber: l.partNumber,
-        quotedPriceCents: unitPriceCents,
-        inStock: stock.inStock,
-        eta: stock.eta,
+        quotedPriceCents: l.unitTradePriceCents ?? 0,
+        inStock: false,
+        eta: 'Pentana read feed unavailable; staff review required',
       };
     });
 
-    this.logger.log(`⚡ [PartsCheck Automation] Auto-quoted RFQ ${rfqPayload.rfqId} ($${(totalCents / 100).toFixed(2)}) for ${rfqPayload.repairerName} within SLA window.`);
+    this.logger.warn(`[PartsCheck Automation] RFQ ${rfqPayload.rfqId} queued for staff review because Pentana read data is not configured.`);
 
     return {
       rfqId: rfqPayload.rfqId,
-      autoQuoted: true,
-      quotedTotalCents: totalCents,
+      autoQuoted: false,
+      quotedTotalCents: 0,
+      requiresStaffReview: true,
       slaTargetSeconds: 900, // 15-minute standard smash quote SLA
       timestamp: new Date(),
       lines: evaluatedLines,

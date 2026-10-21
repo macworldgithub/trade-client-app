@@ -1,0 +1,93 @@
+[
+  {
+    "screen": "vNavBar.htm",
+    "text": "PS Journal\n\n\nInvoice\n\n\nOther Pay\n\n\nParts Source\n\n\nTax Details\n\n\n\t",
+    "fields": []
+  },
+  {
+    "screen": "vNavBar.htm",
+    "text": "",
+    "fields": []
+  },
+  {
+    "screen": "vBottomGroup.htm",
+    "text": "",
+    "fields": []
+  },
+  {
+    "screen": "vBottomGroup.htm",
+    "text": "\tParts Sales Journal Display",
+    "fields": []
+  },
+  {
+    "screen": "AcctgJnlPartsSrcDisp.htm",
+    "text": "Reference No\nTotal Amount\nBalance\nSource\tGl Account\tSale Amount\tCost Amount\n\t\t\t\n\t\t\t\n\n\n\t\t\t\t\nRow 1 of 2\tPage 1 of 1\nTaxable Parts Source",
+    "fields": [
+      {
+        "id": "txtRefNo",
+        "title": "",
+        "value": "252780D"
+      },
+      {
+        "id": "txtTotSaleAmt",
+        "title": "",
+        "value": "192.43"
+      },
+      {
+        "id": "txtTotCostAmt",
+        "title": "",
+        "value": "168.38"
+      },
+      {
+        "id": "txtSaleBal",
+        "title": "",
+        "value": "0.00"
+      },
+      {
+        "id": "txtCostBal",
+        "title": "",
+        "value": "0.00"
+      },
+      {
+        "id": "searchresults_AtbOne",
+        "title": "",
+        "value": "Z"
+      },
+      {
+        "id": "searchresults_AtbTwo",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "searchresults_AtbAmtThree",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "searchresults_AtbAmtFour",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "searchresults_AtbOne",
+        "title": "",
+        "value": "HY1"
+      },
+      {
+        "id": "searchresults_AtbTwo",
+        "title": "",
+        "value": "2DHF505"
+      },
+      {
+        "id": "searchresults_AtbAmtThree",
+        "title": "",
+        "value": "192.43"
+      },
+      {
+        "id": "searchresults_AtbAmtFour",
+        "title": "",
+        "value": "168.38"
+      }
+    ]
+  }
+]

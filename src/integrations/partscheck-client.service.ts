@@ -28,7 +28,7 @@ export class PartsCheckClientService {
     this.apiUrl = this.configService.get<string>('PARTSCHECK_API_URL', 'https://api.partscheck.com.au/v2');
     this.apiKey = this.configService.get<string>('PARTSCHECK_API_KEY', '');
     this.webhookSecret = this.configService.get<string>('PARTSCHECK_WEBHOOK_SECRET', '');
-    this.integrationMode = this.configService.get<string>('INTEGRATION_MODE', 'hybrid');
+    this.integrationMode = this.configService.get<string>('INTEGRATION_MODE', 'dry-run');
   }
 
   /**
@@ -56,8 +56,8 @@ export class PartsCheckClientService {
       }
     }
 
-    this.logger.log(`[PartsCheck Auto-Quote] RFQ ${payload.rfqId} quoted ($${(payload.quotedTotalCents / 100).toFixed(2)}) dispatched to ${payload.repairerName}`);
-    return { success: true, dispatchedAt: new Date() };
+    this.logger.warn(`[PartsCheck Auto-Quote] RFQ ${payload.rfqId} prepared locally; no live PartsCheck writer is configured.`);
+    return { success: false, dispatchedAt: new Date() };
   }
 
   /**

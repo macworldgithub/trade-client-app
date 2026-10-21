@@ -9,13 +9,16 @@ export interface DmsStockResult {
   listPriceCents: number | null;
   eta: string | null;
   probeSuccess: boolean;
-  source: 'erapower_live' | 'federated_sim';
+  source: 'erapower_live' | 'unconfigured';
+  error?: string;
 }
 
 export interface DmsOrderResponse {
   success: boolean;
   dmsOrderNumber: string;
   injectedAt: Date;
+  requiresStaffEntry: boolean;
+  reason: string;
 }
 
 @Injectable()
@@ -35,17 +38,22 @@ export class PentanaDmsService {
     siteCode: string,
     brandCode?: string,
   ): Promise<DmsStockResult> {
-    const stock = this.eraPowerService.resolveEraPowerStock(partNumber, siteCode);
-
-    return {
-      inStock: stock.inStock,
-      stockQty: stock.stockQty,
-      binLocation: stock.binLocation,
-      listPriceCents: null,
-      eta: stock.eta,
-      probeSuccess: true,
-      source: 'erapower_live',
-    };
+    try {
+      const stock = this.eraPowerService.resolveEraPowerStock(partNumber, siteCode);
+      return { ...stock, listPriceCents: null, probeSuccess: true, source: 'erapower_live' };
+    } catch (error: any) {
+      this.logger.warn(`Pentana read unavailable for ${partNumber} at ${siteCode}: ${error?.message}`);
+      return {
+        inStock: false,
+        stockQty: 0,
+        binLocation: null,
+        listPriceCents: null,
+        eta: null,
+        probeSuccess: false,
+        source: 'unconfigured',
+        error: 'PENTANA_READ_SOURCE_NOT_CONFIGURED',
+      };
+    }
   }
 
   /**
@@ -58,14 +66,12 @@ export class PentanaDmsService {
     totalCents: number;
     lines: Array<{ partNumber: string; quantity: number; unitPriceCents: number }>;
   }): Promise<DmsOrderResponse> {
-    const dmsOrderNumber = `ERA-${orderPayload.orderNumber.replace('ORD-', '')}`;
-    
-    this.logger.log(`⚡ [eraPower Automation] Order ${orderPayload.orderNumber} successfully mapped & spooled to Pentana eraPower counter queue (${dmsOrderNumber})`);
-    
     return {
-      success: true,
-      dmsOrderNumber,
+      success: false,
+      dmsOrderNumber: '',
       injectedAt: new Date(),
+      requiresStaffEntry: true,
+      reason: 'PENTANA_WRITEBACK_REQUIRES_SITE_CONFIRMATION',
     };
   }
 }

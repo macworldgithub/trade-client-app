@@ -10,6 +10,8 @@ import {
   UseGuards,
   HttpCode,
   HttpStatus,
+  Headers,
+  UnauthorizedException,
 } from '@nestjs/common';
 import {
   ApiTags,
@@ -31,6 +33,7 @@ import { Roles } from '../common/decorators/roles.decorator';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
 import { Role } from '../common/enums/roles.enum';
 import { UserDocument } from '../auth/schemas/user.schema';
+import { ConfigService } from '@nestjs/config';
 
 const CONTROLLER_ROLES = [
   Role.CONTROLLER,
@@ -44,7 +47,10 @@ const CONTROLLER_ROLES = [
 @ApiTags('PartsCheck')
 @Controller('partscheck')
 export class PartsCheckController {
-  constructor(private readonly partsCheckService: PartsCheckService) {}
+  constructor(
+    private readonly partsCheckService: PartsCheckService,
+    private readonly configService: ConfigService,
+  ) {}
 
   // ─── POST /partscheck/rfq ─────────────────────────────────────────────────
 
@@ -62,7 +68,15 @@ export class PartsCheckController {
     description: 'RFQ processed, stored, and evaluated for automated quote-back',
   })
   @ApiResponse({ status: 400, description: 'Invalid RFQ payload' })
-  handleInboundRfq(@Body() dto: InboundRfqDto, @Req() req: Request) {
+  handleInboundRfq(
+    @Body() dto: InboundRfqDto,
+    @Req() req: Request,
+    @Headers('authorization') authorization?: string,
+  ) {
+    const configuredKey = this.configService.get<string>('PORTAL_API_KEY', '');
+    if (configuredKey && authorization !== `Bearer ${configuredKey}`) {
+      throw new UnauthorizedException('Invalid portal integration key');
+    }
     return this.partsCheckService.handleInboundRfq(dto, req.ip);
   }
 
