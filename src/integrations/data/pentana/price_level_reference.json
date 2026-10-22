@@ -1,0 +1,418 @@
+[
+  {
+    "source_entity_code": "50",
+    "price_level_code": "16",
+    "source_label": "16, peugeot avg cost",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "20",
+    "source_label": "20, DEALER",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "21",
+    "source_label": "21, PUGEOT DEALER",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "17",
+    "source_label": "17, SUZUKI 17%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "22",
+    "source_label": "22, CAPRICORN",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "18",
+    "source_label": "18, TRADE INTRO",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "23",
+    "source_label": "23,",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "19",
+    "source_label": "19, PANEL-PPR 40%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "24",
+    "source_label": "24, HIGH VOLUME PANEL",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "25",
+    "source_label": "25, list less 25",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "30",
+    "source_label": "30, dealer price",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "31",
+    "source_label": "31, BRANCH TRANSFERS ONLY",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "80",
+    "source_label": "80, DEALER-4",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "27",
+    "source_label": "27, list less 20",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "32",
+    "source_label": "32, list less 27",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "28",
+    "source_label": "28, list-22",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "29",
+    "source_label": "29,",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "900",
+    "source_label": "900, LIST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "901",
+    "source_label": "901, LLIST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "35",
+    "source_label": "35, motorone",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "36",
+    "source_label": "36, Holmart",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "40",
+    "source_label": "40, Warranty",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "37",
+    "source_label": "37, cost plus 10",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "41",
+    "source_label": "41, cost",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "38",
+    "source_label": "38, PANEL HOLDEN, PUG,SUZ,HSV",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "42",
+    "source_label": "42, SUZUKI LESS 20%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "39",
+    "source_label": "39, cost + 5%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "999",
+    "source_label": "999, LIST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "45",
+    "source_label": "45, SUZUKI BASE AVG COST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "50",
+    "source_label": "50, internal pricing",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "51",
+    "source_label": "51, 51",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "52",
+    "source_label": "52, LIST LESS 25%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "1",
+    "source_label": "1, DEFAULT",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "53",
+    "source_label": "53, PUG DISC 53",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "2",
+    "source_label": "2, retail discount",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "54",
+    "source_label": "54, CODE 54,55",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "99",
+    "source_label": "99, LIST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "3",
+    "source_label": "3, LIST + 10",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "55",
+    "source_label": "55, STK ORD DISCOUNT",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "4",
+    "source_label": "4, RETAIL RUSH ORDER",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "10",
+    "source_label": "10, COUNTER TRADE,GM EMPLOYEE, PENSIONE",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "56",
+    "source_label": "56, PUG DISC 56",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "11",
+    "source_label": "11, TRADE",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "60",
+    "source_label": "60, holmart",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "5",
+    "source_label": "5, PANEL LIST LESS 15%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "57",
+    "source_label": "57, euro trade",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "6",
+    "source_label": "6, LIST",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "12",
+    "source_label": "12, LOADED TRADE",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "13",
+    "source_label": "13, DEALER LESS 8",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "58",
+    "source_label": "58, PEUGEOT LESS 20%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "7",
+    "source_label": "7, MODIFIED TRADE",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  },
+  {
+    "source_entity_code": "50",
+    "price_level_code": "15",
+    "source_label": "15, TRADE -5%",
+    "source_screen": "EntityParts.htm",
+    "discount_percent": null,
+    "rule_formula_verified": false
+  }
+]

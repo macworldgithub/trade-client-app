@@ -1,0 +1,158 @@
+[
+  {
+    "screen": "PartsInvoiceDisp.htm",
+    "text": "Parts Invoice Inquiry\nInvoice Number\n252780D\nPay Method\nOrder Status\nInvoice Status\nGP%\non Date\nat Time\nCustomer No\nCustomer Name\nBusiness Phone\nCounterman\nPrice Level\nOrder Type\non Date\nat Time\nPart No\tDescription\tQty Ordered\tQty Shipped\tList\t\tSelling Price\tExtended Amount\tTc\tPl\n\t\t\t\t\t\t\t\t\t\n\n\n\t\t\t\t\nRow 1 of 1\tPage 1 of 1\nUser\nGP\nTotal\nTax\nBalance",
+    "fields": [
+      {
+        "id": "selInvoiceNo",
+        "title": "",
+        "value": "252780D"
+      },
+      {
+        "id": "txtPayTitle",
+        "title": "",
+        "value": "CHARGE"
+      },
+      {
+        "id": "txtOrderStatus",
+        "title": "",
+        "value": "P/Slip generated"
+      },
+      {
+        "id": "txtInvoiceStatus",
+        "title": "",
+        "value": "Posted to accounting"
+      },
+      {
+        "id": "txtGpPct",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "txtInvStatusDate",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "txtInvStatusTime",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "txtCustNo",
+        "title": "",
+        "value": "19400"
+      },
+      {
+        "id": "txtCustName",
+        "title": "",
+        "value": "A&M Smash Repairs"
+      },
+      {
+        "id": "txtCustBusPhone",
+        "title": "",
+        "value": "(03) 8759 4110"
+      },
+      {
+        "id": "txtCounterman",
+        "title": "",
+        "value": "BA"
+      },
+      {
+        "id": "txtPriceLevel",
+        "title": "",
+        "value": "20"
+      },
+      {
+        "id": "txtOrderType",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "txtOrderDate",
+        "title": "",
+        "value": "19/10/2026"
+      },
+      {
+        "id": "txtOrderTime",
+        "title": "",
+        "value": "09:59:49"
+      },
+      {
+        "id": "searchresults_AtbOne",
+        "title": "",
+        "value": "86812N9000"
+      },
+      {
+        "id": "searchresults_AtbTwo",
+        "title": "",
+        "value": " GUARD ASSY-FRONT WH"
+      },
+      {
+        "id": "searchresults_AtbThree",
+        "title": "",
+        "value": "1"
+      },
+      {
+        "id": "searchresults_AtbFour",
+        "title": "",
+        "value": "1"
+      },
+      {
+        "id": "searchresults_AtbAmtFive",
+        "title": "",
+        "value": "240.54"
+      },
+      {
+        "id": "searchresults_AtbAmtSix",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "searchresults_AtbAmtSeven",
+        "title": "",
+        "value": "192.43"
+      },
+      {
+        "id": "searchresults_AtbAmtEight",
+        "title": "",
+        "value": "192.43"
+      },
+      {
+        "id": "searchresults_AtbNine",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "searchresults_AtbTen",
+        "title": "",
+        "value": "20"
+      },
+      {
+        "id": "txtUser",
+        "title": "",
+        "value": "s03disp"
+      },
+      {
+        "id": "txtGpAmt",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "txtInvTotal",
+        "title": "",
+        "value": "192.43"
+      },
+      {
+        "id": "txtTotTax",
+        "title": "",
+        "value": "19.24"
+      },
+      {
+        "id": "txtBalance",
+        "title": "",
+        "value": "211.67"
+      }
+    ]
+  }
+]

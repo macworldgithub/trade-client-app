@@ -1,0 +1,2 @@
+﻿source_entity_code,account_id,invoice_reference,invoice_number,invoice_date_raw,order_date_raw,part_number,description,quantity_ordered,quantity_shipped,list_unit_price,selling_unit_price,extended_amount,price_level_code,invoice_tax_total,invoice_balance,price_context,current_offer_verified,current_quantity_available,source_screen
+50,19400,HYT252780D,252780D,20/10/2026,19/10/2026,86812N9000, GUARD ASSY-FRONT WH,1,1,240.54,192.43,192.43,20,19.24,211.67,POSTED_INVOICE_SNAPSHOT,false,,PartsInvoiceDisp.htm

@@ -1,0 +1,50 @@
+{
+  "source_entity_code": "50",
+  "query": "SMASH",
+  "customer_and_prospect": true,
+  "customer_type_options_selected": [
+    "Parts",
+    "Quotes",
+    "Receivable",
+    "Service",
+    "User Defined",
+    "Vehicle"
+  ],
+  "rows_reported": 185,
+  "pages_reported": 21,
+  "pages_captured": 21,
+  "detail_rows_captured": 185,
+  "account_screen_rows_captured": 34,
+  "receivable_candidate_selection": "Customer-types search value contains R; then all related screen entity IDs verified",
+  "field_navigation": [
+    {
+      "dataset": "parts_account_rules",
+      "path": "Entity Maintenance > select customer > Customer action > Parts Details",
+      "screen": "EntityParts.htm"
+    },
+    {
+      "dataset": "receivables",
+      "path": "Entity Maintenance > select customer > Customer action > Receivable Details",
+      "screen": "EntityReceivable.htm"
+    },
+    {
+      "dataset": "financial_year_parts_sales",
+      "path": "Customer > Value Details (also available under Analysis)",
+      "screen": "EntityValueDtls.htm"
+    },
+    {
+      "dataset": "invoice_price_snapshot",
+      "path": "Analysis > Value Details > Parts > transaction reference > Invoice",
+      "screen": "PartsInvoiceDisp.htm"
+    }
+  ],
+  "network_status": "RECOVERED",
+  "pending_contact_detail_count": 0,
+  "live_stock_capture_complete": false,
+  "live_catalogue_capture_complete": false,
+  "contact_capture_dates": [
+    "2026-10-20",
+    "2026-10-21"
+  ],
+  "account_financial_capture_date": "2026-10-20"
+}

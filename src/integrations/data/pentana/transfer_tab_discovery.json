@@ -1,0 +1,18 @@
+{
+  "source_entity_code": "50",
+  "entity_id": "19400",
+  "inspected_at": "2026-10-21",
+  "path": "Customer > Parts Details > Transfer Details",
+  "finding": "Account default transfer store/vendor and DOE transfer store/vendor fields, all blank for this account. Not a stock-transfer ledger.",
+  "fields": [
+    "CusBranch",
+    "CusIbtVendNo",
+    "CusIbtVenName",
+    "CusPoBranch",
+    "CusPoVendNo",
+    "CusPoVendName"
+  ],
+  "excluded_navigation": [
+    "STORE03"
+  ]
+}

@@ -6,17 +6,22 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { TradeAccount, TradeAccountDocument } from './schemas/account.schema';
+import { PentanaEntity, PentanaEntityDocument } from './schemas/pentana-entity.schema';
 import { UserDocument } from '../auth/schemas/user.schema';
 import { UpdateCreditHoldDto } from './dto/update-credit-hold.dto';
 import { UpdateOverdueDto } from './dto/update-overdue.dto';
 import { SpendQueryDto } from './dto/spend-query.dto';
 import { Role } from '../common/enums/roles.enum';
+import { PentanaIngestionService } from '../integrations/pentana-ingestion.service';
 
 @Injectable()
 export class AccountsService {
   constructor(
     @InjectModel(TradeAccount.name)
     private accountModel: Model<TradeAccountDocument>,
+    @InjectModel(PentanaEntity.name)
+    private entityModel: Model<PentanaEntityDocument>,
+    private readonly pentanaIngestion: PentanaIngestionService,
   ) {}
 
   // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -35,29 +40,75 @@ export class AccountsService {
 
   /** Cents → dollars shape returned on every account response */
   private formatAccount(doc: TradeAccountDocument) {
+    const limit = doc.creditLimitCents ?? 0;
+    const balance = doc.currentBalanceCents ?? 0;
+    const available = doc.creditAvailableCents !== undefined && doc.creditAvailableCents !== null
+      ? doc.creditAvailableCents
+      : (limit - balance);
+
     return {
       id: doc._id,
       accountId: doc.accountId,
       companyName: doc.companyName,
+      legalName: doc.legalName || doc.companyName,
       contactName: doc.contactName,
       contactEmail: doc.contactEmail,
       contactPhone: doc.contactPhone,
+      businessPhone: doc.businessPhone || doc.contactPhone,
+      mobilePhone: doc.mobilePhone,
+      businessEmail: doc.businessEmail || doc.contactEmail,
+      statementEmail: doc.statementEmail || doc.contactEmail,
+      homeEmail: doc.homeEmail,
+      abn: doc.abn,
       paymentTerms: doc.paymentTerms,
-      creditLimitCents: doc.creditLimitCents,
-      currentBalanceCents: doc.currentBalanceCents,
+      creditLimitCents: limit,
+      currentBalanceCents: balance,
+      creditAvailableCents: available,
+      aged30DaysCents: doc.aged30DaysCents ?? 0,
+      aged60DaysCents: doc.aged60DaysCents ?? 0,
+      aged90DaysCents: doc.aged90DaysCents ?? 0,
+      aged120DaysCents: doc.aged120DaysCents ?? 0,
+      agedBalanceTotalCents: doc.agedBalanceTotalCents ?? 0,
       discountPercent: doc.discountPercent,
       discountRate: doc.discountPercent,
       creditHold: doc.creditHold,
       isOverdue: doc.isOverdue,
       rooftopId: doc.rooftopId,
       homeRooftopId: doc.rooftopId,
-      ytdSpendCents: doc.ytdSpendCents ?? 0,
-      ytdOrderCount: doc.ytdOrderCount ?? 0,
+      ytdSpendCents: doc.ytdSpendCents ?? (doc.partsSalesFinancialYearCents ?? 0),
+      ytdOrderCount: doc.ytdOrderCount ?? (doc.partsTransactionsFinancialYear ?? 0),
+      purchasePriorYearCents: doc.purchasePriorYearCents ?? 0,
+      averageDaysToPay: doc.averageDaysToPay ?? 30,
+      lastPurchaseDate: doc.lastPurchaseDate,
+      lastPaymentDate: doc.lastPaymentDate,
+      financialYearLabel: doc.financialYearLabel || '01/07/2026 - 30/06/2027',
+      partsSalesFinancialYearCents: doc.partsSalesFinancialYearCents ?? 0,
+      partsTransactionsFinancialYear: doc.partsTransactionsFinancialYear ?? 0,
+      partsSaleTypeCode: doc.partsSaleTypeCode || 'T',
+      partsSaleTypeLabel: doc.partsSaleTypeLabel || 'T, 52| TRADE SALES',
+      priceLevelCode: doc.priceLevelCode || '20',
+      priceLevelLabel: doc.priceLevelLabel || '20, DEALER',
+      paymentMethodCode: doc.paymentMethodCode || '1',
+      paymentMethodLabel: doc.paymentMethodLabel || 'CHARGE',
+      creditTypeCode: doc.creditTypeCode || 'R',
+      creditTypeLabel: doc.creditTypeLabel || 'Regular',
+      creditCode: doc.creditCode || '1',
+      creditCodeLabel: doc.creditCodeLabel || 'Good',
+      creditComments: doc.creditComments || '',
+      purchaseOrderRequired: !!doc.purchaseOrderRequired,
+      billToEntityId: doc.billToEntityId,
+      territoryLabel: doc.territoryLabel || 'No Selection',
+      warningNotes: doc.warningNotes || [],
+      isVerifiedPentana: !!doc.isVerifiedPentana,
+      sourceEntityCode: doc.sourceEntityCode || '50',
+      identifierType: doc.identifierType || 'PENTANA_ENTITY_ID',
+      sourceScreens: doc.sourceScreens,
       lastSyncedAt: doc.lastSyncedAt,
       createdAt: (doc as any).createdAt,
       updatedAt: (doc as any).updatedAt,
     };
   }
+
 
   // ─── GET /accounts  (manager / admin) ─────────────────────────────────────
 
@@ -70,9 +121,12 @@ export class AccountsService {
       filter.$or = [
         { accountId: regex },
         { companyName: regex },
+        { legalName: regex },
+        { abn: regex },
         { contactName: regex },
         { contactEmail: regex },
         { contactPhone: regex },
+        { priceLevelLabel: regex },
       ];
     }
 
@@ -170,9 +224,23 @@ export class AccountsService {
     ytdOrderCount: number;
     creditLimitCents: number;
     currentBalanceCents: number;
+    creditAvailableCents?: number;
     discountPercent: number;
     creditHold: boolean;
     isOverdue: boolean;
+    priceLevelLabel?: string;
+    aged30DaysCents?: number;
+    aged60DaysCents?: number;
+    aged90DaysCents?: number;
+    aged120DaysCents?: number;
+    partsSalesFinancialYearCents?: number;
+    partsTransactionsFinancialYear?: number;
+    purchasePriorYearCents?: number;
+    averageDaysToPay?: number;
+    lastPurchaseDate?: string | null;
+    lastPaymentDate?: string | null;
+    warningNotes?: string[];
+    abn?: string | null;
   }> {
     const doc = await this.resolveAccount(id);
     const requestedYear = query.year ?? new Date().getFullYear();
@@ -186,14 +254,52 @@ export class AccountsService {
       accountId: doc.accountId,
       companyName: doc.companyName,
       year: requestedYear,
-      ytdSpendCents: isCurrent ? doc.ytdSpendCents : 0,
-      ytdOrderCount: isCurrent ? doc.ytdOrderCount : 0,
+      ytdSpendCents: isCurrent ? (doc.ytdSpendCents ?? doc.partsSalesFinancialYearCents ?? 0) : 0,
+      ytdOrderCount: isCurrent ? (doc.ytdOrderCount ?? doc.partsTransactionsFinancialYear ?? 0) : 0,
       creditLimitCents: doc.creditLimitCents,
       currentBalanceCents: doc.currentBalanceCents,
+      creditAvailableCents: doc.creditAvailableCents ?? (doc.creditLimitCents - doc.currentBalanceCents),
       discountPercent: doc.discountPercent,
       creditHold: doc.creditHold,
       isOverdue: doc.isOverdue,
+      priceLevelLabel: doc.priceLevelLabel,
+      aged30DaysCents: doc.aged30DaysCents ?? 0,
+      aged60DaysCents: doc.aged60DaysCents ?? 0,
+      aged90DaysCents: doc.aged90DaysCents ?? 0,
+      aged120DaysCents: doc.aged120DaysCents ?? 0,
+      partsSalesFinancialYearCents: doc.partsSalesFinancialYearCents ?? 0,
+      partsTransactionsFinancialYear: doc.partsTransactionsFinancialYear ?? 0,
+      purchasePriorYearCents: doc.purchasePriorYearCents ?? 0,
+      averageDaysToPay: doc.averageDaysToPay ?? 30,
+      lastPurchaseDate: doc.lastPurchaseDate,
+      lastPaymentDate: doc.lastPaymentDate,
+      warningNotes: doc.warningNotes ?? [],
+      abn: doc.abn,
     };
+  }
+
+  // ─── Pentana Integration & Entity Queries ─────────────────────────────────
+
+  async syncPentanaData() {
+    return this.pentanaIngestion.syncPentanaDataToDatabase();
+  }
+
+  async getDiscoveredEntities(query: {
+    search?: string;
+    suburb?: string;
+    isTradeAccount?: boolean;
+    page?: number;
+    limit?: number;
+  }) {
+    return this.pentanaIngestion.getEntities(query);
+  }
+
+  getPentanaPriceLevels() {
+    return this.pentanaIngestion.getPriceLevels();
+  }
+
+  getPentanaStatus() {
+    return this.pentanaIngestion.getManifestMetadata();
   }
 
   // ─── Credit-hold guard (used by other modules) ────────────────────────────
@@ -215,3 +321,4 @@ export class AccountsService {
     }
   }
 }
+

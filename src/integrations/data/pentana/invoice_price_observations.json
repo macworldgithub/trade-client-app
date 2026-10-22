@@ -1,0 +1,24 @@
+[
+  {
+    "source_entity_code": "50",
+    "account_id": "19400",
+    "invoice_reference": "HYT252780D",
+    "invoice_number": "252780D",
+    "invoice_date_raw": "20/10/2026",
+    "order_date_raw": "19/10/2026",
+    "part_number": "86812N9000",
+    "description": " GUARD ASSY-FRONT WH",
+    "quantity_ordered": "1",
+    "quantity_shipped": "1",
+    "list_unit_price": "240.54",
+    "selling_unit_price": "192.43",
+    "extended_amount": "192.43",
+    "price_level_code": "20",
+    "invoice_tax_total": "19.24",
+    "invoice_balance": "211.67",
+    "price_context": "POSTED_INVOICE_SNAPSHOT",
+    "current_offer_verified": false,
+    "current_quantity_available": null,
+    "source_screen": "PartsInvoiceDisp.htm"
+  }
+]

@@ -1,0 +1,53 @@
+﻿source_entity_code,price_level_code,source_label,source_screen,discount_percent,rule_formula_verified
+50,16,"16, peugeot avg cost",EntityParts.htm,,false
+50,20,"20, DEALER",EntityParts.htm,,false
+50,21,"21, PUGEOT DEALER",EntityParts.htm,,false
+50,17,"17, SUZUKI 17%",EntityParts.htm,,false
+50,22,"22, CAPRICORN",EntityParts.htm,,false
+50,18,"18, TRADE INTRO",EntityParts.htm,,false
+50,23,"23,",EntityParts.htm,,false
+50,19,"19, PANEL-PPR 40%",EntityParts.htm,,false
+50,24,"24, HIGH VOLUME PANEL",EntityParts.htm,,false
+50,25,"25, list less 25",EntityParts.htm,,false
+50,30,"30, dealer price",EntityParts.htm,,false
+50,31,"31, BRANCH TRANSFERS ONLY",EntityParts.htm,,false
+50,80,"80, DEALER-4",EntityParts.htm,,false
+50,27,"27, list less 20",EntityParts.htm,,false
+50,32,"32, list less 27",EntityParts.htm,,false
+50,28,"28, list-22",EntityParts.htm,,false
+50,29,"29,",EntityParts.htm,,false
+50,900,"900, LIST",EntityParts.htm,,false
+50,901,"901, LLIST",EntityParts.htm,,false
+50,35,"35, motorone",EntityParts.htm,,false
+50,36,"36, Holmart",EntityParts.htm,,false
+50,40,"40, Warranty",EntityParts.htm,,false
+50,37,"37, cost plus 10",EntityParts.htm,,false
+50,41,"41, cost",EntityParts.htm,,false
+50,38,"38, PANEL HOLDEN, PUG,SUZ,HSV",EntityParts.htm,,false
+50,42,"42, SUZUKI LESS 20%",EntityParts.htm,,false
+50,39,"39, cost + 5%",EntityParts.htm,,false
+50,999,"999, LIST",EntityParts.htm,,false
+50,45,"45, SUZUKI BASE AVG COST",EntityParts.htm,,false
+50,50,"50, internal pricing",EntityParts.htm,,false
+50,51,"51, 51",EntityParts.htm,,false
+50,52,"52, LIST LESS 25%",EntityParts.htm,,false
+50,1,"1, DEFAULT",EntityParts.htm,,false
+50,53,"53, PUG DISC 53",EntityParts.htm,,false
+50,2,"2, retail discount",EntityParts.htm,,false
+50,54,"54, CODE 54,55",EntityParts.htm,,false
+50,99,"99, LIST",EntityParts.htm,,false
+50,3,"3, LIST + 10",EntityParts.htm,,false
+50,55,"55, STK ORD DISCOUNT",EntityParts.htm,,false
+50,4,"4, RETAIL RUSH ORDER",EntityParts.htm,,false
+50,10,"10, COUNTER TRADE,GM EMPLOYEE, PENSIONE",EntityParts.htm,,false
+50,56,"56, PUG DISC 56",EntityParts.htm,,false
+50,11,"11, TRADE",EntityParts.htm,,false
+50,60,"60, holmart",EntityParts.htm,,false
+50,5,"5, PANEL LIST LESS 15%",EntityParts.htm,,false
+50,57,"57, euro trade",EntityParts.htm,,false
+50,6,"6, LIST",EntityParts.htm,,false
+50,12,"12, LOADED TRADE",EntityParts.htm,,false
+50,13,"13, DEALER LESS 8",EntityParts.htm,,false
+50,58,"58, PEUGEOT LESS 20%",EntityParts.htm,,false
+50,7,"7, MODIFIED TRADE",EntityParts.htm,,false
+50,15,"15, TRADE -5%",EntityParts.htm,,false

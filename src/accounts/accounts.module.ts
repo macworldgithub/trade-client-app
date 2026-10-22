@@ -4,12 +4,14 @@ import { PassportModule } from '@nestjs/passport';
 import { AccountsController } from './accounts.controller';
 import { AccountsService } from './accounts.service';
 import { TradeAccount, TradeAccountSchema } from './schemas/account.schema';
+import { PentanaEntity, PentanaEntitySchema } from './schemas/pentana-entity.schema';
 
 @Module({
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
     MongooseModule.forFeature([
       { name: TradeAccount.name, schema: TradeAccountSchema },
+      { name: PentanaEntity.name, schema: PentanaEntitySchema },
     ]),
   ],
   controllers: [AccountsController],
@@ -19,3 +21,4 @@ import { TradeAccount, TradeAccountSchema } from './schemas/account.schema';
   exports: [AccountsService, MongooseModule],
 })
 export class AccountsModule {}
+

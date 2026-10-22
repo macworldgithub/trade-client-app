@@ -1,4 +1,4 @@
-﻿import { Module, Global } from '@nestjs/common';
+import { Module, Global } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PentanaDmsService } from './pentana-dms.service';
 import { OemPortalService } from './oem-portal.service';
@@ -6,8 +6,10 @@ import { PartsCheckClientService } from './partscheck-client.service';
 import { CapricornService } from './capricorn.service';
 import { EraPowerAutomationService } from './erapower-automation.service';
 import { PartsCheckAutomationService } from './partscheck-automation.service';
+import { PentanaIngestionService } from './pentana-ingestion.service';
 import { Part, PartSchema } from '../parts/schemas/part.schema';
 import { TradeAccount, TradeAccountSchema } from '../accounts/schemas/account.schema';
+import { PentanaEntity, PentanaEntitySchema } from '../accounts/schemas/pentana-entity.schema';
 import { Rooftop, RooftopSchema } from '../rooftops/schemas/rooftop.schema';
 
 @Global()
@@ -16,12 +18,14 @@ import { Rooftop, RooftopSchema } from '../rooftops/schemas/rooftop.schema';
     MongooseModule.forFeature([
       { name: Part.name, schema: PartSchema },
       { name: TradeAccount.name, schema: TradeAccountSchema },
+      { name: PentanaEntity.name, schema: PentanaEntitySchema },
       { name: Rooftop.name, schema: RooftopSchema },
     ]),
   ],
   providers: [
     EraPowerAutomationService,
     PartsCheckAutomationService,
+    PentanaIngestionService,
     PentanaDmsService,
     OemPortalService,
     PartsCheckClientService,
@@ -30,6 +34,7 @@ import { Rooftop, RooftopSchema } from '../rooftops/schemas/rooftop.schema';
   exports: [
     EraPowerAutomationService,
     PartsCheckAutomationService,
+    PentanaIngestionService,
     PentanaDmsService,
     OemPortalService,
     PartsCheckClientService,
@@ -37,3 +42,4 @@ import { Rooftop, RooftopSchema } from '../rooftops/schemas/rooftop.schema';
   ],
 })
 export class IntegrationsModule {}
+

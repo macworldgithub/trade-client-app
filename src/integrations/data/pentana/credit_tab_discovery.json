@@ -1,0 +1,91 @@
+{
+  "captured_at": "2026-10-21T05:00:06.822Z",
+  "screen": "EntityReceivable.htm",
+  "tab": "Credit Details",
+  "text": "Entity Id\nEntity Type\nCustomer Type\nName\nPreferred\nTitle\nSalutation\nAttention\nHome\nBusiness\nMobile\nReceivable Details Aged Balances Amount Pending Transfer Bank Details Credit Details EFT Details\nReference Type\tReference Name\tPhone Number\n\nNo Selection\nCustomer Reference\nEmployer Reference\n\t\t\n\n\n\t\t\t\t\t\t\t\nRow 1 of 1\tPage 1 of 1",
+  "fields": [
+    {
+      "field": "entityname_entityid",
+      "value": "19400",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_entitytype",
+      "value": "C",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_entityid_custype",
+      "value": "XPRXXXU",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_eraname",
+      "value": "A&M Smash Repairs",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_namepreferred",
+      "value": "",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_nametitle",
+      "value": "",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_SalutationDesc",
+      "value": "",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_nameattention",
+      "value": "Accounts",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_homephone",
+      "value": "",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_businessphone",
+      "value": "(03) 8759 4110",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_mobile",
+      "value": "(0434) 231 043",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_entityid_CusCrRefType",
+      "value": "",
+      "type": "select-one"
+    },
+    {
+      "field": "entityname_entityid_CusCrRefName",
+      "value": "",
+      "type": "text",
+      "checked": false
+    },
+    {
+      "field": "entityname_entityid_CusCrRefPhone",
+      "value": "",
+      "type": "text",
+      "checked": false
+    }
+  ]
+}

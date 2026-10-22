@@ -1,0 +1,194 @@
+{
+  "schema_version": "3.0",
+  "source_entity_code": "50",
+  "status": "QUERY_CONTACT_DETAILS_COMPLETE_OPERATIONAL_DATA_PARTIAL",
+  "search_query": "SMASH",
+  "search_rows": 185,
+  "search_pages": 21,
+  "enriched_contact_rows": 185,
+  "pending_contact_rows": 0,
+  "related_account_rows": 34,
+  "related_screens_per_account": 3,
+  "price_level_reference_rows": 52,
+  "warning_notes": 15,
+  "invoice_snapshot_lines": 1,
+  "current_stock_capture_complete": false,
+  "full_catalogue_capture_complete": false,
+  "full_account_book_complete": false,
+  "complete_operational_seed_ready": false,
+  "checks": {
+    "query_pagination": "PASS",
+    "unique_ids": "PASS",
+    "detail_pending_partition": "PASS",
+    "related_screen_ids": "PASS",
+    "account_foreign_keys": "PASS",
+    "csv_round_trip": "PASS"
+  },
+  "files": [
+    {
+      "file": "account_pricing_rules.csv",
+      "bytes": 4608,
+      "sha256": "6d7c632d43d2d1d213e94c9bb60950e9cb74719da9627e6a7127f464461f8a7b"
+    },
+    {
+      "file": "account_pricing_rules.json",
+      "bytes": 20209,
+      "sha256": "148612d2d8bd72b5c579a5d4e53467e9347e84a261084b9cfe8aa3591e13f954"
+    },
+    {
+      "file": "account_screens_raw.json",
+      "bytes": 714437,
+      "sha256": "eaa0a7465a786d0db26439a9eaa2c3de0cf88c16f2d1e0be73a242249789524b"
+    },
+    {
+      "file": "account_warnings.csv",
+      "bytes": 2455,
+      "sha256": "8d7463d43a60a75a92ca611a9f812d201f6514be5bfc5211affb43642ba7baae"
+    },
+    {
+      "file": "account_warnings.json",
+      "bytes": 4806,
+      "sha256": "48f1ce6f0dd7f3135008f1a63de0c26a55f8da987660c199e7dac2f572c0d42e"
+    },
+    {
+      "file": "business_entities.csv",
+      "bytes": 35385,
+      "sha256": "679f5dcacd43846ab726eb4047d7eb8c66b653d0afd1ec9e3a8a273a0ec6136e"
+    },
+    {
+      "file": "business_entities.json",
+      "bytes": 150480,
+      "sha256": "0dd03a042f1b8b52eac6fab9ced4e2063328f6668b7e6b65492bf854beb5bc21"
+    },
+    {
+      "file": "capture_metadata.json",
+      "bytes": 1539,
+      "sha256": "eb6928a883c8f72c0e7d2aa2e4dc5d66c0d138d9cbd26f4be81463a402330da0"
+    },
+    {
+      "file": "credit_tab_discovery.json",
+      "bytes": 2236,
+      "sha256": "7da9ccf24e9e19853b318a3863ae90caa1bbd27f5d33a3202fe6753c63963ed3"
+    },
+    {
+      "file": "entity_details_raw.json",
+      "bytes": 1318993,
+      "sha256": "13bccd173ac9a3a94c7f4f3860b0eebcd80370c3d2155674d053ca7ee073d1a8"
+    },
+    {
+      "file": "entity_search.csv",
+      "bytes": 23853,
+      "sha256": "7386058e02d83681c800d74947c7ca307c056da02168396c78bd8fa4074a5398"
+    },
+    {
+      "file": "entity_search.json",
+      "bytes": 88775,
+      "sha256": "3b254bc8722d9322ca0c743ebe2125fdef772bd06bfd559b2d1f62520e86cb47"
+    },
+    {
+      "file": "invoice_discovery.json",
+      "bytes": 3408,
+      "sha256": "56c056a51a92f78310a1c27d73194086f53b7c5cd4c998808dda64bcef7740fc"
+    },
+    {
+      "file": "invoice_price_observations.csv",
+      "bytes": 513,
+      "sha256": "7b1d4651502a3f38305095b6167f4dad2a9cab7d4da12beb3c8d3cce1b2ac7e9"
+    },
+    {
+      "file": "invoice_price_observations.json",
+      "bytes": 719,
+      "sha256": "4f7a47589af8f2c65a8590613de38490d5938b2486dadc2ed7912ea9b2e5a4b8"
+    },
+    {
+      "file": "pagination_evidence.json",
+      "bytes": 32709,
+      "sha256": "23c0c4e5ddcd47fd0e9034bd57a2d846c986b6d1be156a4eb73fed6f74523fa2"
+    },
+    {
+      "file": "parts_details_discovery.json",
+      "bytes": 25508,
+      "sha256": "89bc123025f0b111720da84913193eb133995e2bf74fa3e717809ff4b751f67e"
+    },
+    {
+      "file": "parts_observed.csv",
+      "bytes": 223,
+      "sha256": "fb10a781d19075e6f636041b4ddf0371c2e95723d1bce5a1424665e9f77b9fcf"
+    },
+    {
+      "file": "parts_observed.json",
+      "bytes": 323,
+      "sha256": "399c01a0c3554b7f651a5447cfd8e0d0434add591e8eff63ab4704f54d583552"
+    },
+    {
+      "file": "parts_source_discovery.json",
+      "bytes": 1929,
+      "sha256": "63b00d4b357c695e9e06c218b8ef637343f0efb8102e725ea12425039c3603d2"
+    },
+    {
+      "file": "pending_details.csv",
+      "bytes": 14,
+      "sha256": "d2d30e05dd245bc1ec70b18d7fa23526145a19a327f98e3b52caf082c49a109a"
+    },
+    {
+      "file": "pending_details.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "file": "price_level_reference.csv",
+      "bytes": 2595,
+      "sha256": "34bfea31bdb6829022a953663d3ea683f2c3856aa90d48454627249fa0702d99"
+    },
+    {
+      "file": "price_level_reference.json",
+      "bytes": 11176,
+      "sha256": "144fee6948f59e03e2806519de10dae4118723bf6c8146b27560290088a707f7"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3206,
+      "sha256": "34838564d9b478f66d82727e39892b0f6ac0a6caf496816e890cc71ba712024d"
+    },
+    {
+      "file": "receivable_accounts_raw.json",
+      "bytes": 5687,
+      "sha256": "c725053afdb8b23ace3b76a64e41da1de79be64a37231071e8ebd58d08bdfb1c"
+    },
+    {
+      "file": "receivable_details_discovery.json",
+      "bytes": 9934,
+      "sha256": "e2c3f9fe57add165782d2b4f5a0d3a587f29e7be1daa79d91564dfd5e900ec80"
+    },
+    {
+      "file": "resumed_details_raw.json",
+      "bytes": 98062,
+      "sha256": "1599dd1d12649c92c92823883861f14797c33b7600c060d1b099d7988afa0d9f"
+    },
+    {
+      "file": "trade_accounts.csv",
+      "bytes": 14532,
+      "sha256": "64baa3ff39ada54cae6edafdabc84bbf52ca39620450a235eaec6b381aa773ec"
+    },
+    {
+      "file": "trade_accounts.json",
+      "bytes": 57031,
+      "sha256": "121e3deec33cb53f4d4664c5d8e2f2a6443bc889a01fccb9ebaf207128a7a779"
+    },
+    {
+      "file": "transfer_tab_discovery.json",
+      "bytes": 492,
+      "sha256": "892d7654a935884b46538452c0fdb81e90d617b071e087f8a5c484a612b080fd"
+    },
+    {
+      "file": "automation/read_account_screens.playwright.js",
+      "bytes": 4476,
+      "sha256": "5085e68330d34a3270e76e0732d1d850414d5deea8d158df9e1dbb2033715849"
+    },
+    {
+      "file": "automation/read_contact_details.playwright.js",
+      "bytes": 4297,
+      "sha256": "d8cce3322b2284562ed0bace8af54477c649c342dbb889063e4271a3a816a9fa"
+    }
+  ]
+}

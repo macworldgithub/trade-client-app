@@ -1,0 +1,975 @@
+[
+  {
+    "screen": "EntityParts.htm",
+    "text": "Entity Id\nEntity Type\nCustomer Type\nName\nPreferred\nTitle\nSalutation\nAttention\nHome\nBusiness\nMobile\nParts Details Call Centre Dtls Notes Order Details Ship To Dtls Transfer Details\nSale Type\nPrice Level\nPayment Method\nTerritory\nShip Via\nRun Number\nName on Tax Invoice\nPurchase Order Required\nPurchase Order Number\nNumber Invoice Copies\nBill to\nName\nStreet Address 1\nStreet Address 2\nSuburb\nCategory\nWhsale Compensatable\nWholesale Fleet Number\nUpdate Retail Profit\nInvoice Sequence\nCapricorn Number\nGM Trade Club No\nAllow sale < GMTC\nGet Genuine Member\nGet Genuine Join Date\nPACCAR Fleet No\nFOTrade Club No\nAllow sale < FOTC\nBMTrade Club No\nAllow sale < BMTC\nParts Labels\nMBTrade Club No\nAllow sale < MBTC\nPinnacle Id\nPaccar Privileges number\nHOTrade Club No\nAllow sale < HOTC\nJLRTrade Club No\nAllow sale < JLRTC\nQt Part# Suppress\nNo Selection\nB, 40| BRANCH TRANSFERS\nD, 40| DEALER SALES\nI, 51| INTERNAL SALES\nR, 40| RETAIL SALES\nT, 52| TRADE SALES\nW, 40| RESELLER WHOLESALE\nNo Selection\n16, peugeot avg cost\n20, DEALER\n21, PUGEOT DEALER\n17, SUZUKI 17%\n22, CAPRICORN\n18, TRADE INTRO\n23,\n19, PANEL-PPR 40%\n24, HIGH VOLUME PANEL\n25, list less 25\n30, dealer price\n31, BRANCH TRANSFERS ONLY\n80, DEALER-4\n27, list less 20\n32, list less 27\n28, list-22\n29,\n900, LIST\n901, LLIST\n35, motorone\n36, Holmart\n40, Warranty\n37, cost plus 10\n41, cost\n38, PANEL HOLDEN, PUG,SUZ,HSV\n42, SUZUKI LESS 20%\n39, cost + 5%\n999, LIST\n45, SUZUKI BASE AVG COST\n50, internal pricing\n51, 51\n52, LIST LESS 25%\n1, DEFAULT\n53, PUG DISC 53\n2, retail discount\n54, CODE 54,55\n99, LIST\n3, LIST + 10\n55, STK ORD DISCOUNT\n4, RETAIL RUSH ORDER\n10, COUNTER TRADE,GM EMPLOYEE, PENSIONE\n56, PUG DISC 56\n11, TRADE\n60, holmart\n5, PANEL LIST LESS 15%\n57, euro trade\n6, LIST\n12, LOADED TRADE\n13, DEALER LESS 8\n58, PEUGEOT LESS 20%\n7, MODIFIED TRADE\n15, TRADE -5%\nNo Selection\nA/MKT\nAMEX\nBULK OIL\nBULK OIL\nBULK OIL\nCASH\nCHEQUE\nCMG NEW\nCRED CD\nCY DELIV\nCY N POL\nCY NC PO\nCY NCSUP\nCY NEWST\nDIRDEP\nF/ASSETS\nF/CARD\nGE DELIV\nGE NC PO\nGE NCSUP\nGE NEWST\nINS CLMS\nKI CARS\nKI DEL\nKI NC PO\nKI NC PO\nKI NCSUP\nKI NEWST\nKI OIL\nMG DELIV\nMG NC PO\nMG NCSUP\nMG NEWST\nMI DELIV\nMI N POL\nMI NCSUP\nN/C POL\nN/C SUPP\nNEW CARS\nNEW DEL\nNEW SZ\nNI DEL\nOTHER\nPAYBYLIN\nPENDING\nPTS SUP\nRENTAL\nS52 SUPP\nSTOPCRED\nU/C POL\nU/C SUPP\nU/WTY\nUSED DEL\nUSEDCAR\nW-S SUP\nW/S SUP\nNo Selection\nSTAFF A/CS\nDANDENONG REP\nSERVICE ACCOUNT\nCHELTENHAM REP\nALL CARS PARTS EASTERN\nALL CAR PARTS EASTERN\nPARTS A/C\nIQ CONTROLS\nNo Selection\nNo Selection\nNo Selection\nYES\nNO\nAccommodation\nNo Selection\nAs Entered\nBin\nPart Number\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes\nNo Selection\nNo\nYes",
+    "fields": [
+      {
+        "id": "entityname_entityid",
+        "title": "Entity id of the detail file",
+        "value": "111087",
+        "checked": false
+      },
+      {
+        "id": "entityname_entitytype",
+        "title": "The entity type codes eg Customer, Prospect etc",
+        "value": "C",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_custype",
+        "title": "The entity customer type",
+        "value": "XPXXXXU",
+        "checked": false
+      },
+      {
+        "id": "entityname_eraname",
+        "title": "The entities Era name",
+        "value": "PERFECT EDGE SMASH ",
+        "checked": false
+      },
+      {
+        "id": "entityname_namepreferred",
+        "title": "Enter the name the entity prefers to be known by",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_nametitle",
+        "title": "Enter the entites title eg Mr, Mrs",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_SalutationDesc",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_nameattention",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_homephone",
+        "title": "Enter the phone number of the entity",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_businessphone",
+        "title": "Enter the business phone number of the entity",
+        "value": "(03) 9314 3330",
+        "checked": false
+      },
+      {
+        "id": "entityname_mobile",
+        "title": "Enter the mobile phone number of the entity",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusSaleType",
+        "title": "vWebpage_tooltip EntityParts.htm 201",
+        "value": "T",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "B",
+            "label": "B, 40| BRANCH TRANSFERS"
+          },
+          {
+            "value": "D",
+            "label": "D, 40| DEALER SALES"
+          },
+          {
+            "value": "I",
+            "label": "I, 51| INTERNAL SALES"
+          },
+          {
+            "value": "R",
+            "label": "R, 40| RETAIL SALES"
+          },
+          {
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "value": "W",
+            "label": "W, 40| RESELLER WHOLESALE"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusPriceCode",
+        "title": "vWebpage_tooltip EntityParts.htm 202",
+        "value": "11",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "16",
+            "label": "16, peugeot avg cost"
+          },
+          {
+            "value": "20",
+            "label": "20, DEALER"
+          },
+          {
+            "value": "21",
+            "label": "21, PUGEOT DEALER"
+          },
+          {
+            "value": "17",
+            "label": "17, SUZUKI 17%"
+          },
+          {
+            "value": "22",
+            "label": "22, CAPRICORN"
+          },
+          {
+            "value": "18",
+            "label": "18, TRADE INTRO"
+          },
+          {
+            "value": "23",
+            "label": "23,"
+          },
+          {
+            "value": "19",
+            "label": "19, PANEL-PPR 40%"
+          },
+          {
+            "value": "24",
+            "label": "24, HIGH VOLUME PANEL"
+          },
+          {
+            "value": "25",
+            "label": "25, list less 25"
+          },
+          {
+            "value": "30",
+            "label": "30, dealer price"
+          },
+          {
+            "value": "31",
+            "label": "31, BRANCH TRANSFERS ONLY"
+          },
+          {
+            "value": "80",
+            "label": "80, DEALER-4"
+          },
+          {
+            "value": "27",
+            "label": "27, list less 20"
+          },
+          {
+            "value": "32",
+            "label": "32, list less 27"
+          },
+          {
+            "value": "28",
+            "label": "28, list-22"
+          },
+          {
+            "value": "29",
+            "label": "29,"
+          },
+          {
+            "value": "900",
+            "label": "900, LIST"
+          },
+          {
+            "value": "901",
+            "label": "901, LLIST"
+          },
+          {
+            "value": "35",
+            "label": "35, motorone"
+          },
+          {
+            "value": "36",
+            "label": "36, Holmart"
+          },
+          {
+            "value": "40",
+            "label": "40, Warranty"
+          },
+          {
+            "value": "37",
+            "label": "37, cost plus 10"
+          },
+          {
+            "value": "41",
+            "label": "41, cost"
+          },
+          {
+            "value": "38",
+            "label": "38, PANEL HOLDEN, PUG,SUZ,HSV"
+          },
+          {
+            "value": "42",
+            "label": "42, SUZUKI LESS 20%"
+          },
+          {
+            "value": "39",
+            "label": "39, cost + 5%"
+          },
+          {
+            "value": "999",
+            "label": "999, LIST"
+          },
+          {
+            "value": "45",
+            "label": "45, SUZUKI BASE AVG COST"
+          },
+          {
+            "value": "50",
+            "label": "50, internal pricing"
+          },
+          {
+            "value": "51",
+            "label": "51, 51"
+          },
+          {
+            "value": "52",
+            "label": "52, LIST LESS 25%"
+          },
+          {
+            "value": "1",
+            "label": "1, DEFAULT"
+          },
+          {
+            "value": "53",
+            "label": "53, PUG DISC 53"
+          },
+          {
+            "value": "2",
+            "label": "2, retail discount"
+          },
+          {
+            "value": "54",
+            "label": "54, CODE 54,55"
+          },
+          {
+            "value": "99",
+            "label": "99, LIST"
+          },
+          {
+            "value": "3",
+            "label": "3, LIST + 10"
+          },
+          {
+            "value": "55",
+            "label": "55, STK ORD DISCOUNT"
+          },
+          {
+            "value": "4",
+            "label": "4, RETAIL RUSH ORDER"
+          },
+          {
+            "value": "10",
+            "label": "10, COUNTER TRADE,GM EMPLOYEE, PENSIONE"
+          },
+          {
+            "value": "56",
+            "label": "56, PUG DISC 56"
+          },
+          {
+            "value": "11",
+            "label": "11, TRADE"
+          },
+          {
+            "value": "60",
+            "label": "60, holmart"
+          },
+          {
+            "value": "5",
+            "label": "5, PANEL LIST LESS 15%"
+          },
+          {
+            "value": "57",
+            "label": "57, euro trade"
+          },
+          {
+            "value": "6",
+            "label": "6, LIST"
+          },
+          {
+            "value": "12",
+            "label": "12, LOADED TRADE"
+          },
+          {
+            "value": "13",
+            "label": "13, DEALER LESS 8"
+          },
+          {
+            "value": "58",
+            "label": "58, PEUGEOT LESS 20%"
+          },
+          {
+            "value": "7",
+            "label": "7, MODIFIED TRADE"
+          },
+          {
+            "value": "15",
+            "label": "15, TRADE -5%"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusPayMethod",
+        "title": "vWebpage_tooltip EntityParts.htm 203",
+        "value": "6",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "AM",
+            "label": "A/MKT"
+          },
+          {
+            "value": "7",
+            "label": "AMEX"
+          },
+          {
+            "value": "26",
+            "label": "BULK OIL"
+          },
+          {
+            "value": "24",
+            "label": "BULK OIL"
+          },
+          {
+            "value": "PO",
+            "label": "BULK OIL"
+          },
+          {
+            "value": "4",
+            "label": "CASH"
+          },
+          {
+            "value": "3",
+            "label": "CHEQUE"
+          },
+          {
+            "value": "CN",
+            "label": "CMG NEW"
+          },
+          {
+            "value": "2",
+            "label": "CRED CD"
+          },
+          {
+            "value": "35",
+            "label": "CY DELIV"
+          },
+          {
+            "value": "CP",
+            "label": "CY N POL"
+          },
+          {
+            "value": "31",
+            "label": "CY NC PO"
+          },
+          {
+            "value": "33",
+            "label": "CY NCSUP"
+          },
+          {
+            "value": "29",
+            "label": "CY NEWST"
+          },
+          {
+            "value": "DD",
+            "label": "DIRDEP"
+          },
+          {
+            "value": "FA",
+            "label": "F/ASSETS"
+          },
+          {
+            "value": "8",
+            "label": "F/CARD"
+          },
+          {
+            "value": "36",
+            "label": "GE DELIV"
+          },
+          {
+            "value": "32",
+            "label": "GE NC PO"
+          },
+          {
+            "value": "34",
+            "label": "GE NCSUP"
+          },
+          {
+            "value": "30",
+            "label": "GE NEWST"
+          },
+          {
+            "value": "IC",
+            "label": "INS CLMS"
+          },
+          {
+            "value": "10",
+            "label": "KI CARS"
+          },
+          {
+            "value": "20",
+            "label": "KI DEL"
+          },
+          {
+            "value": "13",
+            "label": "KI NC PO"
+          },
+          {
+            "value": "14",
+            "label": "KI NC PO"
+          },
+          {
+            "value": "16",
+            "label": "KI NCSUP"
+          },
+          {
+            "value": "9",
+            "label": "KI NEWST"
+          },
+          {
+            "value": "25",
+            "label": "KI OIL"
+          },
+          {
+            "value": "22",
+            "label": "MG DELIV"
+          },
+          {
+            "value": "15",
+            "label": "MG NC PO"
+          },
+          {
+            "value": "18",
+            "label": "MG NCSUP"
+          },
+          {
+            "value": "11",
+            "label": "MG NEWST"
+          },
+          {
+            "value": "21",
+            "label": "MI DELIV"
+          },
+          {
+            "value": "MP",
+            "label": "MI N POL"
+          },
+          {
+            "value": "17",
+            "label": "MI NCSUP"
+          },
+          {
+            "value": "NP",
+            "label": "N/C POL"
+          },
+          {
+            "value": "NS",
+            "label": "N/C SUPP"
+          },
+          {
+            "value": "NC",
+            "label": "NEW CARS"
+          },
+          {
+            "value": "ND",
+            "label": "NEW DEL"
+          },
+          {
+            "value": "23",
+            "label": "NEW SZ"
+          },
+          {
+            "value": "19",
+            "label": "NI DEL"
+          },
+          {
+            "value": "5",
+            "label": "OTHER"
+          },
+          {
+            "value": "PL",
+            "label": "PAYBYLIN"
+          },
+          {
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "value": "PS",
+            "label": "PTS SUP"
+          },
+          {
+            "value": "BB",
+            "label": "RENTAL"
+          },
+          {
+            "value": "KS",
+            "label": "S52 SUPP"
+          },
+          {
+            "value": "ST",
+            "label": "STOPCRED"
+          },
+          {
+            "value": "UP",
+            "label": "U/C POL"
+          },
+          {
+            "value": "US",
+            "label": "U/C SUPP"
+          },
+          {
+            "value": "UW",
+            "label": "U/WTY"
+          },
+          {
+            "value": "UD",
+            "label": "USED DEL"
+          },
+          {
+            "value": "UC",
+            "label": "USEDCAR"
+          },
+          {
+            "value": "12",
+            "label": "W-S SUP"
+          },
+          {
+            "value": "WS",
+            "label": "W/S SUP"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusTerritory",
+        "title": "vWebpage_tooltip EntityParts.htm 204",
+        "value": "",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "1",
+            "label": "STAFF A/CS"
+          },
+          {
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "value": "3",
+            "label": "SERVICE ACCOUNT"
+          },
+          {
+            "value": "4",
+            "label": "CHELTENHAM REP"
+          },
+          {
+            "value": "ACP",
+            "label": "ALL CARS PARTS EASTERN"
+          },
+          {
+            "value": "ACE",
+            "label": "ALL CAR PARTS EASTERN"
+          },
+          {
+            "value": "5",
+            "label": "PARTS A/C"
+          },
+          {
+            "value": "8",
+            "label": "IQ CONTROLS"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusShipVia",
+        "title": "vWebpage_tooltip EntityParts.htm 205",
+        "value": "",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusRunNo",
+        "title": "vWebpage_tooltip EntityParts.htm 206",
+        "value": "",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusTaxNameInv",
+        "title": "vWebpage_tooltip EntityParts.htm 207",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusPoReqd",
+        "title": "vWebpage_tooltip EntityParts.htm 208",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusPoNumber",
+        "title": "vWebpage_tooltip EntityParts.htm 209",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusInvCopies",
+        "title": "vWebpage_tooltip EntityParts.htm 210",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillTo",
+        "title": "vWebpage_tooltip EntityParts.htm 211",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillToName",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillAddrA",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillAddrB",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillSuburb",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusBillPcode",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_PinnacleId",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusCategory",
+        "title": "vWebpage_tooltip EntityParts.htm 219",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusWhslComp",
+        "title": "vWebpage_tooltip EntityParts.htm 220",
+        "value": "",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "YES",
+            "label": "YES"
+          },
+          {
+            "value": "NO",
+            "label": "NO"
+          },
+          {
+            "value": "A",
+            "label": "Accommodation"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusWhslFleetNo",
+        "title": "vWebpage_tooltip EntityParts.htm 221",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusRetProfit",
+        "title": "vWebpage_tooltip EntityParts.htm 222",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusPartLabels",
+        "title": "vWebpage_tooltip EntityParts.htm 223",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusInvSeq",
+        "title": "vWebpage_tooltip EntityParts.htm 224",
+        "value": "A",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "value": "B",
+            "label": "Bin"
+          },
+          {
+            "value": "P",
+            "label": "Part Number"
+          }
+        ]
+      },
+      {
+        "id": "btnEmlOptions",
+        "title": "Click to enter email options",
+        "value": "Parts Email Options",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_PACCNo",
+        "title": "",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_QtPartSuppress",
+        "title": "Select 'Yes' to suppress part numbers printing on quotes",
+        "value": "",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_CusCapNo",
+        "title": "vWebpage_tooltip EntityParts.htm 227",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_GMTradeClubNo",
+        "title": "Enter the GM Trade Club membership number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_GMTradeClubOvr",
+        "title": "",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "",
+        "title": "Change FROM or TO Group Pricing",
+        "value": "Change",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_GetGenuineMbr",
+        "title": "Enter the Get Genuine membership number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_GetGenuineDate",
+        "title": "Enter the commencement date for the Get Genuine membership",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_FOTradeClubNo",
+        "title": "Enter the Ford Trade Club Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_FOTradeClubOvr",
+        "title": "Select 'Yes' to allow sale price less than Ford Trade Club price",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_BMTradeClubNo",
+        "title": "Enter the BMW Trade Club Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_BMTradeClubOvr",
+        "title": "Select 'Yes' to allow sale price less than BMW Trade Club price",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_PaccarFleetNo",
+        "title": "Enter the PACCAR Fleet Services Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_MBTradeClubNo",
+        "title": "Enter the MB Trade Club Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_MBTradeClubOvr",
+        "title": "Select 'Yes' to allow sale price less than MB Trade Club Price",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_HOTradeClubNo",
+        "title": "Enter the HO Trade Club Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_HOTradeClubOvr",
+        "title": "Select 'Yes' to allow sale price less than HO Trade Club Price",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      },
+      {
+        "id": "entityname_entityid_JLRTradeClubNo",
+        "title": "Enter the JLR Trade Club Member number",
+        "value": "",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_JLRTradeClubOvr",
+        "title": "Select 'Yes' to allow sale price less than JLR Trade Club Price",
+        "value": "0",
+        "options": [
+          {
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "value": "1",
+            "label": "Yes"
+          }
+        ]
+      }
+    ]
+  }
+]

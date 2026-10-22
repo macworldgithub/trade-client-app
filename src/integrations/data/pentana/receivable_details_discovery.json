@@ -1,0 +1,335 @@
+[
+  {
+    "screen": "vEntityHeader.htm",
+    "text": "50| Dandenong Mitsubishi & Hyundai",
+    "fields": []
+  },
+  {
+    "screen": "vEntityHeader.htm",
+    "text": "",
+    "fields": []
+  },
+  {
+    "screen": "EntityReceivable.htm",
+    "text": "Entity Id\nEntity Type\nCustomer Type\nName\nPreferred\nTitle\nSalutation\nAttention\nHome\nBusiness\nMobile\nReceivable Details Aged Balances Amount Pending Transfer Bank Details Credit Details EFT Details\nCustomer Debit\nCredit Limit\nAccount Balance\nCredit Available\nCredit Type\nCredit Code\nCredit Terms\nDate Created\nPayment Method\nTerritory\nContact Name\nFormat\nProduce\nService Charges\nPrint\nAge Cnotes Current\nEmail\nFax\nBPAY Number\nEmail\nStatement\nFax\nNo Selection\nRegular\nOne Time\nC.O.D\nNo Selection\nGood\nSlow\nApproval Reqd\nDo not sell\nNo Selection\n7 DAYS\n30 DAYS\nNo Selection\nA/MKT\nAMEX\nBULK OIL\nBULK OIL\nBULK OIL\nCASH\nCHEQUE\nCMG NEW\nCRED CD\nCY DELIV\nCY N POL\nCY NC PO\nCY NCSUP\nCY NEWST\nDIRDEP\nF/ASSETS\nF/CARD\nGE DELIV\nGE NC PO\nGE NCSUP\nGE NEWST\nINS CLMS\nKI CARS\nKI DEL\nKI NC PO\nKI NC PO\nKI NCSUP\nKI NEWST\nKI OIL\nMG DELIV\nMG NC PO\nMG NCSUP\nMG NEWST\nMI DELIV\nMI N POL\nMI NCSUP\nN/C POL\nN/C SUPP\nNEW CARS\nNEW DEL\nNEW SZ\nNI DEL\nOTHER\nPAYBYLIN\nPENDING\nPTS SUP\nRENTAL\nS52 SUPP\nSTOPCRED\nU/C POL\nU/C SUPP\nU/WTY\nUSED DEL\nUSEDCAR\nW-S SUP\nW/S SUP\nNo Selection\nSTAFF A/CS\nDANDENONG REP\nSERVICE ACCOUNT\nCHELTENHAM REP\nALL CARS PARTS EASTERN\nALL CAR PARTS EASTERN\nPARTS A/C\nIQ CONTROLS\nNo Selection\nDetail Forward\nBalance Forward\nAGE\tBALANCE\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\nPURCHASE HISTORY\tVALUE\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\n\n\n\t\nGl Account\nComments\nType",
+    "fields": [
+      {
+        "id": "entityname_entityid",
+        "title": "Entity id of the detail file",
+        "value": "111087"
+      },
+      {
+        "id": "entityname_entitytype",
+        "title": "The entity type codes eg Customer, Prospect etc",
+        "value": "C"
+      },
+      {
+        "id": "entityname_entityid_custype",
+        "title": "The entity customer type",
+        "value": "XPXXXXU"
+      },
+      {
+        "id": "entityname_eraname",
+        "title": "The entities Era name",
+        "value": "PERFECT EDGE SMASH "
+      },
+      {
+        "id": "entityname_namepreferred",
+        "title": "Enter the name the entity prefers to be known by",
+        "value": ""
+      },
+      {
+        "id": "entityname_nametitle",
+        "title": "Enter the entites title eg Mr, Mrs",
+        "value": ""
+      },
+      {
+        "id": "entityname_SalutationDesc",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "entityname_nameattention",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "entityname_homephone",
+        "title": "Enter the phone number of the entity",
+        "value": ""
+      },
+      {
+        "id": "entityname_businessphone",
+        "title": "Enter the business phone number of the entity",
+        "value": "(03) 9314 3330"
+      },
+      {
+        "id": "entityname_mobile",
+        "title": "Enter the mobile phone number of the entity",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_CusCreditLimit",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCreditLimit",
+        "value": ""
+      },
+      {
+        "id": "txtAccountBalance",
+        "title": "vWebpage_tooltip EntityReceivable.htm txtAccountBalance",
+        "value": "0.00"
+      },
+      {
+        "id": "txtCreditAvailable",
+        "title": "vWebpage_tooltip EntityReceivable.htm txtCreditAvailable",
+        "value": "0.00"
+      },
+      {
+        "id": "entityname_entityid_CusCreditType",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCreditType",
+        "value": "",
+        "selected_label": "No Selection"
+      },
+      {
+        "id": "entityname_entityid_CusCreditCode",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCreditCode",
+        "value": "",
+        "selected_label": "No Selection"
+      },
+      {
+        "id": "entityname_entityid_CusCreditTerms",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCreditTerms",
+        "value": "",
+        "selected_label": "No Selection"
+      },
+      {
+        "id": "entityname_entityid_CusDateCredit",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusDateCredit",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_CusPayMethod",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusPayMethod",
+        "value": "6",
+        "selected_label": "PENDING"
+      },
+      {
+        "id": "entityname_entityid_CusTerritory",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusTerritory",
+        "value": "",
+        "selected_label": "No Selection"
+      },
+      {
+        "id": "entityname_entityid_CusRcvContactName",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusRcvContactName",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_CusGlAcct",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusGlAcct",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_CusStatementFmt",
+        "title": "Select the statement format",
+        "value": "",
+        "selected_label": "No Selection"
+      },
+      {
+        "id": "entityname_entityid_CusPrintStatement",
+        "title": "Select 'Yes' to print statement",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusSvcChg",
+        "title": "Select 'Yes' for service charges",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "chkPrint",
+        "title": "",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusCrAge",
+        "title": "Select the age c/notes-current",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "chkEmail",
+        "title": "",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "chkFax",
+        "title": "",
+        "value": "on",
+        "checked": false
+      },
+      {
+        "id": "entityname_entityid_CusStatementEmail",
+        "title": "Enter the email address for account receivables",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_CusStatementFax",
+        "title": "Enter the fax number for account receivables",
+        "value": ""
+      },
+      {
+        "id": "entityname_entityid_BpayNo",
+        "title": "",
+        "value": "1110873"
+      },
+      {
+        "id": "entityname_entityid_CusCrComments",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCrComments",
+        "value": ""
+      },
+      {
+        "id": "lblCurrent",
+        "title": "",
+        "value": "Current"
+      },
+      {
+        "id": "entityname_entityid_CusCurrentBal",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusCurrentBal",
+        "value": ""
+      },
+      {
+        "id": "lbl30Days",
+        "title": "",
+        "value": "30 Days"
+      },
+      {
+        "id": "entityname_entityid_CusBalA",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusBalA",
+        "value": ""
+      },
+      {
+        "id": "lbl60Days",
+        "title": "",
+        "value": "60 Days"
+      },
+      {
+        "id": "entityname_entityid_CusBalB",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusBalB",
+        "value": ""
+      },
+      {
+        "id": "lbl90Days",
+        "title": "",
+        "value": "90 Days"
+      },
+      {
+        "id": "entityname_entityid_CusBalC",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusBalC",
+        "value": ""
+      },
+      {
+        "id": "lbl120Days",
+        "title": "",
+        "value": "120 Days"
+      },
+      {
+        "id": "entityname_entityid_CusBalD",
+        "title": "vWebpage_tooltip EntityReceivable.htm entitydetail*CusBalD",
+        "value": ""
+      },
+      {
+        "id": "lblDummyType",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "dspDummyAmt",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblTotal",
+        "title": "",
+        "value": "Total"
+      },
+      {
+        "id": "entityname_entityid_CusBalTotal",
+        "title": "The total balance outstanding",
+        "value": "0.00"
+      },
+      {
+        "id": "lblPurchaseYtd",
+        "title": "",
+        "value": "Purchase Ytd"
+      },
+      {
+        "id": "txtPurchaseYtd",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblPurchasePyr",
+        "title": "",
+        "value": "Purchase Pyr"
+      },
+      {
+        "id": "txtPurchasePyr",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblAvgDaysPay",
+        "title": "",
+        "value": "Avg Days - Pay"
+      },
+      {
+        "id": "txtAvgDaysPay",
+        "title": "",
+        "value": "0"
+      },
+      {
+        "id": "lblFirstPurchase",
+        "title": "",
+        "value": "First Purchase"
+      },
+      {
+        "id": "txtFirstPurchase",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblLastPurchase",
+        "title": "",
+        "value": "Last Purchase"
+      },
+      {
+        "id": "txtLastPurchase",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblLastChange",
+        "title": "",
+        "value": "Last Change"
+      },
+      {
+        "id": "txtLastChange",
+        "title": "",
+        "value": ""
+      },
+      {
+        "id": "lblLastPayment",
+        "title": "",
+        "value": "Last Payment"
+      },
+      {
+        "id": "txtLastPayment",
+        "title": "",
+        "value": ""
+      }
+    ]
+  }
+]
