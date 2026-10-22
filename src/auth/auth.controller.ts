@@ -34,7 +34,7 @@ import { Roles } from '../common/decorators/roles.decorator';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
 import { UserDocument } from './schemas/user.schema';
 import { Role } from '../common/enums/roles.enum';
-import { AccountEmailDto, AccountTokenDto, ResetPasswordDto } from './dto/account-recovery.dto';
+import { AccountEmailDto, AccountTokenDto, ResetPasswordDto, EmailOtpChallengeDto, VerifyEmailOtpDto } from './dto/account-recovery.dto';
 import { AuthRateLimitGuard, LimitAuth } from './auth-rate-limit.guard';
 
 @ApiTags('Auth')
@@ -63,11 +63,35 @@ export class AuthController {
     return this.authService.verifyEmail(dto.token);
   }
 
+  @Post('email-otp/resend')
+  @LimitAuth('email-otp-resend')
+  @HttpCode(HttpStatus.OK)
+  resendEmailOtp(@Body() dto: EmailOtpChallengeDto) {
+    return this.authService.resendEmailOtp(dto.challengeId);
+  }
+
+  @Post('email-otp/verify')
+  @LimitAuth('email-otp-verify')
+  @HttpCode(HttpStatus.OK)
+  async verifyEmailOtp(@Body() dto: VerifyEmailOtpDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
+    const result = await this.authService.verifyEmailOtp(dto.challengeId, dto.code, req.ip);
+    if ('requiresTotp' in result) { this.cookies.clearSession(res); return result; }
+    this.cookies.setSession(res, result);
+    return { user: result.user, expiresAt: result.expiresAt };
+  }
+
   @Post('forgot-password')
   @LimitAuth('forgot-password')
   @HttpCode(HttpStatus.OK)
   forgotPassword(@Body() dto: AccountEmailDto) {
     return this.authService.requestAccountEmail(dto.email, 'reset-password');
+  }
+
+  @Post('recovery-otp/verify')
+  @LimitAuth('recovery-otp-verify')
+  @HttpCode(HttpStatus.OK)
+  verifyRecoveryOtp(@Body() dto: VerifyEmailOtpDto) {
+    return this.authService.verifyRecoveryOtp(dto.challengeId, dto.code);
   }
 
   @Post('reset-password')
@@ -96,7 +120,7 @@ export class AuthController {
   @ApiResponse({ status: 401, description: 'Invalid credentials' })
   async login(@Body() dto: LoginDto, @Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const result = await this.authService.login(dto, req.ip);
-    if ('requiresTotp' in result) {
+    if ('requiresTotp' in result || 'requiresEmailOtp' in result) {
       this.cookies.clearSession(res);
       return result;
     }

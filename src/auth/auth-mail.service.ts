@@ -26,13 +26,18 @@ export class AuthMailService {
 
   assertConfigured() { this.settings(); }
 
-  async send(to: string, token: string, purpose: 'verify-email' | 'reset-password') {
-    const { host, from, url, port, user, pass } = this.settings();
-    url.pathname = `/auth/${purpose}`;
-    url.search = '';
-    // Fragments stay out of HTTP requests, server logs, and referrer headers.
-    url.hash = new URLSearchParams({ token }).toString();
-    const verification = purpose === 'verify-email';
+  async sendOtp(to: string, code: string) {
+    await this.deliver(to, 'Your Trade Client verification code',
+      `Your verification code is: ${code}\n\nEnter this code in Trade Client to finish signing in. It expires in 10 minutes and can be used once. Do not share this code. If you did not request it, ignore this email.`);
+  }
+
+  async sendRecoveryOtp(to: string, code: string) {
+    await this.deliver(to, 'Your Trade Client password recovery code',
+      `Your password recovery code is: ${code}\n\nEnter this code on the account recovery screen, then choose a new password. It expires in 10 minutes and can be used once. Do not share this code. Authenticator two-factor authentication stays enabled. If you did not request this, ignore this email.`);
+  }
+
+  private async deliver(to: string, subject: string, text: string) {
+    const { host, from, port, user, pass } = this.settings();
     const transport = nodemailer.createTransport({
       host, port, secure: port === 465, requireTLS: port !== 465,
       auth: user && pass ? { user, pass } : undefined,
@@ -41,8 +46,7 @@ export class AuthMailService {
     try {
       await transport.sendMail({
         from, to,
-        subject: verification ? 'Verify your Trade Client account' : 'Set up or recover your Trade Client account',
-        text: `${verification ? 'Verify your email address' : 'Choose a password and verify your email address'} using this link:\n\n${url.toString()}\n\n${verification ? '' : 'Completing this link saves your password, verifies your email, and signs out existing sessions. It does not disable two-factor authentication.\n\n'}This link expires in ${verification ? '24 hours' : '30 minutes'} and can be used once. If you did not request this, ignore this email.`,
+        subject, text,
       });
     } catch {
       throw new ServiceUnavailableException('Unable to send account email. Please try again later.');

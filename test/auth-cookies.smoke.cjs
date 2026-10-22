@@ -54,6 +54,20 @@ const { MfaChallengeSchema } = require('../dist/auth/schemas/mfa-challenge.schem
   assert.equal(login.user.id, 'user');
   assert(!('accessToken' in login));
   assert(!('refreshToken' in login));
+  const beforeOtp = written.length;
+  const otpChallenge = { requiresEmailOtp: true, challengeId: 'a'.repeat(64), expiresIn: 600, resendAfter: 60 };
+  const otpController = new AuthController({
+    login: async () => otpChallenge,
+    verifyEmailOtp: async () => ({ accessToken: 'verified-access', refreshToken: 'verified-refresh', expiresAt: 789, user: { id: 'verified' } }),
+  }, cookies);
+  const otpResponse = { ...res, clearCookie() {} };
+  assert.deepEqual(await otpController.login({}, req('POST', '/auth/login'), otpResponse), otpChallenge);
+  assert.equal(written.length, beforeOtp, 'password-only login cannot issue session cookies before OTP');
+  const completed = await otpController.verifyEmailOtp({ challengeId: otpChallenge.challengeId, code: '012345' }, req('POST', '/auth/email-otp/verify'), otpResponse);
+  assert.equal(completed.user.id, 'verified');
+  assert(!('accessToken' in completed));
+  assert(!('refreshToken' in completed));
+  assert(written.length > beforeOtp, 'verified OTP sets HttpOnly session cookies');
   for (const [name, , options] of written) {
     assert(options.httpOnly, name);
     assert(options.secure, name);

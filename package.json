@@ -23,7 +23,7 @@
     "pm2:status": "pm2 status",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
-    "test:auth": "node --test test/native-auth.smoke.cjs test/account-recovery.smoke.cjs test/auth-cookies.smoke.cjs test/auth-rate-limit.smoke.cjs test/auth-mfa.smoke.cjs",
+    "test:auth": "node --test test/native-auth.smoke.cjs test/account-recovery.smoke.cjs test/auth-cookies.smoke.cjs test/auth-rate-limit.smoke.cjs test/auth-mfa.smoke.cjs test/email-otp.smoke.cjs",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",

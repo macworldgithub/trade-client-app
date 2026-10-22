@@ -15,6 +15,8 @@ import { ListUsersQueryDto } from './dto/list-users-query.dto';
 import { Role } from '../common/enums/roles.enum';
 import { AuthMailService } from './auth-mail.service';
 import { AuthMfaService } from './auth-mfa.service';
+import { AuthEmailOtpService, EMAIL_OTP_FIELDS } from './auth-email-otp.service';
+import { AuthRecoveryOtpService, RECOVERY_OTP_FIELDS } from './auth-recovery-otp.service';
 
 @Injectable()
 export class AuthService {
@@ -25,6 +27,8 @@ export class AuthService {
     private jwtService: JwtService,
     private mail: AuthMailService,
     private mfa: AuthMfaService,
+    private emailOtp: AuthEmailOtpService,
+    private recoveryOtp: AuthRecoveryOtpService,
   ) {}
 
   async register(dto: RegisterDto, ipAddress?: string, provisionedBy?: UserDocument) {
@@ -37,15 +41,12 @@ export class AuthService {
     const email = dto.email.trim().toLowerCase();
     if (await this.userModel.exists({ email })) throw new ConflictException('Email is already registered');
     this.mail.assertConfigured();
-    const verificationToken = randomBytes(48).toString('base64url');
     const passwordHash = await bcrypt.hash(dto.password, 12);
     let user: UserDocument;
     try {
       user = await this.userModel.create({
         // Compatibility identity for existing order and audit code; no Supabase call.
         supabaseId: randomUUID(), email, fullName: dto.fullName.trim(), passwordHash,
-        emailVerificationTokenHash: this.tokenHash(verificationToken),
-        emailVerificationExpiresAt: new Date(Date.now() + 86400000),
         role: provisionedBy ? (dto.role ?? Role.TRADE_PARTNER) : Role.TRADE_PARTNER,
         tradeAccountId: provisionedBy ? (dto.tradeAccountId ?? null) : null,
         rooftopId: provisionedBy ? (dto.rooftopId ?? null) : null,
@@ -55,8 +56,8 @@ export class AuthService {
       throw error;
     }
     await this.writeAudit(AuditAction.LOGIN, user.supabaseId, null, null, { action: 'REGISTER', email }, ipAddress);
-    await this.mail.send(email, verificationToken, 'verify-email');
-    return { message: 'Registration successful. Check your email to verify your account.', userId: user._id };
+    const challenge = await this.emailOtp.issue(user);
+    return { ...challenge, message: 'Enter the 6-digit code sent to your email.', userId: user._id };
   }
 
   async login(dto: LoginDto, ipAddress?: string) {
@@ -68,10 +69,21 @@ export class AuthService {
       await this.writeAudit(AuditAction.LOGIN_FAILED, 'anonymous', null, null, { email }, ipAddress);
       throw new UnauthorizedException('Invalid email or password');
     }
-    if (!user.emailVerifiedAt) throw new UnauthorizedException('Please verify your email before signing in');
+    if (!user.emailVerifiedAt) return this.emailOtp.issue(user);
+    return this.completeLogin(user, ipAddress);
+  }
+
+  async verifyEmailOtp(challengeId: string, code: string, ipAddress?: string) {
+    const user = await this.emailOtp.verify(challengeId, code);
+    return this.completeLogin(user, ipAddress);
+  }
+
+  resendEmailOtp(challengeId: string) { return this.emailOtp.resend(challengeId); }
+
+  private async completeLogin(user: UserDocument, ipAddress?: string) {
     if (user.totpEnabled) return this.mfa.startChallenge(user);
     const result = await this.createSession(user, ipAddress);
-    await this.writeAudit(AuditAction.LOGIN, user.supabaseId, user.tradeAccountId, user.rooftopId, { email }, ipAddress);
+    await this.writeAudit(AuditAction.LOGIN, user.supabaseId, user.tradeAccountId, user.rooftopId, { email: user.email }, ipAddress);
     return { ...result, user: await this.getMe(user) };
   }
 
@@ -79,46 +91,19 @@ export class AuthService {
     return createHash('sha256').update(token).digest('hex');
   }
 
-  async requestAccountEmail(email: string, purpose: 'verify-email' | 'reset-password') {
-    this.mail.assertConfigured();
-    const token = randomBytes(48).toString('base64url');
-    const verification = purpose === 'verify-email';
-    const prefix = verification ? 'emailVerification' : 'passwordReset';
-    const user = await this.userModel.findOneAndUpdate(
-      { email: email.trim().toLowerCase(), isActive: true,
-        ...(verification ? { emailVerifiedAt: null } : {}),
-        $or: [{ [`${prefix}ExpiresAt`]: null },
-          { [`${prefix}ExpiresAt`]: { $lte: new Date(Date.now() + (verification ? 86400000 : 1800000) - 60000) } }],
-      },
-      { $set: { [`${prefix}TokenHash`]: this.tokenHash(token),
-        [`${prefix}ExpiresAt`]: new Date(Date.now() + (verification ? 86400000 : 1800000)) } },
-      { new: true },
-    );
-    if (user) {
-      try { await this.mail.send(user.email, token, purpose); }
-      catch {
-        // Do not disclose account existence when delivery fails. Permit a retry.
-        await this.userModel.updateOne({ _id: user._id, [`${prefix}TokenHash`]: this.tokenHash(token) },
-          { $unset: { [`${prefix}TokenHash`]: 1, [`${prefix}ExpiresAt`]: 1 } });
-      }
-    }
-    return { message: 'If an eligible account exists, an email will arrive shortly.' };
+  async requestAccountEmail(email: string, purpose: 'reset-password') {
+    return this.recoveryOtp.request(email);
   }
 
+  verifyRecoveryOtp(challengeId: string, code: string) { return this.recoveryOtp.verify(challengeId, code); }
+
   async verifyEmail(token: string) {
-    this.validateAccountToken(token);
-    const user = await this.userModel.findOneAndUpdate(
-      { emailVerificationTokenHash: this.tokenHash(token), emailVerificationExpiresAt: { $gt: new Date() }, isActive: true },
-      { $set: { emailVerifiedAt: new Date() }, $unset: { emailVerificationTokenHash: 1, emailVerificationExpiresAt: 1 } },
-      { new: true },
-    );
-    if (!user) throw new BadRequestException('Invalid or expired verification link');
-    return { message: 'Email verified. You can now sign in.' };
+    throw new BadRequestException('Verification links have been replaced by email codes. Sign in to receive a code.');
   }
 
   private validateAccountToken(token: string) {
     if (typeof token !== 'string' || !/^[A-Za-z0-9_-]{64}$/.test(token)) {
-      throw new BadRequestException('Invalid or expired account link');
+      throw new BadRequestException('Invalid or expired reset authorization. Request a new recovery code.');
     }
   }
 
@@ -127,20 +112,27 @@ export class AuthService {
     if (typeof password !== 'string' || password.length < 12 || Buffer.byteLength(password, 'utf8') > 72) {
       throw new BadRequestException('Password must have at least 12 characters and at most 72 UTF-8 bytes');
     }
+    const filter = { passwordResetTokenHash: this.tokenHash(token), passwordResetExpiresAt: { $gt: new Date() },
+      passwordResetOtpVerifiedAt: { $gt: new Date(Date.now() - 600000) }, isActive: true };
+    const pending = await this.userModel.findOne(filter).select('+passwordResetPasswordVersion');
+    if (!pending || +(pending.passwordResetPasswordVersion ?? 0) !== +(pending.passwordChangedAt ?? 0)) {
+      throw new BadRequestException('Invalid or expired reset authorization. Request a new recovery code.');
+    }
     const passwordHash = await bcrypt.hash(password, 12);
     const user = await this.userModel.findOneAndUpdate(
-      { passwordResetTokenHash: this.tokenHash(token), passwordResetExpiresAt: { $gt: new Date() }, isActive: true },
-      // Possession of the single-use emailed token proves control of the inbox.
+      { ...filter, passwordChangedAt: pending.passwordChangedAt ?? null },
       { $set: { passwordHash, passwordChangedAt: new Date(), emailVerifiedAt: new Date() },
         $unset: { passwordResetTokenHash: 1, passwordResetExpiresAt: 1,
+          passwordResetOtpVerifiedAt: 1, passwordResetPasswordVersion: 1, ...RECOVERY_OTP_FIELDS,
+          ...EMAIL_OTP_FIELDS,
           emailVerificationTokenHash: 1, emailVerificationExpiresAt: 1,
           totpPendingSecretEncrypted: 1, totpPendingFactorId: 1, totpPendingExpiresAt: 1,
           totpPendingPasswordVersion: 1, totpPendingAttempts: 1 } },
       { new: true },
     );
-    if (!user) throw new BadRequestException('Invalid or expired password reset link');
+    if (!user) throw new BadRequestException('Invalid or expired reset authorization. Request a new recovery code.');
     await this.sessionModel.updateMany({ userId: user._id, revokedAt: null }, { $set: { revokedAt: new Date() } });
-    return { message: 'Password saved and email verified. You can now sign in. Two-factor authentication is still required if enabled.' };
+    return { message: 'Password saved and email verified. Sign in with your new password. Authenticator two-factor authentication remains required if enabled.' };
   }
 
   private async tokens(user: UserDocument, session: AuthSessionDocument, refreshToken: string) {

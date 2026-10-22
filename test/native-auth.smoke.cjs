@@ -30,7 +30,8 @@ const bcrypt = require('bcrypt');
     findOne: async () => session && !session.revokedAt && session.expiresAt > new Date() ? session : null,
   };
   const jwt = new JwtService({ secret: 'test-only-secret-with-at-least-32-bytes', signOptions: { algorithm: 'HS256', expiresIn: 900, issuer: 'trade-client-api', audience: 'trade-client' } });
-  const service = new AuthService(users, { create: async () => {} }, sessions, jwt, { assertConfigured() {}, async send() {} });
+  const service = new AuthService(users, { create: async () => {} }, sessions, jwt, { assertConfigured() {}, async send() {} }, undefined,
+    { issue: async () => ({ requiresEmailOtp: true, challengeId: 'a'.repeat(64) }) });
   const dto = { email: 'USER@example.com', fullName: 'Test User', password: 'long-password-for-testing' };
   await assert.rejects(service.register({ ...dto, role: 'admin' }), /trade partners only/);
   await assert.rejects(service.register({ ...dto, tradeAccountId: 'other' }), /trade partners only/);
@@ -46,7 +47,8 @@ const bcrypt = require('bcrypt');
   user.isActive = false;
   await assert.rejects(service.login(dto), /Invalid email or password/);
   user.isActive = true;
-  await assert.rejects(service.login(dto), /verify your email/);
+  assert.equal((await service.login(dto)).requiresEmailOtp, true);
+  assert.equal(session, undefined, 'unverified login must not create a session');
   user.emailVerifiedAt = new Date();
   const login = await service.login(dto);
   assert(!('passwordHash' in login.user));

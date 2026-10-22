@@ -4,6 +4,8 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthService } from './auth.service';
 import { AuthMailService } from './auth-mail.service';
+import { AuthEmailOtpService } from './auth-email-otp.service';
+import { AuthRecoveryOtpService } from './auth-recovery-otp.service';
 import { AuthMfaService } from './auth-mfa.service';
 import { MfaChallenge, MfaChallengeSchema } from './schemas/mfa-challenge.schema';
 import { AuthController } from './auth.controller';
@@ -38,7 +40,7 @@ import { AuthSession, AuthSessionSchema } from './schemas/auth-session.schema';
     ]),
   ],
   controllers: [AuthController],
-  providers: [AuthService, AuthMailService, AuthMfaService, NativeJwtStrategy, AuthCookiesService, AuthRateLimitGuard,
+  providers: [AuthService, AuthMailService, AuthEmailOtpService, AuthRecoveryOtpService, AuthMfaService, NativeJwtStrategy, AuthCookiesService, AuthRateLimitGuard,
     { provide: APP_GUARD, useClass: CsrfGuard }],
   exports: [AuthService, MongooseModule], // Export so other modules can use User model and writeAudit
 })

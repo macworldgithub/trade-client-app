@@ -13,7 +13,8 @@ describe('Native authentication', () => {
     users = { exists: jest.fn().mockResolvedValue(null), create: jest.fn(), findOne: jest.fn(), findById: jest.fn() };
     sessions = { create: jest.fn(), updateMany: jest.fn(), findOneAndUpdate: jest.fn(), updateOne: jest.fn() };
     audit = { create: jest.fn() };
-    service = new AuthService(users, audit, sessions, { signAsync: jest.fn().mockResolvedValue('signed-access-token') } as any, { assertConfigured: jest.fn(), send: jest.fn() } as any, {} as any);
+    service = new AuthService(users, audit, sessions, { signAsync: jest.fn().mockResolvedValue('signed-access-token') } as any, { assertConfigured: jest.fn(), send: jest.fn() } as any, {} as any,
+      { issue: jest.fn().mockResolvedValue({ requiresEmailOtp: true, challengeId: 'a'.repeat(64) }) } as any, {} as any);
   });
 
   it('hashes passwords and creates only unassigned trade partners', async () => {

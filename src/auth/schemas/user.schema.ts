@@ -50,6 +50,24 @@ export class User {
   emailVerifiedAt: Date | null;
 
   @Prop({ type: String, select: false })
+  emailOtpChallengeHash?: string;
+
+  @Prop({ type: String, select: false })
+  emailOtpHash?: string;
+
+  @Prop({ type: Date, select: false })
+  emailOtpExpiresAt?: Date;
+
+  @Prop({ type: Date, select: false })
+  emailOtpSentAt?: Date;
+
+  @Prop({ type: Number, select: false })
+  emailOtpAttempts?: number;
+
+  @Prop({ type: Date, select: false })
+  emailOtpPasswordVersion?: Date | null;
+
+  @Prop({ type: String, select: false })
   emailVerificationTokenHash?: string;
 
   @Prop({ type: Date, default: null, select: false })
@@ -60,6 +78,30 @@ export class User {
 
   @Prop({ type: Date, default: null, select: false })
   passwordResetExpiresAt: Date | null;
+
+  @Prop({ type: Date, select: false })
+  passwordResetOtpVerifiedAt?: Date;
+
+  @Prop({ type: Date, select: false })
+  passwordResetPasswordVersion?: Date | null;
+
+  @Prop({ type: String, select: false })
+  recoveryOtpChallengeHash?: string;
+
+  @Prop({ type: String, select: false })
+  recoveryOtpHash?: string;
+
+  @Prop({ type: Date, select: false })
+  recoveryOtpExpiresAt?: Date;
+
+  @Prop({ type: Date, select: false })
+  recoveryOtpSentAt?: Date;
+
+  @Prop({ type: Number, select: false })
+  recoveryOtpAttempts?: number;
+
+  @Prop({ type: Date, select: false })
+  recoveryOtpPasswordVersion?: Date | null;
 
   @Prop({ type: Date, default: null })
   passwordChangedAt: Date | null;

@@ -19,3 +19,15 @@ export class ResetPasswordDto extends AccountTokenDto {
   @MaxLength(72)
   password: string;
 }
+
+export class EmailOtpChallengeDto {
+  @IsString()
+  @Matches(/^[A-Za-z0-9_-]{64}$/)
+  challengeId: string;
+}
+
+export class VerifyEmailOtpDto extends EmailOtpChallengeDto {
+  @IsString()
+  @Matches(/^\d{6}$/)
+  code: string;
+}

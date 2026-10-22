@@ -77,7 +77,7 @@ const { AuthController } = require('../dist/auth/auth.controller');
   assert.equal(reflector.get('auth-rate-policy', AuthController.prototype.resendVerification),
     reflector.get('auth-rate-policy', AuthController.prototype.forgotPassword),
     'legacy recovery URLs must share the same rate-limit bucket');
-  for (const method of ['register', 'login', 'forgotPassword', 'resendVerification', 'verifyEmail', 'resetPassword', 'refresh', 'enrollTotp', 'confirmTotp', 'disableTotp', 'verifyTotp', 'createUser']) {
+  for (const method of ['register', 'login', 'forgotPassword', 'resendVerification', 'verifyEmail', 'verifyEmailOtp', 'resendEmailOtp', 'verifyRecoveryOtp', 'resetPassword', 'refresh', 'enrollTotp', 'confirmTotp', 'disableTotp', 'verifyTotp', 'createUser']) {
     assert(reflector.get('auth-rate-policy', AuthController.prototype[method]), `${method} must be protected`);
   }
 
