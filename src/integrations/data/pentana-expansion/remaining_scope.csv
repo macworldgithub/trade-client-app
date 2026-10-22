@@ -1,0 +1,11 @@
+﻿dataset,status,source_required,fields_required,next_step
+parts_catalogue,NOT_CAPTURED,Parts master enquiry/export,"part_number,description,franchise,category,fitment",Confirm source interface and read access
+parts_stock,NOT_CAPTURED,Parts stock/on-hand report,"store_code,part_number,on_hand,allocated,available,bin,captured_at",Confirm quantity definitions; vehicle inventory excluded
+purchase_orders,NOT_CAPTURED,Outstanding parts PO report,"po_number,store_code,part_number,ordered,received,outstanding,status",Optional service PO console unavailable; not all PO data proved absent
+stock_transfers,NOT_CAPTURED,Interbranch transfer ledger,"transfer_number,from_store,to_store,part_number,quantity,status",Account transfer defaults are not ledger records
+current_pricing,NOT_CAPTURED,Part and customer price enquiry/export,"part_number,account_id,list_price,trade_price,discount,tax_basis,effective_at",Account pricing codes do not establish a current unit price
+account_contacts,QUERY_SAMPLE_CAPTURED,Entity Maintenance + Entity Search,"account_id,business_name,contacts,address,ABN",Reconcile complete account book independently
+account_financials,QUERY_SAMPLE_CAPTURED,Receivable Details + Value Details,"account_id,terms,credit_limit,balances,purchase_ytd,fy_parts_sales",Consult capture_summary.json for latest counts
+home_site,UNVERIFIED,Account master/site mapping,"account_id,home_site",Do not use capture context as home site
+credit_flags,UNVERIFIED,Credit control source flags or approved derivation,"account_id,credit_hold,overdue_flag",Do not infer from warning prose or blank balances
+other_rooftops,NOT_SYSTEMATICALLY_CAPTURED,Verified Pentana entity selector/interface,"store_code,precinct,brand,source_context",STORE03 excluded; entity52 requires its own evidence

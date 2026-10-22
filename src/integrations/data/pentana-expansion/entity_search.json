@@ -1,0 +1,4252 @@
+[
+  {
+    "source_entity_code": "50",
+    "entity_id": "53520",
+    "entity_name": "        Auto Salvage VicToria",
+    "address": "85-87 Ordish Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "539084",
+    "entity_name": "24/7 Auto Care",
+    "address": "1/5 WINDALE STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039480",
+    "entity_name": "24/7 Auto Care",
+    "address": "5/11 England St",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "580427",
+    "entity_name": "7 Star Automotives",
+    "address": "25 Dingley Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "547259",
+    "entity_name": "A & B Automotive",
+    "address": "12-14 Cahill Street",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "45252",
+    "entity_name": "A & R Auto Spares",
+    "address": "199 Hammond Rd",
+    "suburb": "Dandenong south",
+    "postcode": "3175",
+    "phone": "03-97949588",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39137",
+    "entity_name": "A Plus H Automotive",
+    "address": "1/41 Dingley Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "584445",
+    "entity_name": "A&B Automotive Remanufacturing",
+    "address": "12-14 Cahill St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97683755",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "61664",
+    "entity_name": "A&R Auto Spares",
+    "address": "199-205 Hammond Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537863",
+    "entity_name": "A'n'e Automotive",
+    "address": "65 Elliot Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038101",
+    "entity_name": "A'n'e Automotive",
+    "address": "65 Elliott Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "50024",
+    "entity_name": "A.S.T Auto's",
+    "address": "13/42 Mills Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "330108",
+    "entity_name": "AAA AUTO PARTS",
+    "address": "Unit 1",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "35870",
+    "entity_name": "AAS AUTO",
+    "address": "CAPRICORN SOCEITY ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "59239",
+    "entity_name": "AAS AUTOS ",
+    "address": "24 HAMMOND ROAD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "331398",
+    "entity_name": "ADVANCE AUTO",
+    "address": "1 5 PLUNKETT ROAD",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037026",
+    "entity_name": "AG Autos",
+    "address": "Unit 2",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0469-826741",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "28627",
+    "entity_name": "ARD AUTO ELECTRICS",
+    "address": "16-20 PROGRESS STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0435-940020",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033438",
+    "entity_name": "ASB AUTO HOLDINGS",
+    "address": "18/22 dunn cres",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "0466-049325",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "119077",
+    "entity_name": "ASEEL AUTOMOTIVE PTY LTD",
+    "address": "Unit 6",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5676034",
+    "entity_name": "ASR AUTO WORKS",
+    "address": "14/38-44 DANDENONG ST",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "37637",
+    "entity_name": "ATTA AUTOMATION",
+    "address": "2a Kirkham rd ",
+    "suburb": "Dandenong Sth",
+    "postcode": "3175",
+    "phone": "0432095375",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "80063",
+    "entity_name": "AUSSIN AUTO PARTS",
+    "address": "24-26 Podmore St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "76998",
+    "entity_name": "AUTO GRUOP SOLUTIONS PVT LTD ",
+    "address": "DANDENONG",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0422-785563",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033117",
+    "entity_name": "AUTO MOBILE GROUP",
+    "address": "26 STATION STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "332964",
+    "entity_name": "AUTO TYRE & WHEELS CENTRE",
+    "address": "1/48 Greens Road",
+    "suburb": "Dandenong ",
+    "postcode": "3175",
+    "phone": "03-87532355",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "116113",
+    "entity_name": "AUTO1 CAR BUYING SERVICE ",
+    "address": "",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "91660",
+    "entity_name": "AUTOACE AUTOMOTIVE",
+    "address": "1/53 BOYD STREET",
+    "suburb": "DANDENONG NORTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "64506",
+    "entity_name": "AUTOMUNDO ",
+    "address": "1-11 Knowles Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5676281",
+    "entity_name": "AUTOPLUS PTY LTD",
+    "address": "14 LONSDALE ST",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039214",
+    "entity_name": "Aas Autos",
+    "address": "24 Hammond Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "11241",
+    "entity_name": "Aces Automotive Dandenong",
+    "address": "20 Windale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "03-97085265",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536697",
+    "entity_name": "Ag Autos",
+    "address": "Unit 2",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "25692",
+    "entity_name": "Agha Automotive",
+    "address": "Unit 1",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "62380",
+    "entity_name": "Alex's Autos",
+    "address": "Lonsdale St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537134",
+    "entity_name": "All-Tek Automotive",
+    "address": "30 Egan Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037369",
+    "entity_name": "All-Tek Automotive",
+    "address": "30 Egan Road?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039275",
+    "entity_name": "Alpha Auto Repair Centre",
+    "address": "5 Greaves Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "504331",
+    "entity_name": "Amberley Autos",
+    "address": "12-14 Amberley Cres",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038890",
+    "entity_name": "Amberley Autos",
+    "address": "12-14 Amberley Cres?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5241165",
+    "entity_name": "Amberley Autos (Capricorn)",
+    "address": "12-14 Amberley Crescent",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "531353",
+    "entity_name": "Ashkar Auto Repairs",
+    "address": "Fact 3/14 Tharle Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "504406",
+    "entity_name": "Ashkar Auto Repairs",
+    "address": "Fac 3/14 Tharle St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038975",
+    "entity_name": "Ashkar Auto Repairs",
+    "address": "Fac 3/14 Tharle St?Enter Bramley St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032303",
+    "entity_name": "Ashkar Auto Repairs",
+    "address": "3/14 Tharle St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "532906",
+    "entity_name": "Asr Autoworks",
+    "address": "44 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3201",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "57698",
+    "entity_name": "Aussin Auto Parts",
+    "address": "3-5 Nicole Way",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "65132",
+    "entity_name": "Auto Assurance",
+    "address": "Unit 2",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536403",
+    "entity_name": "Auto Assurance Automotive",
+    "address": "2/23 Egan Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036626",
+    "entity_name": "Auto Assurance Automotive",
+    "address": "use 65132",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5587009",
+    "entity_name": "Auto Assurance Mechanics",
+    "address": "use 65132",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3164",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "50954",
+    "entity_name": "Auto Brake Parts Pty Ltd",
+    "address": "Factory 1, 495 Hammond Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "17572",
+    "entity_name": "Auto Cooling Pty Ltd",
+    "address": "45-47 Marni St",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "03-97064526",
+    "customer_types_raw": "V"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "17403",
+    "entity_name": "Auto Mate Body Repairs",
+    "address": "Unit 81?22 Dunn Crescent",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "37238",
+    "entity_name": "Auto Mexta",
+    "address": "19A Wayne Crt",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34353",
+    "entity_name": "Auto Panel Guru's",
+    "address": "19 Windale street",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034730",
+    "entity_name": "Auto Plus Mechanical",
+    "address": "14 Lonsdale Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "63147",
+    "entity_name": "Auto Repair Specialist",
+    "address": "5 Short St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "23810",
+    "entity_name": "Auto Repair Wizard",
+    "address": "66 Axis Cres",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "42274",
+    "entity_name": "Auto Tech Detail Boutique",
+    "address": "19/21 Park Drive",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "583148",
+    "entity_name": "Auto Tune Services",
+    "address": "Unit 4",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "25254",
+    "entity_name": "Auto-Tek Automotive",
+    "address": "132 Cheltenham Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038468",
+    "entity_name": "AutoPlus Mechanical Services ",
+    "address": "14 Lonsdale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "501927",
+    "entity_name": "Autobarn Dandenong",
+    "address": "Cnr Frankston Dandenong Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "013442",
+    "entity_name": "Autobarn Dandenong",
+    "address": "Cnr Frankston Dandenong Rd?And Zenith Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "335598",
+    "entity_name": "Autocentre Pty Ltd",
+    "address": "4/21 Park Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "0478-589823",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "556901",
+    "entity_name": "Autodemex",
+    "address": "4/2 Healey Rd",
+    "suburb": "Dandenong Sth",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "89265",
+    "entity_name": "Autodrome",
+    "address": "Unit 1",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5619441",
+    "entity_name": "Autodrome ",
+    "address": "1/95 cheltenham road",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "553377",
+    "entity_name": "Autofast Mufflers",
+    "address": "6/61 Lonsdale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "587639",
+    "entity_name": "Autogenie",
+    "address": "",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038754",
+    "entity_name": "Automax Auto Service Centre",
+    "address": "38 Lonsdale St",
+    "suburb": "DANDENONG ",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34543",
+    "entity_name": "Automax Dandenong",
+    "address": "38 Lonsdale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "501570",
+    "entity_name": "Automobiles Dandenong",
+    "address": "38 Lonsdale Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97916155",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "19575",
+    "entity_name": "Automobiles Dandenong",
+    "address": "38 Lonsdale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "035977",
+    "entity_name": "Automobiles Dandenong ",
+    "address": "38 Lonsdale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "8011567",
+    "entity_name": "Automobiles Dandenong (Aust) P",
+    "address": "P O Box 928",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "20823",
+    "entity_name": "Automotive Automation ",
+    "address": "19b kimberly road",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "0421983527",
+    "customer_types_raw": "SPV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538599",
+    "entity_name": "Automotive Car Sales Pty Ltd",
+    "address": "48/50 Bennet Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "581575",
+    "entity_name": "Automotive King",
+    "address": "Fact 1/26 Egan Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032212",
+    "entity_name": "Automotive King",
+    "address": "1/26 Egan Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "523222",
+    "entity_name": "Autoplus Mechanical Services",
+    "address": "14 Lonsdale Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538978",
+    "entity_name": "Autopuls",
+    "address": "2A Attenborough St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039284",
+    "entity_name": "Autopuls",
+    "address": "2A Attenborough Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537975",
+    "entity_name": "Avatar Automobile Engineers",
+    "address": "26 Station St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038219",
+    "entity_name": "Avatar Automobile Engineers",
+    "address": "26 Staion St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032668",
+    "entity_name": "Avs Automotive",
+    "address": "8/1-7 Attenborough St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "576358",
+    "entity_name": "B & M Auto Electrics Pty Ltd ",
+    "address": "64 Micro Circuit",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "0400-897171",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "035587",
+    "entity_name": "BBZ Automotive",
+    "address": "2/18-20 Rhur St",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "03 9005633",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "112024",
+    "entity_name": "BDS AUTO REPAIR",
+    "address": " 6 Bramley St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39607",
+    "entity_name": "BLC AUTOMOTIVE REPAIRS",
+    "address": "9 Hazel Ave",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "8013770",
+    "entity_name": "BURSONS AUTO PARTS ",
+    "address": "180 PRINCES HWY",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "334698",
+    "entity_name": "Bell Automotive Services ",
+    "address": "36 Healey Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "03-89070301",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "106138",
+    "entity_name": "Bell Automotive Services Pty Ltd",
+    "address": "1/36 Healey Road",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "03-94875550",
+    "customer_types_raw": "SRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "534477",
+    "entity_name": "Ben's Kitchen Rd Automotive",
+    "address": "20A Healey Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "534233",
+    "entity_name": "Bert Kewish Automotive",
+    "address": "29 Amberley Cres",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5194477",
+    "entity_name": "Birch Automotive (capricorn)",
+    "address": "23 Picket Street",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "539211",
+    "entity_name": "Blc Automotive",
+    "address": "Fact 27/22 Dunn Cres",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "030880",
+    "entity_name": "Blue Sky Auto",
+    "address": "173-175 Dandenong-Frankston Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "69037518",
+    "entity_name": "Brave Auto & Panel Repairs",
+    "address": "6-8 Bryants Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032635",
+    "entity_name": "Bravo Auto & Panel",
+    "address": "use 037518",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537171",
+    "entity_name": "Bravo Auto & Panel Repairs",
+    "address": "8 Bryants Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037518",
+    "entity_name": "Bravo Auto & Panel Repairs",
+    "address": "8 Bryants Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "531748",
+    "entity_name": "Bravo Auto And Pael",
+    "address": "8 Bryants Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "64995",
+    "entity_name": "Bravo Automotive And Panel Repairs",
+    "address": "use 037518",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "30458",
+    "entity_name": "Buraq Automotice Services",
+    "address": "29/73 Assembly drive",
+    "suburb": "Dandenong south",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "2413228",
+    "entity_name": "CD AUTO PAINT SUPPLIES PTY LTD",
+    "address": "2 GLADSTONE RD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "507031",
+    "entity_name": "CHERRY AUTO ELEC CASH ACCOUNT",
+    "address": "10 Gladstone Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "33807",
+    "entity_name": "CHERRY AUTOMOTIVE ELECTRIC",
+    "address": "CAPRICORN ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "48818",
+    "entity_name": "CST Automation",
+    "address": "",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "57028",
+    "entity_name": "Capital Auto Glass",
+    "address": "Mobile Service?",
+    "suburb": "Dandenong",
+    "postcode": "3201",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "557974",
+    "entity_name": "Carputer Auto Electronics",
+    "address": "19 Hilton Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036495",
+    "entity_name": "Caspian Auto Service",
+    "address": "16 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5598296",
+    "entity_name": "Century Auto Care",
+    "address": "72 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "62964",
+    "entity_name": "Century Autocare",
+    "address": "72 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "533174",
+    "entity_name": "Cherry Auto Elec's",
+    "address": "10 Gladstone Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033728",
+    "entity_name": "Cherry Auto Elec's",
+    "address": "10 Gladstone Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "541292",
+    "entity_name": "Cherry Automotive Electricals P/l",
+    "address": "10 Gladstone Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "35479",
+    "entity_name": "City Auto Care",
+    "address": "4/1-7 Attenborough St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036696",
+    "entity_name": "City Auto Care",
+    "address": "4/17 Attenborough St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "595931",
+    "entity_name": "Cmg Automotive Pty Ltd",
+    "address": "38 Lonsdale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": ""
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39612",
+    "entity_name": "Complete Auto Care",
+    "address": "6 Dandenong St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536997",
+    "entity_name": "Complete Auto Clinic",
+    "address": "Fac 2 42 Brooklyn Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031501",
+    "entity_name": "Complete Automotive Repair",
+    "address": "22 Station St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5671802",
+    "entity_name": "Crown Tyres & Auto Care (Repco)",
+    "address": "41 Plunkett Road",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "582330",
+    "entity_name": "Crown Tyres And Auto Care",
+    "address": "41 Plunkett Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032643",
+    "entity_name": "Crown Tyres And Auto Care",
+    "address": "41 Plunkett Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "10347",
+    "entity_name": "D&D Automotive Management",
+    "address": "3/94 Foster St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033156",
+    "entity_name": "D&D Automotive Management",
+    "address": "3/94 Foster Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "47088",
+    "entity_name": "DANDENONG AUTO ELECTRICAL ENGINEERS ",
+    "address": "1 Quinn St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": ""
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "232181",
+    "entity_name": "DANDENONG HYUNDAI (M C AUTO)",
+    "address": "169-179 PRINCES HWY",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "33810",
+    "entity_name": "DANIELLO'S AUTOMOTIVE",
+    "address": "CAPRICORN ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "55263",
+    "entity_name": "DAVIES AUTOMOTIVE EQUIPMENT",
+    "address": "15 BROOKLYN AVE",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0418-589848",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034488",
+    "entity_name": "DEOL TYRES & AUTO ",
+    "address": "34A NICHOLAS DRIVE",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "44057",
+    "entity_name": "DISEK AUTOMOBILES",
+    "address": "14 PLUNKET RD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "110439",
+    "entity_name": "DOS Automotives",
+    "address": "6 lonsdale street",
+    "suburb": "Dandenong",
+    "postcode": "3225",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "597464",
+    "entity_name": "Dandenong Auto Mechanics",
+    "address": "Unit 1",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "547147",
+    "entity_name": "Dandenong Auto Parts",
+    "address": "39 Plunkett Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5672719",
+    "entity_name": "Dandenong Auto Service Centre",
+    "address": "Fact 2/ 49-51 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546032",
+    "entity_name": "Dandenong Automobiles",
+    "address": "38 Lonsdale Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538926",
+    "entity_name": "Dandenong Automotive",
+    "address": "2/55 Scott Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "18542",
+    "entity_name": "Dandenong Automotive Centre",
+    "address": "17 Attenborough St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0403-117115",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "6963799",
+    "entity_name": "Dandenong Automotive Centre Pty Ltd",
+    "address": "17 Attenborough St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "S"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "547910",
+    "entity_name": "Dandenong Automotive Repair",
+    "address": "Tba",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031489",
+    "entity_name": "Dandenong Autos & Tyres",
+    "address": "25 Windale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "509557",
+    "entity_name": "Dandy Auto Centre",
+    "address": "2 Plunkett Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0418-388884",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "116465",
+    "entity_name": "Dandy Auto Service",
+    "address": "49 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5687604",
+    "entity_name": "Dandy Auto Works",
+    "address": "5/55 Scott Street",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "562984",
+    "entity_name": "Dandy One Auto",
+    "address": "Unit 5",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "533179",
+    "entity_name": "Daniello's Automotive Service",
+    "address": "6/23 Stephen Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "0033810",
+    "entity_name": "Daniello's Automotive Service",
+    "address": "6/23 Stephen Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "557192",
+    "entity_name": "Dm Auto Universal",
+    "address": "17 Attenborough Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-87530797",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "562001",
+    "entity_name": "Dos Automotive",
+    "address": "Unit 5",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "23415",
+    "entity_name": "Doug Chandler Auto Sales",
+    "address": "60-64 Hemmings St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "570175",
+    "entity_name": "Ds Auto Repair & Service",
+    "address": "6 Patrona St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039607",
+    "entity_name": "Duca Automotive",
+    "address": "15A Bennet St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546918",
+    "entity_name": "Eagle Auto Parts ",
+    "address": "92 Sth Gippsland Hwy",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0409-197155",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "567530",
+    "entity_name": "Eastwood Automotive",
+    "address": "39 Redgum Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039499",
+    "entity_name": "Eastwood Automotive",
+    "address": "39 Redgum Drive?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "03-97682999",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "582860",
+    "entity_name": "Eddies Auto Care",
+    "address": "2/11 Wauchope Lane",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033200",
+    "entity_name": "Eddies Auto Care",
+    "address": "2/11 Wauchope Lane?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "82499",
+    "entity_name": "Elite Auto Refinishing",
+    "address": "2/59 Amberley Cres?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "591566",
+    "entity_name": "Elite Tyre And Auto Service",
+    "address": "47 CHELTENHAM RD",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536476",
+    "entity_name": "Endurance Automatic Transmissi",
+    "address": "6 Gladstone Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "36808",
+    "entity_name": "Endurance Automatics",
+    "address": "6 Gladstone Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97914555",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "1066",
+    "entity_name": "Enhanced Auto Electrics",
+    "address": "2/413 Hammond Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "11841",
+    "entity_name": "Euro Auto Haus",
+    "address": "13 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "530820",
+    "entity_name": "Euro Auto Haus P/l",
+    "address": "F1 13 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "533820",
+    "entity_name": "Evo Automatics",
+    "address": "Fac 3 21 Johnston Crt",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "533553",
+    "entity_name": "Evo Automatics",
+    "address": "Do Not Use",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "90995",
+    "entity_name": "Extra Mile Auto Care (on the spot Industries)",
+    "address": "2/36 Stephen Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "38497",
+    "entity_name": "Flash Auto Mechanic",
+    "address": "Unit 1",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0432-758033",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "17069",
+    "entity_name": "Friends Auto Service",
+    "address": "116 Hammond Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "588015",
+    "entity_name": "Friends Auto Solutions",
+    "address": "2/16 Superior Dve",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "336243",
+    "entity_name": "Fynix Automotive",
+    "address": "7 Airlie Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-90077818",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "46149",
+    "entity_name": "G&A AUTOMOTIVE",
+    "address": "10 Nicholas Dr",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "330543",
+    "entity_name": "GME DIESEL AND AUTO WORKS",
+    "address": "Factory 3/1 Bungaleen Ct",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5183958",
+    "entity_name": "GOOSES AUTOS Capricorn",
+    "address": "8 QUINN STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5566234",
+    "entity_name": "Gary Beerling Automotive",
+    "address": "2/47 Dingley Ave",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "555706",
+    "entity_name": "Gaspar Tapia Auto Repair",
+    "address": "46B Claredale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "578262",
+    "entity_name": "Ggs Autohouse",
+    "address": "Unit 3",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "348852",
+    "entity_name": "Ggs Automotive",
+    "address": "19 Hazel Avenue?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "551913",
+    "entity_name": "Gjb Automotive",
+    "address": "6/23-25 Union Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "534782",
+    "entity_name": "Gold Lion Autos",
+    "address": "FAC3 2 Egan Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5186748",
+    "entity_name": "Gold Lion Autos (CAPRICORN)",
+    "address": "Crn Dunn Crs",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "80009",
+    "entity_name": "Goose's Auto's",
+    "address": "9 Quinn St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0418-522963",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538553",
+    "entity_name": "Gooses Autos",
+    "address": "9 Quinn St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038954",
+    "entity_name": "Gooses Autos",
+    "address": "9 Quinn St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "41619",
+    "entity_name": "Green Auto Tech",
+    "address": "17/39 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "528741",
+    "entity_name": "Greens Autoservice",
+    "address": "259 Princess Hwy",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "41367",
+    "entity_name": "Gth Automotive Repairs",
+    "address": "3/198 Princess Hwy?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032830",
+    "entity_name": "Gth Automotive Repairs",
+    "address": "3/198 Princes Hwy",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038794",
+    "entity_name": "H&T Auto Pty Ltd",
+    "address": "12a Webster Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0426-825786",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "84850",
+    "entity_name": "HB AUTO ",
+    "address": "55-59 Leggo Ct",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "336297",
+    "entity_name": "HI-TECH ELECTRICAL & AUTO REPAIRS",
+    "address": "5 7 DINGLEY AVE",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97691622",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "335436",
+    "entity_name": "HK Auto Services",
+    "address": "15 Heart Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0452-541809",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "32451",
+    "entity_name": "HPF AUTO SERVICE CENTRE",
+    "address": "CAPRICORN ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "579891",
+    "entity_name": "Hachanay Auto Service",
+    "address": "1A/314 Hammond Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "570585",
+    "entity_name": "Hallam Truck Repairs",
+    "address": "17 Kimberly Rd",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "03-97682627",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "534505",
+    "entity_name": "Hb Auto Repairs",
+    "address": "55 Leggo Crt",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5626270",
+    "entity_name": "Heavy Automatics",
+    "address": "17 CRUMPTON WAY",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "70075",
+    "entity_name": "Heavy Automatics (Vic) Pty Ltd ",
+    "address": "17 Crompton Way",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5243537",
+    "entity_name": "Hpf Auto Service Centre (CAPRICORN)",
+    "address": "12-14 Amberley Cres",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "65753",
+    "entity_name": "Innovative Auto Electrics Pty Ltd ",
+    "address": "23/73 Assembly Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032001",
+    "entity_name": "Instyle Automotive",
+    "address": "75 Rodeo Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "539393",
+    "entity_name": "J.D. Motors Automotive Repairs",
+    "address": "8 Gladstone Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "573227",
+    "entity_name": "JAN AUTOMOTIVE SPECIALIST",
+    "address": "**USE 37026**",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "29421",
+    "entity_name": "JMB automotive",
+    "address": "50a healey rd",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "109858",
+    "entity_name": "JMB automotive ",
+    "address": "50 healey road",
+    "suburb": "dandenong south ",
+    "postcode": "3175",
+    "phone": "97683898",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "29648",
+    "entity_name": "JRD Automotive",
+    "address": "60 Cyber Loop",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038052",
+    "entity_name": "JRD Automotive",
+    "address": "60-62 Cyber Loop",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39618",
+    "entity_name": "James's Automotive Services",
+    "address": "Mobile Mechanic?",
+    "suburb": "Dandenong",
+    "postcode": "VIC",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "13050",
+    "entity_name": "Jps Automotive ",
+    "address": "6 Luisa Ave",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "0478156447",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "585352",
+    "entity_name": "K Tech Auto Services",
+    "address": "Fact 2/99 Box St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "8023075",
+    "entity_name": "KEYSBOROUGH AUTOMATICS",
+    "address": "109 GREENS ROAD",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034233",
+    "entity_name": "KIAN AUTO SERVICES AUSTRALIA",
+    "address": "19 Cheltenham Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536362",
+    "entity_name": "Kammotive Auto Elec & Mechanical",
+    "address": "Factory 3",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036584",
+    "entity_name": "Kammotive Auto Elec & Mechanical",
+    "address": "2/40 Stephen Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "36691",
+    "entity_name": "Kammotive Auto Elect.",
+    "address": "3/21 Johnson Crt",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039218",
+    "entity_name": "Keysborough Automatics",
+    "address": "109 Greens Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "557183",
+    "entity_name": "Keysbrough Automatics",
+    "address": "191-195 Greens Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "S"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "58393",
+    "entity_name": "Kian Auto Services",
+    "address": "19 cheltenham rd",
+    "suburb": "dandenong",
+    "postcode": "3175 ",
+    "phone": "0413-662337",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "562791",
+    "entity_name": "Knr Auto's",
+    "address": "Unit 10",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "75426",
+    "entity_name": "Kumar Automotive",
+    "address": "24A Dingley Ave",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "27230",
+    "entity_name": "LONSDALE ST AUTO ELECTRICS Pty Ltd",
+    "address": "15 Park Dr",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "2413695",
+    "entity_name": "LONSDALE STREET AUTO ELECTRICS",
+    "address": "use 036591",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "U"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036591",
+    "entity_name": "LONSDALE STREET AUTO ELECTRICS",
+    "address": "15 Park Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "551827",
+    "entity_name": "Lh Auto Service Centre",
+    "address": "7 Balmoral Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5191913",
+    "entity_name": "Lonsdale St Auto Electrics P/L ",
+    "address": "15 Park Drive",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0402-139967",
+    "customer_types_raw": "SPV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "501021",
+    "entity_name": "Lonsdale Streer Auto Elecs",
+    "address": "15 Park Drive",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "66431",
+    "entity_name": "M&Q Auto Mechanics",
+    "address": "2/3 Short St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "103194",
+    "entity_name": "MACKAY AUTOMOTIVE",
+    "address": "894 TAYLORS ROAD",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "88146",
+    "entity_name": "MC2 AUTOMOTIVE PTY LTD",
+    "address": "Unit 8",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "334434",
+    "entity_name": "MELBOURNE CITY AUTO WRECKERS",
+    "address": "25 Dingley Ave",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "56888",
+    "entity_name": "MJS AUTO",
+    "address": "21/38-44 Dandenong St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "531123",
+    "entity_name": "Mac City Auto Mechanics",
+    "address": "Unit 1",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "85983",
+    "entity_name": "Machter Auto Parts",
+    "address": "Unit 2/42-52 Arkwright dr",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "11595",
+    "entity_name": "Manual Auto Service",
+    "address": "18 Windale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034363",
+    "entity_name": "Mayani Automotive",
+    "address": "25 Hammond Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-87649417",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34694",
+    "entity_name": "Mds Auto Repairs",
+    "address": "Unit 49?22 Dunn Crescent",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5543205",
+    "entity_name": "Mds Auto Repairs (capricorn)",
+    "address": "49/22 Dunn Crescent",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "106954",
+    "entity_name": "Melbourne Auto Door Services",
+    "address": "1-33/47 Leggo Crt",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "582885",
+    "entity_name": "Metro Auto Recyclers Pty Ltd",
+    "address": "21-25 Podmore St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "549415",
+    "entity_name": "Mirza Auto Repair",
+    "address": "Unit 5",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538892",
+    "entity_name": "Mm Mechanical & Autocare",
+    "address": "Unit 1",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039166",
+    "entity_name": "Mm Mechanical & Autocare",
+    "address": "Unit 1?42 Dingley Avenue",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34442",
+    "entity_name": "Motor 1 Automotive Pty Ltd",
+    "address": "107 Greens Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "65843",
+    "entity_name": "MotorOne Autobody Dandenong",
+    "address": "124 Logis Bvd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "03-92322111",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "555911",
+    "entity_name": "Multiplex Auto Care",
+    "address": "6/61 Lonsdale Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039987",
+    "entity_name": "My Autos Motors",
+    "address": "23 Dingley Ave",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "100778",
+    "entity_name": "N & B AUTOCARE ",
+    "address": "116 Cheltenham Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039013",
+    "entity_name": "N & B Auto Service",
+    "address": "116 Cheltenham Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546809",
+    "entity_name": "N & B Auto Service ",
+    "address": "116 Cheltenham Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "299383",
+    "entity_name": "N & B Auto Service & Repairs Pty Ltd",
+    "address": "116 Cheltenham Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034815",
+    "entity_name": "NEWTON MOTORSPORT & AUTOMOTIVE SERVICES",
+    "address": "2 / 37 SUPERIOR DRIVE",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "49838",
+    "entity_name": "NIMRO AUTO TECHNICA",
+    "address": "9/38 DANDENONG ST",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "597643",
+    "entity_name": "NVS Auto Traders",
+    "address": "Factory 5",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0435-809488",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "587288",
+    "entity_name": "Nation Auto Cooling",
+    "address": "45 Marni Street",
+    "suburb": "Dandenong",
+    "postcode": "",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "585951",
+    "entity_name": "Nazari Auto Care",
+    "address": "35 Bennet St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39249",
+    "entity_name": "Negombo Auto Care",
+    "address": "2/19 Station St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "31136",
+    "entity_name": "Negombo Auto Care",
+    "address": "2/19 Station Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "47141",
+    "entity_name": "Nes Automotive",
+    "address": "6/7 Greaves St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "57816",
+    "entity_name": "New Jersey Auto Repairs",
+    "address": "36 Jones Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037073",
+    "entity_name": "Newton Motorsport & Automotive",
+    "address": "use 034815",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "59610",
+    "entity_name": "Noor Auto Repair Centre",
+    "address": "Unit 1?39-43 Bennet Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "91292",
+    "entity_name": "ONWORK AUTOMOTIVE",
+    "address": "2/55 SCOTT STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "597636",
+    "entity_name": "On Work Automotive",
+    "address": "Unit 2",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0433-656398",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "545601",
+    "entity_name": "One M Auto Repairs",
+    "address": "2/38 Dandenong Street",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036707",
+    "entity_name": "One M Auto Repairs",
+    "address": "2/38 Dandenong Street?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "332004",
+    "entity_name": "One Solution Automotive",
+    "address": "23/39-43 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "85459",
+    "entity_name": "Online Auto ",
+    "address": "46-48 Lonsdale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "70924",
+    "entity_name": "Online Auto 0001433 ",
+    "address": "41 Lonsdale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "78069",
+    "entity_name": "Online Auto 0001874OA .",
+    "address": "1",
+    "suburb": "Dandenong",
+    "postcode": "3265",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "82158",
+    "entity_name": "Optimum Auto Care",
+    "address": "5/2 Brooklyn Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "332781",
+    "entity_name": "Optimums Auto Care",
+    "address": "5/2 Brooklyn Ave",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "50928",
+    "entity_name": "P & T Automotive Pty Ltd",
+    "address": "16 Windale St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "36235",
+    "entity_name": "P D Automotive",
+    "address": "2/2 Healey Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "41044",
+    "entity_name": "P and T Automotive",
+    "address": "16 Windale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "8041777",
+    "entity_name": "P&T AUTOMOTIVE SERVICES",
+    "address": "16 WINDALE STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031012",
+    "entity_name": "P&T Automotive",
+    "address": "16 Windale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5636483",
+    "entity_name": "P.D. Automotive (capricorn)",
+    "address": "Factory 2C Healy Road",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "68104",
+    "entity_name": "PICK N SAVE INTERNATIONAL ",
+    "address": "103 FRANKSTON DANDENONG ROAD",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0414588850",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "38372",
+    "entity_name": "PRIME AUTOWORKX ",
+    "address": "Unit 50",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "37577",
+    "entity_name": "PRIMESERVE AUTOMOTIVE",
+    "address": "CAPRICORN SOCEITY ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "45288",
+    "entity_name": "PRO AUTO WORKSHOP",
+    "address": "2/104 CHELTENHAM ROAD",
+    "suburb": "DANDENONG",
+    "postcode": "3715",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "31596",
+    "entity_name": "PRO TECH AUTOMOTICE REPAIRS",
+    "address": "1A/ 314-316 HAMMOND RD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "12227",
+    "entity_name": "PROJECT AUTOMOTIVE",
+    "address": "15a WAYNE COURT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "32990",
+    "entity_name": "Pcb Auto Elec & Mech Repairs",
+    "address": "use 035430",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "532172",
+    "entity_name": "Pcb Auto Elec&Mechanical",
+    "address": "use 035430",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "032916",
+    "entity_name": "Pcb Auto Elec&Mechanical",
+    "address": "49 Cyber Loop?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "035430",
+    "entity_name": "Pcb Auto Elect & Mech Repairs",
+    "address": "46-48 South Link",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039860",
+    "entity_name": "Pcb Automotive",
+    "address": "49 Cyber Loop?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5230661",
+    "entity_name": "Pcb Automotive ",
+    "address": "49 Cyber Loop",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "28002",
+    "entity_name": "Pit Stop Autocare",
+    "address": "1 Petrona St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037109",
+    "entity_name": "Plus Four Automotive Services",
+    "address": "22 Dingley Avenue",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "577188",
+    "entity_name": "Precision Plus Auto Care",
+    "address": "182 Princes Hwy",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "36119",
+    "entity_name": "Prestige Auto Works",
+    "address": "10 Handley Cres",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "535758",
+    "entity_name": "Prestige Auto Works P/l",
+    "address": "10 Handley Crescent",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036064",
+    "entity_name": "Prestige Auto Works P/l",
+    "address": "10 Handley Crescent?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537507",
+    "entity_name": "Prime Autoworx",
+    "address": "Unit 50",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037872",
+    "entity_name": "Prime Autoworx",
+    "address": "50/22 Dunn Cres",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033440",
+    "entity_name": "Prime Autoworx",
+    "address": "Unit 50?22 Dunn Crescent",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34650",
+    "entity_name": "Primeserve Automotive",
+    "address": "1A/63 Lonsdale St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5269182",
+    "entity_name": "Primeserve Automotive (Capricorn)",
+    "address": "1A-63 Lonsdale Street",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "23792",
+    "entity_name": "Pro R Automotive",
+    "address": "10/11 swift way",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "69280",
+    "entity_name": "Pro-Fix Automotive",
+    "address": "3 Short St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "548752",
+    "entity_name": "Promech Mechanical Services",
+    "address": "409 South Gippsland Highway",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536582",
+    "entity_name": "Pronto Automotive",
+    "address": "4/16-20 Station Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036817",
+    "entity_name": "Pronto Automotive",
+    "address": "4/16-20 Station Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "12617",
+    "entity_name": "Psa Auto Repairs",
+    "address": "17 Balmoral Avenue?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "18007",
+    "entity_name": "Pulse Auto Electrics",
+    "address": "9/9 Brooklyn Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "542608",
+    "entity_name": "R & E Auto Parts",
+    "address": "Cnr Knowles Road And Sth Gippsland",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039335",
+    "entity_name": "R & E Autoparts",
+    "address": "Crn Noles Rd & Sth Gippsland Hwy?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5192017",
+    "entity_name": "R & E Autos Pty Ltd",
+    "address": "Cnr South Gippsland Hwy",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "594180",
+    "entity_name": "R & S Automobile",
+    "address": "24 Hammond Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97913500",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "115901",
+    "entity_name": "R & S Automobiles Pty Ltd",
+    "address": "24 Hammond Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "547991",
+    "entity_name": "R&E Auto Parts",
+    "address": "375-383 South Gippsland Highway",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "90933",
+    "entity_name": "RAP AUTO ELECTRICAL",
+    "address": "10-12 Gladstone Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "65284",
+    "entity_name": "RIFAIE AUTO SERVICING",
+    "address": "2/41 BENNET STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038916",
+    "entity_name": "RPM Automotive Holdings",
+    "address": "1-7 Ausco Place",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "578792",
+    "entity_name": "Rahmat Auto Services",
+    "address": "22/41 Bennet St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "77435",
+    "entity_name": "Raj Super Automotive",
+    "address": "Unit 3",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "53421",
+    "entity_name": "Razmo Auto Repairs",
+    "address": "6/38-44 Dandenong Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0404-079384",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038883",
+    "entity_name": "Reliance Auto Care",
+    "address": "6 handley cres",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "0422-373150",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034516",
+    "entity_name": "Reno Autocare",
+    "address": "19 Windale St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "13375",
+    "entity_name": "Rms Auto Services",
+    "address": "2/9-13 Dingley Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "573873",
+    "entity_name": "Road Runner Tyres & Auto",
+    "address": "Unit 7",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "590302",
+    "entity_name": "Royyals Automotive",
+    "address": "11A Amberley Cred",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "534036",
+    "entity_name": "Rp Motorsport",
+    "address": "Unit 40",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036859",
+    "entity_name": "Rvo Automatics",
+    "address": "4/2 Egan Rd?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546904",
+    "entity_name": "Rvo Automatics ",
+    "address": "4 Egan Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "2347",
+    "entity_name": "S K FIVE STAR AUTOMOTIVE",
+    "address": "121 BOX STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "28683",
+    "entity_name": "S&S AUTO",
+    "address": "FACTROY 27/ 22 DUNN CRESCENT",
+    "suburb": "DANDENONG",
+    "postcode": "3178",
+    "phone": "",
+    "customer_types_raw": "VU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "34523",
+    "entity_name": "S&S Auto Workshop's",
+    "address": "Unit 25/22 Dunn Cres",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97929919",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "336423",
+    "entity_name": "SALVATION AUTO",
+    "address": "20 KEATING CRES",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "61633",
+    "entity_name": "SAPS AUTOMOBLE ",
+    "address": "Factory 3",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "75171",
+    "entity_name": "SB AUTOBODY",
+    "address": "Unit 4/31 Glomar Ct, ",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "87920",
+    "entity_name": "SBK AUTOMOTIVE",
+    "address": "41 PLUNKETT ROAD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "73808",
+    "entity_name": "SDJ AUTO SALES",
+    "address": "183 PRINCESS HIGHWAY",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0452-300878",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "45585",
+    "entity_name": "SDJ AUTO sales",
+    "address": "183 Princes Hwy",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "48857",
+    "entity_name": "SIA AUTO SERVICE",
+    "address": "6/49-51 BENNET ST",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "330345",
+    "entity_name": "SOS AUTOSHOP",
+    "address": "7 20 RHUR STREET",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0477-290704",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "52104",
+    "entity_name": "SS Automotive",
+    "address": "5 Quinn St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "6923641",
+    "entity_name": "SWIFT AUTOMOTIVE",
+    "address": "F2 19-21 SWIFT WAY",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "110135",
+    "entity_name": "SYDNEY AUTOMOTIVE & PAINT EQUIPMENT PTY LTD ",
+    "address": "DANDENONG",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "0411-075585",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "594406",
+    "entity_name": "Sadaqat Auto Parts",
+    "address": "24 Kitchen Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0431-328444",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039259",
+    "entity_name": "Sadaqat Auto Parts",
+    "address": "24 Kitchen Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "21375",
+    "entity_name": "Sahib Automobiles",
+    "address": "2/3 Balmoral Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39611",
+    "entity_name": "Sam Autos General Repairs",
+    "address": "1/38-44 Dandenong St?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "6936739",
+    "entity_name": "San Auto's",
+    "address": "Factory 1",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "588928",
+    "entity_name": "Sanac Auto Care",
+    "address": "4/52 Dingley Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "10093",
+    "entity_name": "Saps Automobile Services",
+    "address": "3/73 Assembly Drive",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "31983",
+    "entity_name": "Serine Auto Repairs",
+    "address": "6 DANDENONG ST",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "21997",
+    "entity_name": "Shah Auto Repairs",
+    "address": "2/108-110 Cheltenham Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "564671",
+    "entity_name": "Sk 5 Star Automotive And Mechanical",
+    "address": "121 Box St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97911888",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "036613",
+    "entity_name": "Sk Five Star Automotive Pty Ltd",
+    "address": "121 Box St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033013",
+    "entity_name": "Soorat Auto",
+    "address": "29 Superior Dr",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "532202",
+    "entity_name": "Soorat Auto ",
+    "address": "29 Superior Dr",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "0447-111470",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "570441",
+    "entity_name": "Soorat Auto Pty Ltd",
+    "address": "29 Superior Dr",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "557406",
+    "entity_name": "South Dandenong Auto's ",
+    "address": "5/7 Plunkett Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "98456",
+    "entity_name": "South East Auto Repair Centre",
+    "address": "1/36 Healey Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "030364",
+    "entity_name": "Southeast Auto & Tyre",
+    "address": "16 Hammond Rd",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "537379",
+    "entity_name": "Southern Auto Repairs",
+    "address": "10 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "03-97687286",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "530596",
+    "entity_name": "Southern Auto Repairs",
+    "address": "10 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "037737",
+    "entity_name": "Southern Auto Repairs",
+    "address": "10 Dandenong St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031632",
+    "entity_name": "Southern Auto Repairs Pty Ltd",
+    "address": "10 Dandenong St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "530300",
+    "entity_name": "Speedway Automotive",
+    "address": "1/95 Cheltenham Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "85272",
+    "entity_name": "Spring Automotive Services",
+    "address": "6/112 Hammond Rd?",
+    "suburb": "Dandenong Sth",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "500917",
+    "entity_name": "Startek Automotive",
+    "address": "11 Bennet Street",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033140",
+    "entity_name": "Startek Automotive",
+    "address": "11 Bennet Street?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "3300",
+    "entity_name": "Superban Auto",
+    "address": "Fact 2/31 Brooklyn Ave?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "0412-813490",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "104087",
+    "entity_name": "Supergates Automation & Fencing",
+    "address": "481 Hammond Rd",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PROS"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "574119",
+    "entity_name": "Superstar Auto Service",
+    "address": "6/23 Union Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "522558",
+    "entity_name": "Swift Automotive",
+    "address": "350 Frankston-Dandenong Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "034034",
+    "entity_name": "Swift Automotive",
+    "address": "350 Frankston-Dandenong Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5192919",
+    "entity_name": "Swift Automotive Pty Ltd",
+    "address": "350 Frankston-Dandenong Road",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536929",
+    "entity_name": "Swift Automotive Repairs P/l",
+    "address": "350 Frankston Dandenong Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "76955",
+    "entity_name": "THE CARE AUTOMOTIVE GROUP",
+    "address": "1-11 KNOWLES ROAD",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "8047931",
+    "entity_name": "TOTAL AUTO RECYCLERS ",
+    "address": "123 GREENS ROAD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "39421",
+    "entity_name": "TOTAL AUTOCARE",
+    "address": "CAPRICORN SOCIETY ACCOUNT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "582852",
+    "entity_name": "Talyer Auto Service Centre",
+    "address": "Unit 4/260-276 Abbotts Rd",
+    "suburb": "Dandenong Sth",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033197",
+    "entity_name": "Talyer Auto Service Centre",
+    "address": "Unit 4/260-276 Abbotts Rd?",
+    "suburb": "Dandenong Sth",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "37988",
+    "entity_name": "The Automotive Clinic",
+    "address": "106 Cheltenham Rd",
+    "suburb": "DANDENONG ",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "83146",
+    "entity_name": "Total Auto Recyclers",
+    "address": "123 Greens Road?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "6953904",
+    "entity_name": "Total Auto Recyclers Pty Ltd",
+    "address": "123 Greens Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "RU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538242",
+    "entity_name": "Total Automotive Products",
+    "address": "16-20 Progress St",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "552054",
+    "entity_name": "Trevor Davis Auto Refinis",
+    "address": "1/74 Healey Road",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "31264",
+    "entity_name": "Triton Auto Care",
+    "address": "fac2 /36  stephens rd",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "588882",
+    "entity_name": "Triton Panel & Auto Care Pty Ltd",
+    "address": "2/36 Stephen Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "14391",
+    "entity_name": "Tyre And Auto P/l",
+    "address": "51-65 Cheltenham Road?(rear Shell S/station)",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "530411",
+    "entity_name": "U.G. Automotive",
+    "address": "28 Balmoral Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031420",
+    "entity_name": "U.G. Automotive",
+    "address": "28 Balmoral Ave?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "85054",
+    "entity_name": "UNITED AUTOMOTIVE",
+    "address": "56 LONSDALE STREET",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "03-70505100",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "033746",
+    "entity_name": "USE 0033810",
+    "address": "6/23 Stephen Road?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5193203",
+    "entity_name": "USE 2347",
+    "address": "121 Box Street",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "538665",
+    "entity_name": "Ug Automotive",
+    "address": "28 Balmoral Ave",
+    "suburb": "Dandenong 3175",
+    "postcode": "VIC",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "82482",
+    "entity_name": "Unique Auto Parts ",
+    "address": "22-24 Lanyon Street?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "80559",
+    "entity_name": "Use Account 39607",
+    "address": "9 Hazel Ave?",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "039473",
+    "entity_name": "Use Account 39607",
+    "address": "9 Hazel Avenue?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "594645",
+    "entity_name": "Used Auto",
+    "address": "106 Cheltenham Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "S"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "22355",
+    "entity_name": "Used Autos Pty Ltd",
+    "address": "106b Cheltenham Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SV"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "5569828",
+    "entity_name": "V.A Automotive",
+    "address": "9 Airlie Ave",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "514951",
+    "entity_name": "V.A. Automotive",
+    "address": "517 Hammond Rd",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "107232",
+    "entity_name": "VIMAX TYRES AND AUTO",
+    "address": "41 PLUNKET ROAD",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "32230",
+    "entity_name": "VIP Body Repair & Automotive Pty Ltd",
+    "address": "1/493 Hammond Rd,",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "558659",
+    "entity_name": "Vernon Mcleod Auto Repairs",
+    "address": "2/38 Sinclair Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "597415",
+    "entity_name": "Vip Body Repair & Automotive",
+    "address": "1/493 Hammond Rd",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "536020",
+    "entity_name": "Volksberg Auto Repair",
+    "address": "U 15",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "77667",
+    "entity_name": "Vs Auto Repairs",
+    "address": "441 Hammond Rd?",
+    "suburb": "Dandenong South",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "524712",
+    "entity_name": "W.A. Sedgman Auto Repairs",
+    "address": "3 Hilton St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "23176",
+    "entity_name": "WOODS AUTO SHOPS P/L DANDENONG",
+    "address": "101 ORDISH ROAD",
+    "suburb": "DANDENONG SOUTH",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPRU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "546382",
+    "entity_name": "Westies Auto Elec",
+    "address": "Mobile Service",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "038123",
+    "entity_name": "Westies Auto Elec",
+    "address": "Mobile Service?Pick Up @ Counter",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "031750",
+    "entity_name": "XPERT AUTO SERVICES",
+    "address": "4/20 WAYNE COURT",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "531027",
+    "entity_name": "Xr Performance Auto",
+    "address": "3/37 Cheltenham Rd",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "27830",
+    "entity_name": "ZAK automotive",
+    "address": "fac 5/49 bennett st",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "78458",
+    "entity_name": "Zac Automotive",
+    "address": "5/49 Bennet St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "59763",
+    "entity_name": "Zahir Auto Service",
+    "address": "1 Dennis St",
+    "suburb": "DANDENONG",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "16575",
+    "entity_name": "do not use",
+    "address": "14 Lonsdale St",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "030217",
+    "entity_name": "euro plus automotive",
+    "address": "4 42 dingley ave",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "03-87382029",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "71197",
+    "entity_name": "global auto land pty ltd",
+    "address": "1/13 Kitchen Road",
+    "suburb": "Dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "SPVU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "37936",
+    "entity_name": "green auto tech",
+    "address": "17/39 bennett street ",
+    "suburb": "dandenong",
+    "postcode": "3175",
+    "phone": "",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "030319",
+    "entity_name": "innovative auto electrics",
+    "address": "23/73 assembly drive",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "0421-877112",
+    "customer_types_raw": "PU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "013892",
+    "entity_name": "jollys auto parts",
+    "address": "123 greens rd",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "03-87634195",
+    "customer_types_raw": "SPU"
+  },
+  {
+    "source_entity_code": "50",
+    "entity_id": "81063",
+    "entity_name": "paint pro automotive",
+    "address": "20 enterprise circuit",
+    "suburb": "dandenong south",
+    "postcode": "3175",
+    "phone": "0418-573086",
+    "customer_types_raw": "PU"
+  }
+]

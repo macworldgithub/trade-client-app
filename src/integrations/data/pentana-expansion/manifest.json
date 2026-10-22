@@ -1,0 +1,204 @@
+{
+  "source_entity_code": "50",
+  "query": {
+    "name": "AUTO",
+    "suburb": "DANDENONG"
+  },
+  "query_rows": 425,
+  "query_pages": 48,
+  "receivable_candidates": 56,
+  "related_account_rows": 56,
+  "pending_accounts": 0,
+  "newly_discovered_contact_ids": 425,
+  "newly_captured_account_ids": 56,
+  "combined_unique_contact_search_ids": 610,
+  "combined_unique_captured_account_ids": 90,
+  "full_account_book_complete": false,
+  "current_stock_capture_complete": false,
+  "full_catalogue_capture_complete": false,
+  "current_pricing_capture_complete": false,
+  "validation": "PASS",
+  "note": "Additive query snapshot, not a refresh/replacement of the previous bundle.",
+  "files": [
+    {
+      "file": "account_pricing_rules.csv",
+      "sha256": "59ab1a55d0a7d541ec827cd4aab5117f58ed932f1bc71b607b9a800e012a7a3e",
+      "bytes": 5007
+    },
+    {
+      "file": "account_pricing_rules.json",
+      "sha256": "3dd4d1c44e09f5bc1e43cb0f566f0a2de7d9703105cf1522c453971b397e495f",
+      "bytes": 24203
+    },
+    {
+      "file": "account_screens_batch_01.json",
+      "sha256": "9d6bd6b35738fd9e2b43f5d2f92bc4e3c9ba69269744a6ecfeac434b35a46ffa",
+      "bytes": 154417
+    },
+    {
+      "file": "account_screens_batch_02.json",
+      "sha256": "a7d79736ee0fa72627c9844d0ea743008945a4c2f557b75abb524aaf3bb13d4d",
+      "bytes": 150123
+    },
+    {
+      "file": "account_screens_batch_03.json",
+      "sha256": "d5174b3885ba210dd52742239692a856dbe7b8916f74ff212ab359799f1d9d7b",
+      "bytes": 149313
+    },
+    {
+      "file": "account_screens_batch_04.json",
+      "sha256": "4389d37d6173edc7a49ccbe492c6fe93c345d29a06b9b1c90bfa7abc2c1559b2",
+      "bytes": 145839
+    },
+    {
+      "file": "account_screens_batch_05.json",
+      "sha256": "e63ea17b775656708789826795c8c7a0d75d4686ea3bc68c8dac974c009f8471",
+      "bytes": 61888
+    },
+    {
+      "file": "account_screens_batch_06.json",
+      "sha256": "4a6aff828a7195c74531c1656755d72cbb9a61a29f840b8f10c5679b665d6f40",
+      "bytes": 86980
+    },
+    {
+      "file": "account_screens_batch_07.json",
+      "sha256": "662bb1fb1f863e64156cd74a58ec6f1033372c9c4b0d0849319fef0fb696cf6c",
+      "bytes": 111813
+    },
+    {
+      "file": "account_screens_batch_08.json",
+      "sha256": "0cde13f9e5f123b468488f42b8544f266330d0aa918111675cf1d456a53a7d59",
+      "bytes": 105756
+    },
+    {
+      "file": "account_screens_batch_09.json",
+      "sha256": "c7063a5d0ff85def4246d03d47a4a6d66537cfa304a4fea7fcc2df86eac6abe0",
+      "bytes": 100855
+    },
+    {
+      "file": "account_screens_batch_10.json",
+      "sha256": "f07cc18e626067f2c91b63f560ced6431fb2654a08e5117fc7b79c764b41f66d",
+      "bytes": 103883
+    },
+    {
+      "file": "account_screens_batch_11.json",
+      "sha256": "5a5e6878641a068330cd4ea11e70a7dd78c0806afa51abd6232334fbf6f89aed",
+      "bytes": 23976
+    },
+    {
+      "file": "account_screens_raw.json",
+      "sha256": "6de27c4abced3d3d5c4e62b42754814304274bd637e531da6cb3e09fd57a5f22",
+      "bytes": 1240799
+    },
+    {
+      "file": "account_warnings.csv",
+      "sha256": "8d847872f7ee718a072ca0c248f600bee08a1b2b46cfc888d7c40d05d8c4edc7",
+      "bytes": 2362
+    },
+    {
+      "file": "account_warnings.json",
+      "sha256": "369188479b5821149ecb45abcf3f2b5221f2c59039ab3677f1fc7132df631e1f",
+      "bytes": 3705
+    },
+    {
+      "file": "automation/read_account_screens.playwright.js",
+      "sha256": "f7d31e201a37261f4bfe4facf205916c8c732f0a0c4de09de1b5be0e9d70627e",
+      "bytes": 4694
+    },
+    {
+      "file": "automation/read_search_pages.playwright.js",
+      "sha256": "aa386cb737a1f67650330faa6802681940d70600d5e3a065c59527a99b370640",
+      "bytes": 1144
+    },
+    {
+      "file": "capture_summary.json",
+      "sha256": "cddf7e0be8c0867bb4d6fb5476bd23540d9c3e13809d4a9c9c5d38f405ded963",
+      "bytes": 694
+    },
+    {
+      "file": "contact_details.csv",
+      "sha256": "e9f6f6a1d41487ab3fa39fdf6a04ca22457eac76fde5d946c8a506f769a0342f",
+      "bytes": 11862
+    },
+    {
+      "file": "contact_details.json",
+      "sha256": "6842c6c69aebef5c29fd73918384d15e71e6aa02d91c720b8cd72a3f86e6ef12",
+      "bytes": 38655
+    },
+    {
+      "file": "entity52_menu_check.json",
+      "sha256": "7d84d3a56b8f6de970ace48033b2cf5dc7e431fba8683062140ba9639e1dba2e",
+      "bytes": 356
+    },
+    {
+      "file": "entity_search.csv",
+      "sha256": "f02d098c254333259faf50961027be85557e6964f9083b02210545e652f46309",
+      "bytes": 30327
+    },
+    {
+      "file": "entity_search.json",
+      "sha256": "be6c9fce6ac7ac27c94d4c43fd220e95ff4cd9ba80d6b4f6a67b45fe2aa1abfb",
+      "bytes": 109705
+    },
+    {
+      "file": "field_coverage.json",
+      "sha256": "606473502e25c1736e49c78c48f05c68543c51b4ff44ec7c9efa584f72cd8113",
+      "bytes": 2143
+    },
+    {
+      "file": "pending_accounts.csv",
+      "sha256": "d2d30e05dd245bc1ec70b18d7fa23526145a19a327f98e3b52caf082c49a109a",
+      "bytes": 14
+    },
+    {
+      "file": "pending_accounts.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "file": "portal_menus.json",
+      "sha256": "8fb00c245a71f325db49d0c7612618e2ba749cf5bf98a6533cb0170cb2b9d8d8",
+      "bytes": 3761
+    },
+    {
+      "file": "README.md",
+      "sha256": "cfca1858953a92642c4c04e6d3b790488b93fc2b230b90d4b4968faf92418852",
+      "bytes": 4012
+    },
+    {
+      "file": "remaining_scope.csv",
+      "sha256": "3651e958cde468317f4473b8e87a3fee6709c09e6bb0b08c4ac6a0092e783d07",
+      "bytes": 1796
+    },
+    {
+      "file": "remaining_scope.json",
+      "sha256": "3ea5cced87756dade935cd9fe7a3cdb8e1ae48daa274c9f20facb81d46f00590",
+      "bytes": 2928
+    },
+    {
+      "file": "repository_csv_inventory.json",
+      "sha256": "4e720419b8996c7265198e415dba4120117f6d9168ee1a80c1076d28dfbe49aa",
+      "bytes": 19551
+    },
+    {
+      "file": "scope-audit.md",
+      "sha256": "018d22fb315f32c21fe8eb01ac1e81d7994de9a69168e2917e3a871367c2aa50",
+      "bytes": 6674
+    },
+    {
+      "file": "search_evidence.json",
+      "sha256": "8b53899a90073fdfc420afb06eb87793de1798264434b4be33c87aed487e525b",
+      "bytes": 83124
+    },
+    {
+      "file": "trade_accounts.csv",
+      "sha256": "0d3b4a6f3acf50e8683ad47284a448ef10bb6f0f7ca7affb29f6900f51dbdd42",
+      "bytes": 14077
+    },
+    {
+      "file": "trade_accounts.json",
+      "sha256": "a4295895d3e719aa372edb45ecf5c2307193dc963f621d3c5fa8419d74329eb8",
+      "bytes": 66000
+    }
+  ]
+}

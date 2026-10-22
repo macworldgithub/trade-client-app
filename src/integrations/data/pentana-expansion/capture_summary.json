@@ -1,0 +1,22 @@
+{
+  "source_entity_code": "50",
+  "query": {
+    "name": "AUTO",
+    "suburb": "DANDENONG"
+  },
+  "query_rows": 425,
+  "query_pages": 48,
+  "receivable_candidates": 56,
+  "related_account_rows": 56,
+  "pending_accounts": 0,
+  "newly_discovered_contact_ids": 425,
+  "newly_captured_account_ids": 56,
+  "combined_unique_contact_search_ids": 610,
+  "combined_unique_captured_account_ids": 90,
+  "full_account_book_complete": false,
+  "current_stock_capture_complete": false,
+  "full_catalogue_capture_complete": false,
+  "current_pricing_capture_complete": false,
+  "validation": "PASS",
+  "note": "Additive query snapshot, not a refresh/replacement of the previous bundle."
+}

@@ -1,0 +1,978 @@
+[
+  {
+    "requested_entity_id": "98456",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T08:02:22.045Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "98456"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "South East Auto Repair Centre"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "South East Auto Repair Centre"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "dear"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "XPRXXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "South East Auto Repair Centre"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "1/36 Healey Road"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": "Australia"
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": "josh.rogers@searc.com.au"
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "accounts@searc.com.au"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 9487 5550"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": "(0411) 716 915"
+      },
+      {
+        "field": "entityname_fax",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": "17686382178"
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": ""
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": ""
+        },
+        {
+          "field": "entityname_eraname",
+          "value": ""
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": ""
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": ""
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ],
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": "28/08/2026     0556           catherinem     \nTHIS ACCOUNT IS CLOSED.\nThank you\n\n\n\n\n%0B%0B%0B%0B%0B%0B%0B%0B%0B%0B\n\n22/01/2026     2120           andrewa        \nHyundai ppr - stock price minus 12%\nMitsubishi cppp - stock price plus 12%\nALLOW 3 DAYS \n"
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": "98456"
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": "C"
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": "XPRXXXU"
+        },
+        {
+          "field": "entityname_eraname",
+          "value": "South East Auto Repair Centre"
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": "dear"
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": "(03) 9487 5550"
+        },
+        {
+          "field": "entityname_mobile",
+          "value": "(0411) 716 915"
+        }
+      ]
+    ],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T08:02:14.734Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "98456"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "South East Auto Repair Centre"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "dear"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9487 5550"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": "(0411) 716 915"
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "24",
+            "label": "24, HIGH VOLUME PANEL"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T08:02:18.111Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "98456"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "South East Auto Repair Centre"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "dear"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9487 5550"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": "(0411) 716 915"
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "5000.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "5000.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "22/07/2025"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": "accounts@searc.com.au"
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "984567"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": "0.00"
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": "29722.61"
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "63"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": "22/07/2025"
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": "01/06/2026"
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": "14/08/2026"
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": "14/08/2026"
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T08:02:20.279Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "98456"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "South East Auto Repair Centre"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "dear"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9487 5550"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": "(0411) 716 915"
+          }
+        ]
+      }
+    ]
+  }
+]

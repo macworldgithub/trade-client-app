@@ -1,0 +1,83 @@
+{
+  "trade_accounts": {
+    "rows": 56,
+    "populated": {
+      "source_entity_code": 56,
+      "account_id": 56,
+      "entity_name": 56,
+      "business_name": 53,
+      "contact_name": 42,
+      "business_email": 42,
+      "business_phone": 56,
+      "abn_raw": 25,
+      "home_site": 0,
+      "credit_hold": 0,
+      "overdue_flag": 0,
+      "credit_limit": 56,
+      "account_balance": 45,
+      "credit_available": 56,
+      "payment_terms_code": 42,
+      "credit_type_code": 47,
+      "credit_code": 41,
+      "current_balance": 6,
+      "aged_30_days": 7,
+      "aged_60_days": 9,
+      "aged_90_days": 9,
+      "aged_120_days": 18,
+      "aged_total": 56,
+      "purchase_ytd_receivable": 36,
+      "purchase_prior_year_receivable": 35,
+      "last_purchase_date": 34,
+      "last_payment_date": 34,
+      "average_days_to_pay": 56,
+      "payment_terms": 56,
+      "credit_code_label": 56,
+      "financial_year": 56,
+      "parts_sales_financial_year": 15,
+      "parts_transactions_financial_year": 15,
+      "captured_at": 56
+    }
+  },
+  "contact_details": {
+    "rows": 56,
+    "populated": {
+      "source_entity_code": 56,
+      "entity_id": 56,
+      "entity_name": 56,
+      "business_name": 53,
+      "contact_name": 42,
+      "address_line_1": 56,
+      "address_line_2": 8,
+      "suburb": 56,
+      "postcode": 56,
+      "state": 56,
+      "business_email": 42,
+      "home_email": 32,
+      "business_phone": 56,
+      "home_phone": 7,
+      "mobile_phone": 17,
+      "abn_raw": 25,
+      "acn_raw": 3,
+      "entity_type_raw": 56,
+      "customer_type_detail_raw": 56,
+      "captured_at": 56
+    }
+  },
+  "account_pricing_rules": {
+    "rows": 56,
+    "populated": {
+      "source_entity_code": 56,
+      "account_id": 56,
+      "sale_type_code": 52,
+      "sale_type_label": 56,
+      "price_level_code": 48,
+      "price_level_label": 52,
+      "payment_method_code": 56,
+      "payment_method_label": 56,
+      "part_number": 0,
+      "current_trade_unit_price": 0,
+      "discount_percent": 0,
+      "captured_at": 56
+    }
+  }
+}

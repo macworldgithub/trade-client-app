@@ -1,0 +1,6095 @@
+[
+  {
+    "requested_entity_id": "038975",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:38:41.891Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "038975"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Ashkar Auto Repairs"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Ashkar Auto Repairs"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Manager"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "XPRXXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Ashkar Auto Repairs"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "Fac 3/14 Tharle St?Enter Bramley St"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": ""
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "vanessa@booran.com.au"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "03-97920998??03-97920998?0410-578205"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": ""
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": ""
+        },
+        {
+          "field": "entityname_eraname",
+          "value": ""
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": ""
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": ""
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ],
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": "03/04/2020     0556           vanessab       \nPLEASE DO NOT USE THIS ACCOUNT! THEY ARE A CAPRICORN CUSTOMER\nMEMBER 032303!\n"
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": "038975"
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": "C"
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": "XPRXXXU"
+        },
+        {
+          "field": "entityname_eraname",
+          "value": "Ashkar Auto Repairs"
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": "Manager"
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": "03-97920998??03-97920998?0410-578205"
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ]
+    ],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:38:34.256Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "038975"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Ashkar Auto Repairs"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97920998??03-97920998?0410-578205"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "11",
+            "label": "11, TRADE"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": "40001193"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "1",
+            "label": "Yes"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": "118126"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": "27/02/2014"
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:38:37.661Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "038975"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Ashkar Auto Repairs"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97920998??03-97920998?0410-578205"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "25/06/2004"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "0389759"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": "0.00"
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "95"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": "22/02/2018"
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": "10/10/2019"
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": "06/04/2020"
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": "06/04/2020"
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:38:40.130Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "038975"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Ashkar Auto Repairs"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97920998??03-97920998?0410-578205"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "034730",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:39:03.136Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "034730"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Auto Plus Mechanical"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Brakes Plus"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "SPRVXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Auto Plus Mechanical"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "14 Lonsdale Street?"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": ""
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "dandenong@autoplus.com.au"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "03-97069636??03-97924746?"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": "57887940889"
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:38:55.567Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "034730"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Auto Plus Mechanical"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97069636??03-97924746?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "11",
+            "label": "11, TRADE"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": "40001307"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "1",
+            "label": "Yes"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:38:59.167Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "034730"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Auto Plus Mechanical"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97069636??03-97924746?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "2",
+            "label": "Slow"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "25/02/2008"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": "dandenong@autoplus.com.au"
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "0347302"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": "0.00"
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": "0.00"
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": "120.08"
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": "539.99"
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "42"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": "05/10/2017"
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": "07/08/2026"
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": "28/09/2026"
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": "28/09/2026"
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:39:01.378Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": "109.16"
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": "27.55"
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": "4"
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "109.16"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "27.55"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "4"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "034730"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Auto Plus Mechanical"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97069636??03-97924746?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "501927",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:39:24.368Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "501927"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": "Mr"
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Ashleigh Martin"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "SPRXXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "CP"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "F"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "Cnr Frankston Dandenong Rd"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": "And Zenith Rd"
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": "Australia"
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": ""
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": ""
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 9792 5835"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": "(03) 9793 3438"
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:39:16.946Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "501927"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "CP"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9792 5835"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "11",
+            "label": "11, TRADE"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:39:20.424Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "501927"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "CP"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9792 5835"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "1",
+            "label": "Good"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "25/09/2014"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "20024"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": ""
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": ""
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "0"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": ""
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:39:22.601Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "501927"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "CP"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9792 5835"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "013442",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:39:46.471Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "013442"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": "Mr"
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Ashleigh Martin"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "XPRXXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "F"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Autobarn Dandenong"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "Cnr Frankston Dandenong Rd?And Zenith Rd"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": "Australia"
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": ""
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": ""
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "03-97925835??03-97933438?"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:39:39.087Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "013442"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97925835??03-97933438?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "30",
+            "label": "30, dealer price"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:39:42.478Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "013442"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97925835??03-97933438?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": ""
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "1",
+            "label": "Good"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "25/09/2014"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "0134429"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": ""
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": ""
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "0"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": ""
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:39:44.671Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "013442"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "XPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autobarn Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": "Mr"
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Ashleigh Martin"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "03-97925835??03-97933438?"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "501570",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:40:10.866Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "501570"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Automobiles Dandenong"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Automobiles Dandenong"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Manager"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "SPRXXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Automobiles Dandenong"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "38 Lonsdale Street"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": "PO Box 928"
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": "automobiles@optusnet.com.au"
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "joep-tyreworks@outlook.com"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": "(03) 9791 6155"
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 9791 5716"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": "(03) 9791 5497"
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": ""
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": ""
+        },
+        {
+          "field": "entityname_eraname",
+          "value": ""
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": ""
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": ""
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ],
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": "03/07/2024     0556           ddenes         \n2.7.24- no show - r/o - 306170\n===CHECK OWNERS DETAILS =====\nCHECK ENGINE LIGHT ON ----- ASK OWNER FOR MORE DETAILS\nADVISED OWNER MAY NEED FOR A FEW DAYS ?\nDIAGNOSTIC CODE CHECK ONLY $ 495.00 ============\nHER MECHANIC SAID TAKE TO HOLDEN\nDROPPING OFF MONDAY 1/7/24 AT 4.00PM\nRING OWNER WITH PART AND LABOUR COSTS BEFORE STARTING -\nPARTS MUST BE PAID FOR BEFORE ORDERING AND NO RETURNS OR\nREFUNDS GIVEN ONCE WE HAVE ORDERED ANY PARTS\n\n25/08/2005     3050           jeffm          \nNO WORK IS TO BE CARRIED OUT ON ANY VEHICLE WITHOUT PHONING\nFOR AN ORDER NUMBER. ASK FOR KERRY - 9791-5716\n\n\n"
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": "501570"
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": "C"
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": "SPRXXXU"
+        },
+        {
+          "field": "entityname_eraname",
+          "value": "Automobiles Dandenong"
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": "Manager"
+        },
+        {
+          "field": "entityname_homephone",
+          "value": "(03) 9791 6155"
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": "(03) 9791 5716"
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ]
+    ],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:40:03.292Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "501570"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": "(03) 9791 6155"
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "30",
+            "label": "30, dealer price"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": "40033340"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": "85661"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": "22/03/2016"
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:40:06.782Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "501570"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": "(03) 9791 6155"
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": ""
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "1",
+            "label": "Good"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "22/10/2026"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": "automobiles@optusnet.com.au"
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "16360"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": ""
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": ""
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "0"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": ""
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": ""
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:40:09.125Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "501570"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRXXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": "(03) 9791 6155"
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "035977",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:40:32.660Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "035977"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Automobiles Dandenong"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Automobiles Dandenong"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "SPRVXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Automobiles Dandenong "
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "38 Lonsdale St"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": "automobiles@optusnet.com.au"
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "automobiles@optusnet.com.au"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 9791 5716"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:40:25.297Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "035977"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong "
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "30",
+            "label": "30, dealer price"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": "40033340"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "1",
+            "label": "Yes"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "",
+            "label": "No Selection"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:40:28.657Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "035977"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong "
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "1.00"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "1.00"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "1",
+            "label": "Good"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "22/10/2026"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "1",
+            "label": "CHARGE"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": "automobiles@optusnet.com.au"
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "0359778"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": "0.00"
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "65"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": "15/09/2016"
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": "25/10/2018"
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": "10/01/2019"
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": "10/01/2019"
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:40:30.878Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "035977"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Automobiles Dandenong "
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": ""
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9791 5716"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "requested_entity_id": "523222",
+    "source_entity_code": "50",
+    "captured_at": "2026-10-22T07:40:57.551Z",
+    "status": "CAPTURED",
+    "fields": [
+      {
+        "field": "entityname_entityid",
+        "value": "523222"
+      },
+      {
+        "field": "entityname_NameBusiness",
+        "value": "Autoplus Mechanical Services"
+      },
+      {
+        "field": "entityname_namefirst",
+        "value": ""
+      },
+      {
+        "field": "entityname_namemiddle",
+        "value": ""
+      },
+      {
+        "field": "entityname_namelast",
+        "value": ""
+      },
+      {
+        "field": "entityname_namepreferred",
+        "value": ""
+      },
+      {
+        "field": "entityname_sort",
+        "value": "Brakes Plus"
+      },
+      {
+        "field": "entityname_namesalutation",
+        "value": ""
+      },
+      {
+        "field": "entityname_nametitle",
+        "value": ""
+      },
+      {
+        "field": "entityname_nameattention",
+        "value": "Manager"
+      },
+      {
+        "field": "entityname_entityid_custype",
+        "value": "SPRVXXU"
+      },
+      {
+        "field": "entityname_entitytype",
+        "value": "C"
+      },
+      {
+        "field": "entityname_ContactType",
+        "value": "B"
+      },
+      {
+        "field": "entityname_privacycode",
+        "value": ""
+      },
+      {
+        "field": "entityname_eraname",
+        "value": "Autoplus Mechanical Services"
+      },
+      {
+        "field": "entityname_streetaddra",
+        "value": "14 Lonsdale Street"
+      },
+      {
+        "field": "entityname_streetaddrb",
+        "value": ""
+      },
+      {
+        "field": "entityname_suburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_State",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_country",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalstreeta",
+        "value": "14 Lonsdale St"
+      },
+      {
+        "field": "entityname_postalstreetb",
+        "value": ""
+      },
+      {
+        "field": "entityname_postalsuburb",
+        "value": "Dandenong"
+      },
+      {
+        "field": "entityname_postalpcode",
+        "value": "3175"
+      },
+      {
+        "field": "entityname_postalstate",
+        "value": "VIC"
+      },
+      {
+        "field": "entityname_postalcountry",
+        "value": ""
+      },
+      {
+        "field": "entityname_email",
+        "value": ""
+      },
+      {
+        "field": "entityname_BusinessEmail",
+        "value": "sue@autoplusexperts.com.au"
+      },
+      {
+        "field": "entityname_homephone",
+        "value": ""
+      },
+      {
+        "field": "entityname_businessphone",
+        "value": "(03) 9706 9636"
+      },
+      {
+        "field": "entityname_mobile",
+        "value": ""
+      },
+      {
+        "field": "entityname_fax",
+        "value": "(03) 9792 4746"
+      },
+      {
+        "field": "entityname_phonepager",
+        "value": ""
+      },
+      {
+        "field": "entityname_phonenumber",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusACNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusABRNId",
+        "value": ""
+      },
+      {
+        "field": "entityname_entityid_CusPPSRid",
+        "value": ""
+      }
+    ],
+    "warnings": [
+      [
+        {
+          "field": "txaWarningMsgs",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Date",
+          "value": ""
+        },
+        {
+          "field": "searchresults_Time",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchMethod",
+          "value": ""
+        },
+        {
+          "field": "searchresults_AtbOne",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchFupDate",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchStockNo",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchReason",
+          "value": ""
+        },
+        {
+          "field": "searchresults_EchResult",
+          "value": ""
+        },
+        {
+          "field": "entityname_entityid",
+          "value": "523222"
+        },
+        {
+          "field": "entityname_entitytype",
+          "value": "C"
+        },
+        {
+          "field": "entityname_entityid_custype",
+          "value": "SPRVXXU"
+        },
+        {
+          "field": "entityname_eraname",
+          "value": "Autoplus Mechanical Services"
+        },
+        {
+          "field": "entityname_namepreferred",
+          "value": ""
+        },
+        {
+          "field": "entityname_nametitle",
+          "value": ""
+        },
+        {
+          "field": "entityname_SalutationDesc",
+          "value": ""
+        },
+        {
+          "field": "entityname_nameattention",
+          "value": "Manager"
+        },
+        {
+          "field": "entityname_homephone",
+          "value": ""
+        },
+        {
+          "field": "entityname_businessphone",
+          "value": "(03) 9706 9636"
+        },
+        {
+          "field": "entityname_mobile",
+          "value": ""
+        }
+      ]
+    ],
+    "screens": [
+      {
+        "screen": "EntityParts.htm",
+        "captured_at": "2026-10-22T07:40:50.200Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "523222"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autoplus Mechanical Services"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9706 9636"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusSaleType",
+            "value": "T",
+            "label": "T, 52| TRADE SALES"
+          },
+          {
+            "field": "entityname_entityid_CusPriceCode",
+            "value": "11",
+            "label": "11, TRADE"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusShipVia",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRunNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusTaxNameInv",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPoReqd",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusPoNumber",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusInvCopies",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillTo",
+            "value": "40518"
+          },
+          {
+            "field": "entityname_entityid_CusBillToName",
+            "value": "Capricorn Society Ltd"
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrA",
+            "value": "Locked Bag 436"
+          },
+          {
+            "field": "entityname_entityid_CusBillAddrB",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusBillSuburb",
+            "value": "Victoria Park"
+          },
+          {
+            "field": "entityname_entityid_CusBillPcode",
+            "value": "6979"
+          },
+          {
+            "field": "entityname_entityid_PinnacleId",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCategory",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusWhslComp",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusWhslFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusRetProfit",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusPartLabels",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusInvSeq",
+            "value": "A",
+            "label": "As Entered"
+          },
+          {
+            "field": "btnEmlOptions",
+            "value": "Parts Email Options"
+          },
+          {
+            "field": "entityname_entityid_PACCNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_QtPartSuppress",
+            "value": "",
+            "label": "No Selection"
+          },
+          {
+            "field": "entityname_entityid_CusCapNo",
+            "value": "38468"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubNo",
+            "value": "40001307"
+          },
+          {
+            "field": "entityname_entityid_GMTradeClubOvr",
+            "value": "1",
+            "label": "Yes"
+          },
+          {
+            "field": "entityname_entityid_GetGenuineMbr",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_GetGenuineDate",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_FOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BMTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_PaccarFleetNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_MBTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_HOTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubNo",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_JLRTradeClubOvr",
+            "value": "0",
+            "label": "No"
+          }
+        ]
+      },
+      {
+        "screen": "EntityReceivable.htm",
+        "captured_at": "2026-10-22T07:40:53.644Z",
+        "fields": [
+          {
+            "field": "entityname_entityid",
+            "value": "523222"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autoplus Mechanical Services"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9706 9636"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusCreditLimit",
+            "value": "0.01"
+          },
+          {
+            "field": "txtAccountBalance",
+            "value": "0.00"
+          },
+          {
+            "field": "txtCreditAvailable",
+            "value": "0.01"
+          },
+          {
+            "field": "entityname_entityid_CusCreditType",
+            "value": "R",
+            "label": "Regular"
+          },
+          {
+            "field": "entityname_entityid_CusCreditCode",
+            "value": "1",
+            "label": "Good"
+          },
+          {
+            "field": "entityname_entityid_CusCreditTerms",
+            "value": "30",
+            "label": "30 DAYS"
+          },
+          {
+            "field": "entityname_entityid_CusDateCredit",
+            "value": "25/02/2008"
+          },
+          {
+            "field": "entityname_entityid_CusPayMethod",
+            "value": "6",
+            "label": "PENDING"
+          },
+          {
+            "field": "entityname_entityid_CusTerritory",
+            "value": "2",
+            "label": "DANDENONG REP"
+          },
+          {
+            "field": "entityname_entityid_CusRcvContactName",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusGlAcct",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_CusStatementFmt",
+            "value": "D",
+            "label": "Detail Forward"
+          },
+          {
+            "field": "entityname_entityid_CusPrintStatement",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "entityname_entityid_CusSvcChg",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkPrint",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusCrAge",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "chkEmail",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "chkFax",
+            "value": "on",
+            "checked": false
+          },
+          {
+            "field": "entityname_entityid_CusStatementEmail",
+            "value": "sue@autoplusexperts.com.au"
+          },
+          {
+            "field": "entityname_entityid_CusStatementFax",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid_BpayNo",
+            "value": "5232228"
+          },
+          {
+            "field": "entityname_entityid_CusCrComments",
+            "value": ""
+          },
+          {
+            "field": "lblCurrent",
+            "value": "Current"
+          },
+          {
+            "field": "entityname_entityid_CusCurrentBal",
+            "value": ""
+          },
+          {
+            "field": "lbl30Days",
+            "value": "30 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalA",
+            "value": ""
+          },
+          {
+            "field": "lbl60Days",
+            "value": "60 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalB",
+            "value": ""
+          },
+          {
+            "field": "lbl90Days",
+            "value": "90 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalC",
+            "value": ""
+          },
+          {
+            "field": "lbl120Days",
+            "value": "120 Days"
+          },
+          {
+            "field": "entityname_entityid_CusBalD",
+            "value": ""
+          },
+          {
+            "field": "lblDummyType",
+            "value": ""
+          },
+          {
+            "field": "dspDummyAmt",
+            "value": ""
+          },
+          {
+            "field": "lblTotal",
+            "value": "Total"
+          },
+          {
+            "field": "entityname_entityid_CusBalTotal",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchaseYtd",
+            "value": "Purchase Ytd"
+          },
+          {
+            "field": "txtPurchaseYtd",
+            "value": "0.00"
+          },
+          {
+            "field": "lblPurchasePyr",
+            "value": "Purchase Pyr"
+          },
+          {
+            "field": "txtPurchasePyr",
+            "value": "0.00"
+          },
+          {
+            "field": "lblAvgDaysPay",
+            "value": "Avg Days - Pay"
+          },
+          {
+            "field": "txtAvgDaysPay",
+            "value": "36"
+          },
+          {
+            "field": "lblFirstPurchase",
+            "value": "First Purchase"
+          },
+          {
+            "field": "txtFirstPurchase",
+            "value": "20/04/2021"
+          },
+          {
+            "field": "lblLastPurchase",
+            "value": "Last Purchase"
+          },
+          {
+            "field": "txtLastPurchase",
+            "value": "01/06/2022"
+          },
+          {
+            "field": "lblLastChange",
+            "value": "Last Change"
+          },
+          {
+            "field": "txtLastChange",
+            "value": "28/07/2022"
+          },
+          {
+            "field": "lblLastPayment",
+            "value": "Last Payment"
+          },
+          {
+            "field": "txtLastPayment",
+            "value": "28/07/2022"
+          }
+        ]
+      },
+      {
+        "screen": "EntityValueDtls.htm",
+        "captured_at": "2026-10-22T07:40:55.798Z",
+        "fields": [
+          {
+            "field": "txtFinancialYear",
+            "value": "01/07/2026 - 30/06/2027"
+          },
+          {
+            "field": "entityname_valuedtl",
+            "value": "on",
+            "checked": true
+          },
+          {
+            "field": "txtPartSales",
+            "value": "Part Sales"
+          },
+          {
+            "field": "txtPartSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtPartSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSales",
+            "value": "Service Sales"
+          },
+          {
+            "field": "txtServiceSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtServiceSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSales",
+            "value": "New Vehicle Sales"
+          },
+          {
+            "field": "txtNewVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtNewVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSales",
+            "value": "Used Vehicle Sales"
+          },
+          {
+            "field": "txtUsedVehicleSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesGp",
+            "value": ""
+          },
+          {
+            "field": "txtUsedVehicleSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "txtTotals",
+            "value": "Totals"
+          },
+          {
+            "field": "txtTotalSales",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalGp",
+            "value": "0.00"
+          },
+          {
+            "field": "txtTotalCnt",
+            "value": "0"
+          },
+          {
+            "field": "txtMiscellaneousInvoices",
+            "value": "Miscellaneous Invoices"
+          },
+          {
+            "field": "txtMiscSalesAmt",
+            "value": ""
+          },
+          {
+            "field": "txtMiscSalesCnt",
+            "value": ""
+          },
+          {
+            "field": "entityname_entityid",
+            "value": "523222"
+          },
+          {
+            "field": "entityname_entitytype",
+            "value": "C"
+          },
+          {
+            "field": "entityname_entityid_custype",
+            "value": "SPRVXXU"
+          },
+          {
+            "field": "entityname_eraname",
+            "value": "Autoplus Mechanical Services"
+          },
+          {
+            "field": "entityname_namepreferred",
+            "value": ""
+          },
+          {
+            "field": "entityname_nametitle",
+            "value": ""
+          },
+          {
+            "field": "entityname_SalutationDesc",
+            "value": ""
+          },
+          {
+            "field": "entityname_nameattention",
+            "value": "Manager"
+          },
+          {
+            "field": "entityname_homephone",
+            "value": ""
+          },
+          {
+            "field": "entityname_businessphone",
+            "value": "(03) 9706 9636"
+          },
+          {
+            "field": "entityname_mobile",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+]

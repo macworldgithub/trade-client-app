@@ -1,0 +1,72 @@
+[
+  {
+    "dataset": "parts_catalogue",
+    "status": "NOT_CAPTURED",
+    "source_required": "Parts master enquiry/export",
+    "fields_required": "part_number,description,franchise,category,fitment",
+    "next_step": "Confirm source interface and read access"
+  },
+  {
+    "dataset": "parts_stock",
+    "status": "NOT_CAPTURED",
+    "source_required": "Parts stock/on-hand report",
+    "fields_required": "store_code,part_number,on_hand,allocated,available,bin,captured_at",
+    "next_step": "Confirm quantity definitions; vehicle inventory excluded"
+  },
+  {
+    "dataset": "purchase_orders",
+    "status": "NOT_CAPTURED",
+    "source_required": "Outstanding parts PO report",
+    "fields_required": "po_number,store_code,part_number,ordered,received,outstanding,status",
+    "next_step": "Optional service PO console unavailable; not all PO data proved absent"
+  },
+  {
+    "dataset": "stock_transfers",
+    "status": "NOT_CAPTURED",
+    "source_required": "Interbranch transfer ledger",
+    "fields_required": "transfer_number,from_store,to_store,part_number,quantity,status",
+    "next_step": "Account transfer defaults are not ledger records"
+  },
+  {
+    "dataset": "current_pricing",
+    "status": "NOT_CAPTURED",
+    "source_required": "Part and customer price enquiry/export",
+    "fields_required": "part_number,account_id,list_price,trade_price,discount,tax_basis,effective_at",
+    "next_step": "Account pricing codes do not establish a current unit price"
+  },
+  {
+    "dataset": "account_contacts",
+    "status": "QUERY_SAMPLE_CAPTURED",
+    "source_required": "Entity Maintenance + Entity Search",
+    "fields_required": "account_id,business_name,contacts,address,ABN",
+    "next_step": "Reconcile complete account book independently"
+  },
+  {
+    "dataset": "account_financials",
+    "status": "QUERY_SAMPLE_CAPTURED",
+    "source_required": "Receivable Details + Value Details",
+    "fields_required": "account_id,terms,credit_limit,balances,purchase_ytd,fy_parts_sales",
+    "next_step": "Consult capture_summary.json for latest counts"
+  },
+  {
+    "dataset": "home_site",
+    "status": "UNVERIFIED",
+    "source_required": "Account master/site mapping",
+    "fields_required": "account_id,home_site",
+    "next_step": "Do not use capture context as home site"
+  },
+  {
+    "dataset": "credit_flags",
+    "status": "UNVERIFIED",
+    "source_required": "Credit control source flags or approved derivation",
+    "fields_required": "account_id,credit_hold,overdue_flag",
+    "next_step": "Do not infer from warning prose or blank balances"
+  },
+  {
+    "dataset": "other_rooftops",
+    "status": "NOT_SYSTEMATICALLY_CAPTURED",
+    "source_required": "Verified Pentana entity selector/interface",
+    "fields_required": "store_code,precinct,brand,source_context",
+    "next_step": "STORE03 excluded; entity52 requires its own evidence"
+  }
+]

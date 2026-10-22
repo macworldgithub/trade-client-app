@@ -24,7 +24,8 @@ export interface PentanaSyncSummary {
 @Injectable()
 export class PentanaIngestionService implements OnApplicationBootstrap {
   private readonly logger = new Logger(PentanaIngestionService.name);
-  private dataDir: string | null = null;
+  private baseDataDir: string | null = null;
+  private expansionDataDir: string | null = null;
 
   constructor(
     @InjectModel(TradeAccount.name)
@@ -36,15 +37,18 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
   ) {}
 
   async onApplicationBootstrap() {
-    this.resolveDataDirectory();
-    // Auto-check and ingest if database has few or no verified Pentana accounts
+    this.resolveBaseDataDirectory();
+    this.resolveExpansionDataDirectory();
+    // Auto-check and ingest if database has fewer than 85 verified Pentana accounts
     try {
       const verifiedCount = await this.accountModel.countDocuments({ isVerifiedPentana: true });
-      if (verifiedCount < 30) {
-        this.logger.log(`Verified Pentana accounts count is ${verifiedCount}; performing autonomous ingestion of Entity 50 bundle.`);
+      if (verifiedCount < 85) {
+        this.logger.log(
+          `Verified Pentana accounts count is ${verifiedCount}; performing autonomous ingestion of Entity 50 complete base + expansion bundle.`,
+        );
         await this.syncPentanaDataToDatabase();
       } else {
-        this.logger.log(`Pentana Entity 50 dataset already loaded (${verifiedCount} verified accounts).`);
+        this.logger.log(`Pentana Entity 50 complete dataset already loaded (${verifiedCount} verified accounts).`);
       }
     } catch (err: any) {
       this.logger.warn(`Deferred initial Pentana sync check: ${err.message}`);
@@ -52,11 +56,11 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
   }
 
   /**
-   * Resolves the extraction bundle directory from microservice exports or local data mirror.
+   * Resolves the base extraction bundle directory (Entity 50 v3).
    */
-  public resolveDataDirectory(): string {
-    if (this.dataDir && fs.existsSync(this.dataDir)) {
-      return this.dataDir;
+  public resolveBaseDataDirectory(): string {
+    if (this.baseDataDir && fs.existsSync(this.baseDataDir)) {
+      return this.baseDataDir;
     }
 
     const candidatePaths = [
@@ -71,20 +75,52 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
 
     for (const candidate of candidatePaths) {
       if (candidate && fs.existsSync(candidate) && fs.existsSync(path.join(candidate, 'trade_accounts.json'))) {
-        this.dataDir = candidate;
-        this.logger.log(`[Pentana Ingestion] Located verified extraction bundle at: ${candidate}`);
+        this.baseDataDir = candidate;
+        this.logger.log(`[Pentana Ingestion] Located verified base extraction bundle at: ${candidate}`);
         return candidate;
       }
     }
 
-    // Default to local data directory
     const fallback = path.resolve(__dirname, 'data/pentana');
-    this.dataDir = fallback;
+    this.baseDataDir = fallback;
     return fallback;
   }
 
-  private readBundleFile<T = any>(filename: string): T[] {
-    const dir = this.resolveDataDirectory();
+  /**
+   * Resolves the additive expansion bundle directory (Entity 50 2026-10-22).
+   */
+  public resolveExpansionDataDirectory(): string | null {
+    if (this.expansionDataDir && fs.existsSync(this.expansionDataDir)) {
+      return this.expansionDataDir;
+    }
+
+    const candidatePaths = [
+      process.env.PENTANA_EXPANSION_DIR,
+      path.resolve(process.cwd(), '../tradie-client-microservice/exports/pentana-expansion-2026-10-22'),
+      'd:/Hammad/tradie-client-microservice/exports/pentana-expansion-2026-10-22',
+      path.resolve(__dirname, 'data/pentana-expansion'),
+      path.resolve(__dirname, '../data/pentana-expansion'),
+      path.resolve(process.cwd(), 'src/integrations/data/pentana-expansion'),
+      path.resolve(process.cwd(), 'dist/integrations/data/pentana-expansion'),
+    ];
+
+    for (const candidate of candidatePaths) {
+      if (candidate && fs.existsSync(candidate) && fs.existsSync(path.join(candidate, 'trade_accounts.json'))) {
+        this.expansionDataDir = candidate;
+        this.logger.log(`[Pentana Ingestion] Located additive expansion bundle at: ${candidate}`);
+        return candidate;
+      }
+    }
+
+    return null;
+  }
+
+  public resolveDataDirectory(): string {
+    return this.resolveBaseDataDirectory();
+  }
+
+  private readDirFile<T = any>(dir: string | null, filename: string): T[] {
+    if (!dir || !fs.existsSync(dir)) return [];
     const jsonPath = path.join(dir, filename.endsWith('.json') ? filename : `${filename}.json`);
 
     if (fs.existsSync(jsonPath)) {
@@ -96,7 +132,6 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       }
     }
 
-    // Fallback to CSV if JSON doesn't exist
     const csvPath = path.join(dir, filename.endsWith('.csv') ? filename : `${filename}.csv`);
     if (fs.existsSync(csvPath)) {
       try {
@@ -163,24 +198,52 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
 
   /**
    * Main synchronization routine:
-   * Ingests 34 trade accounts, 185 business entities, warnings, pricing rules, price levels, and observed parts.
+   * Ingests complete dataset from eraPower Entity 50:
+   * - 90 Verified Trade Accounts (34 base + 56 expansion)
+   * - 610 Discovered Business Entities (185 base + 425 search + 56 enriched contact details)
+   * - 90 Account Pricing Rules
+   * - 31 Notepad Warnings
+   * - 52 Price Level Reference Rules
+   * - Observed Part (86812N9000) from posted invoice
    */
   async syncPentanaDataToDatabase(): Promise<PentanaSyncSummary> {
-    const accountsData = this.readBundleFile('trade_accounts');
-    const entitiesData = this.readBundleFile('business_entities');
-    const pricingRules = this.readBundleFile('account_pricing_rules');
-    const warningsData = this.readBundleFile('account_warnings');
-    const priceLevels = this.readBundleFile('price_level_reference');
-    const partsData = this.readBundleFile('parts_observed');
-    const invoiceObs = this.readBundleFile('invoice_price_observations');
+    const baseDir = this.resolveBaseDataDirectory();
+    const expDir = this.resolveExpansionDataDirectory();
+
+    // 1. Read Base Bundle
+    const baseAccounts: any[] = this.readDirFile(baseDir, 'trade_accounts');
+    const baseEntities: any[] = this.readDirFile(baseDir, 'business_entities');
+    const basePricing: any[] = this.readDirFile(baseDir, 'account_pricing_rules');
+    const baseWarnings: any[] = this.readDirFile(baseDir, 'account_warnings');
+    const priceLevels: any[] = this.readDirFile(baseDir, 'price_level_reference');
+    const partsData: any[] = this.readDirFile(baseDir, 'parts_observed');
+    const invoiceObs: any[] = this.readDirFile(baseDir, 'invoice_price_observations');
+
+    // 2. Read Additive Expansion Bundle
+    const expAccounts: any[] = expDir ? this.readDirFile(expDir, 'trade_accounts') : [];
+    const expSearch: any[] = expDir ? this.readDirFile(expDir, 'entity_search') : [];
+    const expContacts: any[] = expDir ? this.readDirFile(expDir, 'contact_details') : [];
+    const expPricing: any[] = expDir ? this.readDirFile(expDir, 'account_pricing_rules') : [];
+    const expWarnings: any[] = expDir ? this.readDirFile(expDir, 'account_warnings') : [];
 
     this.logger.log(
-      `[Pentana Sync] Processing extraction bundle: ${accountsData.length} accounts, ${entitiesData.length} entities, ${warningsData.length} warnings, ${pricingRules.length} pricing rules.`,
+      `[Pentana Sync] Processing datasets: Base (${baseAccounts.length} acc, ${baseEntities.length} ent) + Expansion (${expAccounts.length} acc, ${expSearch.length} search ent, ${expContacts.length} contacts).`,
     );
 
-    // Map warnings by entity_id
+    // 3. Build Contacts Enrichment Map (from expContacts + baseEntities)
+    const contactEnrichment = new Map<string, any>();
+    for (const ent of baseEntities) {
+      const id = String(ent.entity_id).trim();
+      if (id) contactEnrichment.set(id, ent);
+    }
+    for (const cont of expContacts) {
+      const id = String(cont.entity_id).trim();
+      if (id) contactEnrichment.set(id, cont);
+    }
+
+    // 4. Build Warnings Map by entity_id
     const warningsByEntity = new Map<string, string[]>();
-    for (const w of warningsData) {
+    for (const w of [...baseWarnings, ...expWarnings]) {
       const id = String(w.entity_id || w.warning_entity_id).trim();
       if (!id) continue;
       const list = warningsByEntity.get(id) || [];
@@ -191,29 +254,35 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       warningsByEntity.set(id, list);
     }
 
-    // Map pricing rules by account_id
+    // 5. Build Pricing Rules Map by account_id
     const pricingByAccount = new Map<string, any>();
-    for (const p of pricingRules) {
+    for (const p of [...basePricing, ...expPricing]) {
       const id = String(p.account_id).trim();
       if (id) {
         pricingByAccount.set(id, p);
       }
     }
 
-    // Set of account IDs for fast check
-    const tradeAccountIds = new Set<string>();
+    // 6. Merge Trade Accounts (Unique across base + expansion)
+    const accountsMap = new Map<string, any>();
+    for (const acc of baseAccounts) {
+      const id = String(acc.account_id).trim();
+      if (id) accountsMap.set(id, acc);
+    }
+    for (const acc of expAccounts) {
+      const id = String(acc.account_id).trim();
+      if (id) accountsMap.set(id, acc);
+    }
 
+    const tradeAccountIds = new Set<string>(accountsMap.keys());
     let accountsCount = 0;
     const now = new Date();
 
-    // 1. Ingest 34 Verified Trade Accounts
-    for (const acc of accountsData) {
-      const accountId = String(acc.account_id).trim();
-      if (!accountId) continue;
-      tradeAccountIds.add(accountId);
-
+    // 7. Upsert all 90 Verified Trade Accounts
+    for (const [accountId, acc] of accountsMap.entries()) {
       const warningList = warningsByEntity.get(accountId) || [];
       const pricingRule = pricingByAccount.get(accountId) || {};
+      const contactInfo = contactEnrichment.get(accountId) || {};
 
       const creditLimitCents = this.parseDollarsToCents(acc.credit_limit);
       const currentBalanceCents = this.parseDollarsToCents(acc.account_balance);
@@ -222,7 +291,7 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       const aged60DaysCents = this.parseDollarsToCents(acc.aged_60_days);
       const aged90DaysCents = this.parseDollarsToCents(acc.aged_90_days);
       const aged120DaysCents = this.parseDollarsToCents(acc.aged_120_days);
-      const agedBalanceTotalCents = this.parseDollarsToCents(acc.aged_balance_total_raw);
+      const agedBalanceTotalCents = this.parseDollarsToCents(acc.aged_balance_total_raw || acc.aged_total);
       const ytdSpendCents =
         this.parseDollarsToCents(acc.purchase_ytd_receivable) ||
         this.parseDollarsToCents(acc.parts_sales_financial_year);
@@ -232,29 +301,43 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
 
       // Calculate discount percent based on price level
       let discountPercent = 15.0;
-      const priceLevelLabel = acc.price_level_label || pricingRule.price_level_label || '';
-      if (priceLevelLabel.toLowerCase().includes('less 25') || acc.price_level_code === '25') {
+      const priceLevelLabel = String(acc.price_level_label || pricingRule.price_level_label || '').toLowerCase();
+      const priceLevelCode = String(acc.price_level_code || pricingRule.price_level_code || '').trim();
+
+      if (priceLevelLabel.includes('less 25') || priceLevelCode === '25' || priceLevelCode === '52') {
         discountPercent = 25.0;
-      } else if (priceLevelLabel.toLowerCase().includes('less 27') || acc.price_level_code === '32') {
+      } else if (priceLevelLabel.includes('less 27') || priceLevelCode === '32' || priceLevelCode === '24') {
         discountPercent = 27.0;
-      } else if (priceLevelLabel.toLowerCase().includes('less 20') || acc.price_level_code === '27') {
+      } else if (priceLevelLabel.includes('less 20') || priceLevelCode === '27') {
         discountPercent = 20.0;
-      } else if (priceLevelLabel.toLowerCase().includes('less 8') || acc.price_level_code === '13') {
+      } else if (priceLevelLabel.includes('less 8') || priceLevelCode === '13') {
         discountPercent = 18.0;
-      } else if (priceLevelLabel.toLowerCase().includes('17%') || acc.price_level_code === '17') {
+      } else if (priceLevelLabel.includes('17%') || priceLevelCode === '17') {
         discountPercent = 17.0;
-      } else if (priceLevelLabel.toLowerCase().includes('dealer') || acc.price_level_code === '20') {
+      } else if (
+        priceLevelLabel.includes('dealer') ||
+        priceLevelCode === '20' ||
+        priceLevelCode === '30' ||
+        priceLevelCode === '22' ||
+        priceLevelCode === '35'
+      ) {
         discountPercent = 20.0;
-      } else if (priceLevelLabel.toLowerCase().includes('trade') || acc.price_level_code === '11') {
+      } else if (priceLevelLabel.includes('trade') || priceLevelCode === '11') {
         discountPercent = 15.0;
+      } else if (priceLevelLabel.includes('intro') || priceLevelCode === '18') {
+        discountPercent = 12.0;
       }
 
       // Check credit hold conditions
-      const hasTillPaymentWarning = warningList.some((w) =>
-        w.toLowerCase().includes('till payment before ordering') || w.toLowerCase().includes('till payment'),
+      const hasTillPaymentWarning = warningList.some(
+        (w) => w.toLowerCase().includes('till payment before ordering') || w.toLowerCase().includes('till payment'),
       );
-      const hasDontUseWarning = warningList.some((w) =>
-        w.toLowerCase().includes("don't use this account") || w.toLowerCase().includes('use account'),
+      const hasDontUseWarning = warningList.some(
+        (w) =>
+          w.toLowerCase().includes("don't use this account") ||
+          w.toLowerCase().includes('use account') ||
+          w.toLowerCase().includes('please use capricorn') ||
+          w.toLowerCase().includes('use capricorn account only'),
       );
       const isBalanceOverLimit = creditLimitCents > 0 && currentBalanceCents > creditLimitCents;
 
@@ -265,30 +348,36 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
         (isBalanceOverLimit && creditAvailableCents < 0);
 
       const isOverdue =
-        acc.overdue_flag === true ||
-        aged60DaysCents > 0 ||
-        aged90DaysCents > 0 ||
-        aged120DaysCents > 0;
+        acc.overdue_flag === true || aged60DaysCents > 0 || aged90DaysCents > 0 || aged120DaysCents > 0;
 
-      const companyName = (acc.entity_name || acc.legal_name || 'Trade Account').trim();
-      const contactName = (acc.contact_name || 'Accounts Manager').trim() || 'Accounts Manager';
-      const email = (acc.business_email || acc.statement_email || acc.home_email || `account-${accountId}@booran.com.au`).trim();
+      const companyName = (acc.entity_name || acc.business_name || contactInfo.entity_name || 'Trade Account').trim();
+      const contactName = (acc.contact_name || contactInfo.contact_name || 'Accounts Manager').trim() || 'Accounts Manager';
+      const email = (
+        acc.business_email ||
+        contactInfo.business_email ||
+        acc.statement_email ||
+        contactInfo.home_email ||
+        acc.home_email ||
+        `account-${accountId}@booran.com.au`
+      ).trim();
+
+      const phone = acc.business_phone || contactInfo.business_phone || acc.mobile_phone || contactInfo.mobile_phone || null;
 
       const docData: Partial<TradeAccount> = {
         accountId,
         companyName,
-        legalName: acc.legal_name ? acc.legal_name.trim() : companyName,
+        legalName: acc.legal_name ? acc.legal_name.trim() : (contactInfo.business_name || companyName),
         contactName,
         contactEmail: email,
         statementEmail: acc.statement_email ? acc.statement_email.trim() : null,
-        businessEmail: acc.business_email ? acc.business_email.trim() : null,
-        homeEmail: acc.home_email ? acc.home_email.trim() : null,
-        contactPhone: acc.business_phone || acc.mobile_phone || null,
-        businessPhone: acc.business_phone ? acc.business_phone.trim() : null,
-        mobilePhone: acc.mobile_phone ? acc.mobile_phone.trim() : null,
-        abn: acc.abn_raw ? acc.abn_raw.trim() : null,
+        businessEmail: acc.business_email ? acc.business_email.trim() : (contactInfo.business_email ? contactInfo.business_email.trim() : null),
+        homeEmail: acc.home_email ? acc.home_email.trim() : (contactInfo.home_email ? contactInfo.home_email.trim() : null),
+        contactPhone: phone ? phone.trim() : null,
+        businessPhone: acc.business_phone ? acc.business_phone.trim() : (contactInfo.business_phone ? contactInfo.business_phone.trim() : null),
+        mobilePhone: acc.mobile_phone ? acc.mobile_phone.trim() : (contactInfo.mobile_phone ? contactInfo.mobile_phone.trim() : null),
+        abn: acc.abn_raw ? acc.abn_raw.trim() : (contactInfo.abn_raw ? contactInfo.abn_raw.trim() : null),
 
-        paymentTerms: acc.payment_terms ? acc.payment_terms.trim() : '30 DAYS',
+        paymentTerms: acc.payment_terms ? acc.payment_terms.trim() : (acc.payment_terms_code || '30 DAYS'),
         creditLimitCents,
         currentBalanceCents,
         creditAvailableCents,
@@ -308,10 +397,10 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
         ytdYear: 2026,
         purchasePriorYearCents,
         averageDaysToPay: parseInt(acc.average_days_to_pay || '30', 10) || 30,
-        lastPurchaseDate: acc.last_purchase_date_raw || null,
-        lastPaymentDate: acc.last_payment_date_raw || null,
+        lastPurchaseDate: acc.last_purchase_date_raw || acc.last_purchase_date || null,
+        lastPaymentDate: acc.last_payment_date_raw || acc.last_payment_date || null,
 
-        financialYearLabel: acc.financial_year_label || '01/07/2026 - 30/06/2027',
+        financialYearLabel: acc.financial_year_label || acc.financial_year || '01/07/2026 - 30/06/2027',
         partsSalesFinancialYearCents,
         partsTransactionsFinancialYear,
         partsSaleTypeCode: acc.parts_sale_type_code || pricingRule.sale_type_code || 'T',
@@ -348,12 +437,62 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       accountsCount++;
     }
 
-    // 2. Ingest 185 Discovered Business Entities
-    let entitiesCount = 0;
-    for (const ent of entitiesData) {
-      const entityId = String(ent.entity_id).trim();
-      if (!entityId) continue;
+    // 8. Merge and Upsert 610 Discovered Business Entities
+    const entitiesMap = new Map<string, any>();
 
+    // Step A: Base 185 entities (all captured)
+    for (const ent of baseEntities) {
+      const id = String(ent.entity_id).trim();
+      if (!id) continue;
+      entitiesMap.set(id, {
+        ...ent,
+        detailCaptureStatus: 'CAPTURED',
+      });
+    }
+
+    // Step B: Expansion search 425 entities (search discovered)
+    for (const s of expSearch) {
+      const id = String(s.entity_id).trim();
+      if (!id) continue;
+      if (!entitiesMap.has(id)) {
+        entitiesMap.set(id, {
+          entity_id: id,
+          source_entity_code: s.source_entity_code || '50',
+          entity_name: s.entity_name,
+          business_name: s.entity_name,
+          contact_name: '',
+          address_line_1: s.address,
+          address_line_2: '',
+          suburb: s.suburb,
+          postcode: s.postcode,
+          state: 'VIC',
+          business_email: '',
+          home_email: '',
+          business_phone: s.phone,
+          mobile_phone: '',
+          abn_raw: '',
+          acn_raw: '',
+          entity_type_raw: '',
+          customer_type_detail_raw: s.customer_types_raw,
+          detailCaptureStatus: 'SEARCH_DISCOVERED',
+        });
+      }
+    }
+
+    // Step C: Expansion contact details (56 enriched accounts)
+    for (const c of expContacts) {
+      const id = String(c.entity_id).trim();
+      if (!id) continue;
+      const existing = entitiesMap.get(id) || {};
+      entitiesMap.set(id, {
+        ...existing,
+        ...c,
+        detailCaptureStatus: 'CAPTURED',
+      });
+    }
+
+    let entitiesCount = 0;
+    for (const [entityId, ent] of entitiesMap.entries()) {
       const isTrade = tradeAccountIds.has(entityId);
       const entityName = (ent.entity_name || ent.business_name || `Entity ${entityId}`).trim();
 
@@ -365,20 +504,20 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
         contactName: ent.contact_name ? ent.contact_name.trim() : '',
         firstName: ent.first_name ? ent.first_name.trim() : '',
         lastName: ent.last_name ? ent.last_name.trim() : '',
-        addressLine1: ent.address_line_1 ? ent.address_line_1.trim() : '',
+        addressLine1: ent.address_line_1 ? ent.address_line_1.trim() : (ent.address ? ent.address.trim() : ''),
         addressLine2: ent.address_line_2 ? ent.address_line_2.trim() : '',
         suburb: ent.suburb ? ent.suburb.trim().toUpperCase() : '',
         postcode: ent.postcode ? ent.postcode.trim() : '',
         state: ent.state ? ent.state.trim().toUpperCase() : 'VIC',
         businessEmail: ent.business_email ? ent.business_email.trim() : '',
         homeEmail: ent.home_email ? ent.home_email.trim() : '',
-        businessPhone: ent.business_phone ? ent.business_phone.trim() : '',
+        businessPhone: ent.business_phone ? ent.business_phone.trim() : (ent.phone ? ent.phone.trim() : ''),
         mobilePhone: ent.mobile_phone ? ent.mobile_phone.trim() : '',
         abn: ent.abn_raw ? ent.abn_raw.trim() : '',
         acn: ent.acn_raw ? ent.acn_raw.trim() : '',
         entityTypeRaw: ent.entity_type_raw || '',
-        customerTypeDetailRaw: ent.customer_type_detail_raw || '',
-        detailCaptureStatus: ent.detail_capture_status || 'CAPTURED',
+        customerTypeDetailRaw: ent.customer_type_detail_raw || ent.customer_types_raw || '',
+        detailCaptureStatus: ent.detailCaptureStatus || 'CAPTURED',
         isTradeAccount: isTrade,
         linkedAccountId: isTrade ? entityId : null,
         capturedAt: ent.captured_at ? new Date(ent.captured_at) : null,
@@ -392,7 +531,7 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       entitiesCount++;
     }
 
-    // 3. Ingest Pentana Observed Parts (from Posted Invoices)
+    // 9. Ingest Pentana Observed Parts (from Posted Invoices)
     let partsCount = 0;
     if (partsData.length > 0) {
       for (const p of partsData) {
@@ -461,21 +600,21 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
     }
 
     this.logger.log(
-      `[Pentana Sync Complete] Synced ${accountsCount} trade accounts, ${entitiesCount} discovered entities, ${partsCount} observed parts.`,
+      `[Pentana Sync Complete] Synced ${accountsCount} verified trade accounts, ${entitiesCount} discovered entities, ${partsCount} observed parts.`,
     );
 
     return {
       tradeAccountsSynced: accountsCount,
       entitiesSynced: entitiesCount,
-      pricingRulesLoaded: pricingRules.length,
-      warningsLoaded: warningsData.length,
+      pricingRulesLoaded: pricingByAccount.size,
+      warningsLoaded: warningsByEntity.size,
       priceLevelsLoaded: priceLevels.length,
       partsSynced: partsCount,
       sourceEntityCode: '50',
-      sourceQuery: 'SMASH (Entity 50 - Dandenong Mitsubishi & Hyundai)',
+      sourceQuery: 'SMASH + AUTO DANDENONG (Entity 50 - Dandenong Mitsubishi & Hyundai)',
       syncedAt: now,
       status: 'SUCCESS',
-      notes: `Successfully ingested ${accountsCount} verified Pentana trade accounts and ${entitiesCount} smash repair contact entities into database.`,
+      notes: `Successfully ingested ${accountsCount} verified Pentana trade accounts and ${entitiesCount} business entities into database.`,
     };
   }
 
@@ -508,7 +647,7 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
       ];
     }
 
-    if (query.suburb) {
+    if (query.suburb && query.suburb !== 'ALL') {
       filter.suburb = query.suburb.toUpperCase();
     }
 
@@ -517,7 +656,7 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
     }
 
     const page = Math.max(1, Number(query.page) || 1);
-    const limit = query.limit ? Math.min(100, Math.max(1, Number(query.limit))) : 20;
+    const limit = query.limit ? Math.min(100, Math.max(1, Number(query.limit))) : 25;
     const skip = (page - 1) * limit;
 
     const [entities, total] = await Promise.all([
@@ -539,29 +678,49 @@ export class PentanaIngestionService implements OnApplicationBootstrap {
    * Returns the 52 Pentana price-level reference rules
    */
   getPriceLevels() {
-    return this.readBundleFile('price_level_reference');
+    const baseDir = this.resolveBaseDataDirectory();
+    return this.readDirFile(baseDir, 'price_level_reference');
   }
 
   /**
    * Returns manifest metadata and verification checks
    */
   getManifestMetadata() {
-    const dir = this.resolveDataDirectory();
-    const manifestPath = path.join(dir, 'manifest.json');
-    if (fs.existsSync(manifestPath)) {
+    const baseDir = this.resolveBaseDataDirectory();
+    const expDir = this.resolveExpansionDataDirectory();
+
+    let baseManifest: any = {};
+    const baseManifestPath = path.join(baseDir, 'manifest.json');
+    if (fs.existsSync(baseManifestPath)) {
       try {
-        return JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+        baseManifest = JSON.parse(fs.readFileSync(baseManifestPath, 'utf8'));
       } catch {
         // fallback
       }
     }
+
+    let expManifest: any = {};
+    if (expDir) {
+      const expManifestPath = path.join(expDir, 'manifest.json');
+      if (fs.existsSync(expManifestPath)) {
+        try {
+          expManifest = JSON.parse(fs.readFileSync(expManifestPath, 'utf8'));
+        } catch {
+          // fallback
+        }
+      }
+    }
+
     return {
-      schema_version: '3.0',
+      schema_version: '3.1',
       source_entity_code: '50',
       status: 'VERIFIED_IMPORT_BUNDLE',
-      search_query: 'SMASH',
-      search_rows: 185,
-      related_account_rows: 34,
+      search_query: 'SMASH (v3) + AUTO DANDENONG (Expansion)',
+      verified_trade_accounts_total: 90,
+      discovered_entities_total: 610,
+      price_levels_total: 52,
+      baseManifest,
+      expManifest,
     };
   }
 }

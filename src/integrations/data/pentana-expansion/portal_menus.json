@@ -1,0 +1,56 @@
+{
+  "source_entity_code": "50",
+  "excluded_store": "03",
+  "evidence": [
+    {
+      "path": "Main",
+      "captured_at": "2026-10-22T08:02:47.104Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nEntity Maintenance\t\nDealer Value\n\nShowroom\t\nService\n\nAccounting\t\nUtilities"
+    },
+    {
+      "path": "Main > Accounting",
+      "captured_at": "2026-10-22T08:02:48.780Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nDeal Processing Console\t\nSales Commissions"
+    },
+    {
+      "path": "Main > Service",
+      "captured_at": "2026-10-22T08:02:51.253Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nRO Costing\t\nVehicle Information\t\nRO Invoice Release\n\nSublet Purchase Orders\t\nLoan Car System\t\nParts Requests\n\nRO Review\t\nActivity Analysis\t\nBatch RO Printing\n\nService Setup Menu\t\nTechnician Time Menu\t\nReports Menu\n\nAppointments Menu\t\nCustomer Maint Menu\t\nWorkshop Control Menu\n\nRepair Order Messages\t\nEmployee Time Maint"
+    },
+    {
+      "path": "Main > Service > Reports Menu",
+      "captured_at": "2026-10-22T08:02:52.937Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nOpen RO Report\t\nRO Edit Listing\t\nTechnician Performance Report\n\nTechnician Productivity Report\t\nClocking Productivity Report\t\nRepair Order History Maintenance\n\nRO Time report\t\nRO Override Report\t\nAdvisor Performance Reports\n\nBay or Tech Recommendation Reports\t\nAuto Generated PO Console\t\nTech Available Hours Report\n\nManufacturer Report\t\nFSA Report\t\nRO Count Limit Enquiry\n\nBMW Connected Drive\t\nBatch Rego Check"
+    },
+    {
+      "path": "Main > Utilities",
+      "captured_at": "2026-10-22T08:02:56.115Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nPrinter Menu\t\nSMS Menu\t\nScrolling Advert\n\nSupportSnapshot"
+    },
+    {
+      "path": "Main > Utilities > Printer Menu",
+      "captured_at": "2026-10-22T08:02:58.705Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nJob Schedule Maintenance\t\nPrint Job Status Inquiry\t\nPrint Template Maintenance"
+    },
+    {
+      "path": "Main > Showroom",
+      "captured_at": "2026-10-22T08:03:02.617Z",
+      "title": "[s50.w2892.erapower] 50| Dandenong Mitsubishi & Hyundai",
+      "screen": "https://c2892-erapower.pentana.cloud/base/templates/eng/vMenu.htm?8321521235144000",
+      "text": "\n\n\nDiary\t\nProspect Maintenance\t\nVehicle Inventory Menu\n\nInventory Inquiry\t\nTrade Appraisal\t\nVehicle Data Purification\n\nShowroom Reception\t\nVehicle Delivery\t\nShowroom Analysis Menu\n\nAdvanced Deal Log\t\nDeal Inquiry\t\nFinance & Insurance Menu\n\nEmployee Time Maint\t\nDelivery Diary\t\nReservations Menu\n\nDealerSocket Link\t\nLoan Car System\t\nPricebook Inquiry\n\nPolicebooks Menu\t\nShowroom Setup Menu\t\nManufacturer Reports\n\nTest Drive Inquiry\t\nDocument Log\t\nAgency Link"
+    }
+  ],
+  "no_source_records_saved": true
+}
